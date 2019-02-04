@@ -1,0 +1,23 @@
+As a prospective tenant, I can:
+create an account
+view open apartments
+schedule a viewing
+cancel a viewing
+
+As a tenant, I can:
+log in
+view bills
+put in a maintenance ticket
+view past maintenance tickets
+view (other) open apartments
+post complaints
+
+As a manager, I can:
+view open/occupied apartments
+override bills
+manage tenant complaints
+
+As a maintenance person, I can:
+view open tickets
+log resolutions
+charge users for actions taken
