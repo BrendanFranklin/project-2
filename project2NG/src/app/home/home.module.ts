@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import{ FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -11,10 +13,15 @@ import { ResidentLoginPageComponent } from './resident-login-page/resident-login
 import { LoginComponent } from './login-component/login-component.component';
 
 @NgModule({
-  declarations: [HomepageComponent, NavbarComponent, ProspectivepageComponent, FilterComponent, EmployeeLoginPageComponent, ResidentLoginPageComponent, LoginComponent],
+  declarations: [HomepageComponent, NavbarComponent,
+     ProspectivepageComponent, FilterComponent,
+      EmployeeLoginPageComponent, ResidentLoginPageComponent,
+       LoginComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class HomeModule { }
