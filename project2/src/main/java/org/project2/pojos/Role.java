@@ -1,18 +1,32 @@
 package org.project2.pojos;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
-@Table(name = "Roles", schema = "Pretense")
 public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "role_id")
     private Integer id;
-
-    @Column(name = "role_name")
     private String name;
+
+    @ManyToMany(mappedBy="roles")
+    private Collection<Users> users;
+
+    @ManyToMany
+    @JoinTable(
+            name="roles_privileges",
+            joinColumns=@JoinColumn(
+                    name="role_id",
+                    referencedColumnName="id"
+            ),
+            inverseJoinColumns=@JoinColumn(
+                    name="privilege_id",
+                    referencedColumnName="id"
+            )
+    )
+    private Collection<Privilege>privileges;
 
     public Role() {
     }
@@ -35,5 +49,21 @@ public class Role {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Collection<Users> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Collection<Users> users) {
+        this.users = users;
+    }
+
+    public Collection<Privilege> getPrivileges() {
+        return privileges;
+    }
+
+    public void setPrivileges(Collection<Privilege> privileges) {
+        this.privileges = privileges;
     }
 }
