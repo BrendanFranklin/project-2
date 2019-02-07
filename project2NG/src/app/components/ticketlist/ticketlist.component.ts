@@ -11,6 +11,7 @@ import { Ticket } from 'src/app/models/ticket';
 export class TicketlistComponent implements OnInit {
 
   @Input() tickets: Ticket[];
+  @Input() employee: boolean;
 
   constructor(private modalService: NgbModal) { }
 
@@ -20,5 +21,6 @@ export class TicketlistComponent implements OnInit {
   detailView(ticket: Ticket){
     const modalRef = this.modalService.open(DetailsmodalComponent)
     modalRef.componentInstance.ticket = ticket;
+    modalRef.componentInstance.employee = this.employee;
   }
 }

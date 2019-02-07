@@ -13,8 +13,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor = "let reimb of reimbs"
-        (click) = "detailView(reimb.iD)">
+        <tr *ngFor = "let ticket of tickets"
+        (click) = "detailView(ticket)">
           <th scope="row">{{reimb.iD}}</th>
           <td>{{reimb.firstName}} {{reimb.lastName}}</td>
           <td>{{reimb.amount}}</td>
