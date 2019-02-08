@@ -10,7 +10,7 @@ import { Ticket } from 'src/app/models/ticket';
 export class DetailsmodalComponent implements OnInit {
   @Input() ticket: Ticket;
   @Input() employee: boolean;
-  @Output() resolveTicket: EventEmitter<any> = new EventEmitter();
+  @Output() resolveTicket: EventEmitter<Ticket> = new EventEmitter();
 
   constructor(public activeModal: NgbActiveModal) { }
 
