@@ -8,12 +8,7 @@ import java.util.List;
 public interface TicketJPARepository extends JpaRepository <Ticket, Integer> {
 
     List<Ticket> getAll();
-
     Ticket viewByAuthor();
-
-//    int save(Ticket t);
-//    void update(Ticket t);
-//    void delete(int id);
 
 
 }
