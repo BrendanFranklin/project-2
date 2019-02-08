@@ -1,7 +1,7 @@
 package org.project2.service;
 
-import org.project2.pojos.User;
-import org.project2.pojos.UserJPARepository;
+import org.project2.pojos.Users;
+import org.project2.repository.UserJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,13 +21,13 @@ public class UserService {
     }
 
     @Transactional
-    public List<User> getAll(){
+    public List<Users> getAll(){
         return this.userRepository.findAll();
     }
 
 
     @Transactional(readOnly = true)
-    public User viewRent(){
+    public Users viewRent(){
         return this.userRepository.viewRent();
     }
 
