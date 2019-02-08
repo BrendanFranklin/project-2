@@ -34,11 +34,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
         if(users == null) {
             throw new UsernameNotFoundException(username);
         }
-        Collection authorities = getAuthorities(users.getRoles());
+        Role authorities = getAuthorities(users.getRoles());
         return new User(users.getUsername(), users.getPassword(), authorities);
     }
 
-    public Collection<? extends GrantedAuthority> getAuthorities(Collection<Role> roles) {
+    public Collection<? extends GrantedAuthority> getAuthorities(roles) {
         return getGrantedAuthorities(getPrivileges(roles));
     }
 

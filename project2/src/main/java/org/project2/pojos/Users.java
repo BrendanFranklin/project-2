@@ -12,22 +12,27 @@ public class Users {
     private String username;
     private String password;
 
-    @ManyToMany
-    @JoinTable(
-            name="users_roles",
-            joinColumns=@JoinColumn(
-                    name="user_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="id")
-    )
-    private Collection<Role> roles;
+//    @ManyToOne
+//    @JoinColumn(name = "id", nullable = false)
+//    @JoinTable(
+//            name="users_roles",
+//            joinColumns=@JoinColumn(
+//                    name="user_id", referencedColumnName="id"),
+//            inverseJoinColumns=@JoinColumn(
+//                    name="role_id", referencedColumnName="id")
+//    )
+//    private Role userRole;
+
+    @Column
+    private Integer roles;
 
     public Users() {
     }
 
-    public Users(String username, String password) {
+    public Users(String username, String password, Integer roles) {
         this.username = username;
         this.password = password;
+        this.roles = roles;
     }
 
     public Integer getId() {
@@ -54,11 +59,11 @@ public class Users {
         this.password = password;
     }
 
-    public Collection<Role> getRoles() {
+    public Integer getRoles() {
         return roles;
     }
 
-    public void setRoles(Collection<Role> roles) {
+    public void setRoles(Integer roles) {
         this.roles = roles;
     }
 }
