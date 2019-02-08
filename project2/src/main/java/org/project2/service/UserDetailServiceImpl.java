@@ -1,6 +1,6 @@
 package org.project2.service;
 
-import org.project2.Repository.ApplicationUserRepository;
+import org.project2.repository.ApplicationUserRepository;
 import org.project2.pojos.Privilege;
 import org.project2.pojos.Users;
 import org.project2.pojos.Role;
@@ -34,11 +34,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
         if(users == null) {
             throw new UsernameNotFoundException(username);
         }
-        Role authorities = getAuthorities(users.getRoles());
+        Collection authorities = getAuthorities(users.getRoles());
         return new User(users.getUsername(), users.getPassword(), authorities);
     }
 
-    public Collection<? extends GrantedAuthority> getAuthorities(roles) {
+    public Collection<? extends GrantedAuthority> getAuthorities(Collection<Role> roles) {
         return getGrantedAuthorities(getPrivileges(roles));
     }
 

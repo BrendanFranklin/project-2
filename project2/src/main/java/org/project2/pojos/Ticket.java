@@ -11,15 +11,11 @@ public class Ticket {
     @Column(name = "ticket_id")
     private int id;
 
-    @JoinColumn(name = "author", referencedColumnName = "users_id")
+    @JoinColumn(name = "author", referencedColumnName = "user_id")
     private String author;
 
-    @JoinColumn(name = "resolved", referencedColumnName = "users_id")
+    @JoinColumn(name = "resolver", referencedColumnName = "user_id")
     private String resolver;
-
-    @Transient
-    @ManyToOne(targetEntity = Users.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Users usersticket;
 
     @Column(name = "notes")
     private String notes;
