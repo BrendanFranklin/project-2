@@ -1,5 +1,6 @@
-package org.project2.pojos;
+package org.project2.Repository;
 
+import org.project2.pojos.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

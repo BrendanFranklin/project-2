@@ -1,4 +1,6 @@
-package org.project2.pojos;
+package org.project2.Repository;
+
+import org.project2.pojos.Ticket;
 
 public interface TicketRepository {
 

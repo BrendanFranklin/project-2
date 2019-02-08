@@ -1,4 +1,4 @@
-package org.project2.data;
+package org.project2.Repository;
 
 import org.project2.pojos.Users;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,11 +1,10 @@
 package org.project2.service;
 
-import org.project2.data.ApplicationUserRepository;
+import org.project2.Repository.ApplicationUserRepository;
 import org.project2.pojos.Privilege;
 import org.project2.pojos.Users;
 import org.project2.pojos.Role;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
