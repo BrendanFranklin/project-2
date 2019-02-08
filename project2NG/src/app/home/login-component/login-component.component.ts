@@ -12,7 +12,8 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   locationUrl: string;
-  @Input()title: string;
+  @Input() title: string;
+  @Input() authUrl: string;
 
    constructor(private router: Router,
     private login: LoginService
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-     this.login.authenticate(this.username, this.password,
+     this.login.authenticate(this.authUrl, this.username, this.password,
      () => this.router.navigate([this.locationUrl]),
      (err) => {
        console.log(err);

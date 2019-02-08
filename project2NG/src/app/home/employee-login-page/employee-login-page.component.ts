@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-employee-login-page',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeLoginPageComponent implements OnInit {
 
-  title: string = "Employee Login"
+  title: string = "Employee Login";
+  authUrl: string = environment.employeeAuth;
   constructor() { }
 
   ngOnInit() {
