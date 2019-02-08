@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TicketpageComponent implements OnInit {
 
-  manager = false;
-  
+  manager: boolean = false;
+
   constructor() {}
 
   ngOnInit() {
