@@ -1,8 +1,7 @@
 package org.project2.service;
 
-import org.project2.repository.ApplicationUserRepository;
+import org.project2.repository.AppUserRepository;
 import org.project2.pojos.Privilege;
-import org.project2.pojos.Users;
 import org.project2.pojos.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,17 +19,17 @@ import java.util.List;
 
 @Service
 public class UserDetailServiceImpl implements UserDetailsService {
-    private ApplicationUserRepository applicationUserRepository;
+    private AppUserRepository appUserRepository;
 
     @Autowired
-    public UserDetailServiceImpl(ApplicationUserRepository applicationUserRepository) {
-        this.applicationUserRepository = applicationUserRepository;
+    public UserDetailServiceImpl(AppUserRepository appUserRepository) {
+        this.appUserRepository = appUserRepository;
     }
 
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Users users = applicationUserRepository.findByUsername(username);
+        Users users = appUserRepository.findByUsername(username);
         if(users == null) {
             throw new UsernameNotFoundException(username);
         }
