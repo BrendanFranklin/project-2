@@ -2,6 +2,7 @@ package org.project2.pojos;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "Users", schema = "pretense")
@@ -23,19 +24,28 @@ public class Users {
     private String username;
     private String password;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "role_id")
+    @ManyToMany
+    @JoinTable(
+            name="user_roles",
+            joinColumns=@JoinColumn(
+                    name="user_id", referencedColumnName="user_id"),
+            inverseJoinColumns=@JoinColumn(
+                    name="role_id", referencedColumnName="id")
+    )
     private Collection<Role> roles;
-
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "apt_num")
     private Integer apt_num;
-
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "role_id")
     private Integer role_id;
 
     public Users(){}
+
+    public Users(String user_classname, String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
+        this.user_classname = user_classname;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+        this.apt_num = apt_num;
+        this.role_id = role_id;
+    }
 
     public Users(String user_classname){
         this.user_classname = user_classname;

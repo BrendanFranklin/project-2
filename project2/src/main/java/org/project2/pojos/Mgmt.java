@@ -6,10 +6,8 @@ import java.util.Collection;
 
 @Entity
 @DiscriminatorValue(value="M")
-public class Mgmt {
+public class Mgmt extends Users{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "mgnt_id")
     private Integer id;
     private String username;
@@ -26,6 +24,13 @@ public class Mgmt {
     private Collection<Role> roles;
 
     public Mgmt() { }
+
+    public Mgmt(Integer id, String username, String password, Collection<Role> roles) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+    }
 
     public Integer getId() {
         return id;

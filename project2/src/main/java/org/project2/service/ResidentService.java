@@ -7,12 +7,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class ResidentSerivice {
-
+public class ResidentService {
     private ResidentRepository residentRepository;
 
     @Autowired
-    public ResidentSerivice(ResidentRepository residentRepository){
+    public ResidentService(ResidentRepository residentRepository){
         this.residentRepository = residentRepository;
     }
 }

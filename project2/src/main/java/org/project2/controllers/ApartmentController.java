@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApartmentController {
     private ApartmentService apartmentService;
 
-    ApartmentController(){}
+    public ApartmentController(){}
 
     @Autowired
     public void setApartmentService(ApartmentService apartmentService){ this.apartmentService = apartmentService;}

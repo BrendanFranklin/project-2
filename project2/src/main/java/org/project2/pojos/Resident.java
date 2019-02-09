@@ -2,13 +2,12 @@ package org.project2.pojos;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @DiscriminatorValue(value="R")
 public class Resident extends Users{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "res_id")
     private Integer id;
     private String username;
@@ -18,8 +17,7 @@ public class Resident extends Users{
     @JoinColumn(name = "role_id")
     private Collection<Role> roles;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "apt_num")
+    @JoinColumn(name = "apt_num", referencedColumnName = "apt_num")
     private Integer apt_num;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
