@@ -1,11 +1,8 @@
-package org.project2.Repository;
+package org.project2.repository;
 
-import com.sun.tools.javac.comp.Todo;
-import org.project2.pojos.Users;
+import org.project2.pojos.Resident;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UsersJPARepository extends JpaRepository<Users, Integer> {
-
-
+public interface UsersJPARepository extends JpaRepository<Resident, Integer> {
 
 }

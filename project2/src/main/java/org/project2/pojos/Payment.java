@@ -14,7 +14,7 @@ public class Payment {
     private boolean overdue;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "resident_id")
+    @JoinColumn(name = "res_id")
     private Integer resident_id;
 
     public Payment() {

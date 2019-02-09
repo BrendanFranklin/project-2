@@ -9,7 +9,7 @@ public class Resident {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "resident_id")
+    @Column(name = "res_id")
     private Integer id;
     private String username;
     private String password;
