@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ApartmentRepository {
     // view empty repositories
-    List<Apartment> findEmpty();
+    List<Apartment> findEmpty(boolean occupied);
     List<Apartment> findAll();
 }
