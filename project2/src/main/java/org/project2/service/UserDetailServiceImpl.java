@@ -34,11 +34,6 @@ public class UserDetailServiceImpl implements UserDetailsService {
         if(users == null) {
             throw new UsernameNotFoundException(username);
         }
-
-        int role;
-        String username;
-        String password;
-
         Collection authorities = getAuthorities(users.getRoles());
         return new User(users.getUsername(), users.getPassword(), authorities);
     }

@@ -13,8 +13,7 @@ public class Payment {
     private boolean paid;
     private boolean overdue;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "res_id")
+    @JoinColumn(name = "res_id", referencedColumnName = "res_id")
     private Integer resident_id;
 
     public Payment() {
