@@ -1,7 +1,8 @@
 package org.project2.pojos;
 
+import org.hibernate.mapping.Collection;
+
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @Table(name = "resident", schema = "pretense")
