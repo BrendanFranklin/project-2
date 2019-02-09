@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "resident", schema = "pretense")
-public class Resident {
+@DiscriminatorValue(value="R")
+public class Resident extends Users{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,7 +19,7 @@ public class Resident {
     private Collection<Role> roles;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "apartment_id")
+    @JoinColumn(name = "apt_num")
     private Integer apt_num;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
