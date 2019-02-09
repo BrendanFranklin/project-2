@@ -25,6 +25,13 @@ public class Mgmt extends Users{
 
     public Mgmt() { }
 
+    public Mgmt(Integer id, String username, String password, Collection<Role> roles) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+    }
+
     public Integer getId() {
         return id;
     }

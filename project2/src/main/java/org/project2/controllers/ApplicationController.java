@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("application")
 public class ApplicationController {
-
     private ApplicationService applicationService;
 
     public ApplicationController(){}

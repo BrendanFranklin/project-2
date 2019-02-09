@@ -11,11 +11,9 @@ public class Ticket {
     @Column(name = "ticket_id")
     private int id;
 
-    @OneToOne
-    @JoinColumn(name = "author", referencedColumnName = "resident_id")
+    @JoinColumn(name = "author", referencedColumnName = "res_id")
     private String author;
 
-    @OneToOne
     @JoinColumn(name = "resolver", referencedColumnName = "mgmt_id")
     private String resolver;
 
