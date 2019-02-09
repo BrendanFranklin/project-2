@@ -1,3 +1,4 @@
 export class Ticket{
-    // constructor()
+    constructor(public submitted: Date , public resolved: Date,
+         public description: string, public author: string, public resolver: string  ){}
 }
