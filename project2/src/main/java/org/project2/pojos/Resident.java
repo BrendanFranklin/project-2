@@ -7,8 +7,6 @@ import java.util.Collection;
 @DiscriminatorValue(value="R")
 public class Resident extends Users{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "res_id")
     private Integer id;
     private String username;

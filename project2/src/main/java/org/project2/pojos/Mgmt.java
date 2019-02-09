@@ -6,10 +6,8 @@ import java.util.Collection;
 
 @Entity
 @DiscriminatorValue(value="M")
-public class Mgmt {
+public class Mgmt extends Users{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "mgnt_id")
     private Integer id;
     private String username;

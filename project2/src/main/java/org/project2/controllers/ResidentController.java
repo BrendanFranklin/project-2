@@ -14,7 +14,7 @@ public class ResidentController {
     public ResidentController(){}
 
     @Autowired
-    public setResidentService(ResidentSerivice residentSerivice){
+    public void setResidentService(ResidentSerivice residentSerivice){
         this.residentSerivice = residentSerivice;
     }
 }
