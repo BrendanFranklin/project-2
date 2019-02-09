@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
+@Table(name = "privileges", schema = "pretense")
 public class Privilege {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -3,7 +3,7 @@ package org.project2.pojos;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Apartment", schema = "Pretense")
+@Table(name = "apartment", schema = "pretense")
 public class Apartment {
 
     @Id
