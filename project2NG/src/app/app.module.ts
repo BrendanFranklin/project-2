@@ -10,6 +10,8 @@ import { LogoutbarComponent } from './components/logoutbar/logoutbar.component';
 import { TicketlistComponent } from './components/ticketlist/ticketlist.component';
 import { DetailsmodalComponent } from './components/detailsmodal/detailsmodal.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

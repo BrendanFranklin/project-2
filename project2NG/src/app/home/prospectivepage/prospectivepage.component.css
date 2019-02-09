@@ -1,0 +1,8 @@
+.building{
+    background-image: url('../../../assets/images/aptimg.jpg');
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 1273px;
+    background-size: 100% 100%;
+    padding: 115px;
+}
