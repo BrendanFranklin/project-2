@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: org.project2.Project2ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 31.645 s <<< FAILURE! - in org.project2.Project2ApplicationTests
+contextLoads(org.project2.Project2ApplicationTests)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in org.project2.Project2Application: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on org.project2.pojos.Ticket.author references an unknown entity: java.lang.String
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on org.project2.pojos.Ticket.author references an unknown entity: java.lang.String
+
