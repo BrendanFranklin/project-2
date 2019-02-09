@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "mgnt", schema = "pretense")
+@DiscriminatorValue(value="M")
 public class Mgmt {
 
     @Id
