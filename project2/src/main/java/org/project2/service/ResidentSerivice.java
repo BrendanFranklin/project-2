@@ -1,18 +1,18 @@
 package org.project2.service;
 
-import org.project2.repository.TicketRepository;
+import org.project2.repository.ResidentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional
-public class TicketService {
+public class ResidentSerivice {
 
-    private TicketRepository ticketRepository;
+    private ResidentRepository residentRepository;
 
     @Autowired
-    public TicketService(TicketRepository ticketRepository){
-        this.ticketRepository = ticketRepository;
+    public ResidentSerivice(ResidentRepository residentRepository){
+        this.residentRepository = residentRepository;
     }
 }

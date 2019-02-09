@@ -4,22 +4,13 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "Users", schema = "pretense")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-        name = "Discriminator",
-        discriminatorType = DiscriminatorType.STRING
-)
-@DiscriminatorValue(value="U")
-public class Users {
+@DiscriminatorValue(value="R")
+public class Resident extends Users{
+
     @Id
-    @GeneratedValue
-    @Column(name = "user_id")
-    int user_id;
-
-    @Column(name = "user_name")
-    String user_classname;
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "res_id")
+    private Integer id;
     private String username;
     private String password;
 
@@ -35,26 +26,23 @@ public class Users {
     @JoinColumn(name = "role_id")
     private Integer role_id;
 
-    public Users(){}
-
-    public Users(String user_classname){
-        this.user_classname = user_classname;
+    public Resident() {
     }
 
-    public int getUser_id() {
-        return user_id;
+    public Resident(String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
+        this.apt_num = apt_num;
+        this.role_id = role_id;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public Integer getId() {
+        return id;
     }
 
-    public String getUser_classname() {
-        return user_classname;
-    }
-
-    public void setUser_classname(String user_classname) {
-        this.user_classname = user_classname;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUsername() {

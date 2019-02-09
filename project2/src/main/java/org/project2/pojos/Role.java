@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
+@Table(name = "roles", schema = "pretense")
 public class Role {
 
     @Id
@@ -12,7 +13,7 @@ public class Role {
     private String name;
 
     @ManyToMany(mappedBy="roles")
-    private Collection<Users> users;
+    private Collection<Resident> residents;
 
     @ManyToMany
     @JoinTable(
@@ -51,12 +52,12 @@ public class Role {
         this.name = name;
     }
 
-    public Collection<Users> getUsers() {
-        return users;
+    public Collection<Resident> getUsers() {
+        return residents;
     }
 
-    public void setUsers(Collection<Users> users) {
-        this.users = users;
+    public void setUsers(Collection<Resident> residents) {
+        this.residents = residents;
     }
 
     public Collection<Privilege> getPrivileges() {
