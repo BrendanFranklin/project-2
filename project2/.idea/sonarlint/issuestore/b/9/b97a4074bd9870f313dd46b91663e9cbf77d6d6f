@@ -1,5 +1,5 @@
 
 tsquid:S3008 "VRename this field "PROP_DB_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûüÇª8¦ÖžîŒ-
 zsquid:S3008!"WRename this field "PROP_DB_USER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€˜ºÃýÿÿÿÿ8¦ÖžîŒ-
-usquid:S3008""WRename this field "PROP_DB_PASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ýÌ™8¦ÖžîŒ-
 wsquid:S3008#"YRename this field "PROP_DB_DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùé»ƒ8¦ÖžîŒ-
+usquid:S3008""WRename this field "PROP_DB_PASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ýÌ™8¦ÖžîŒ-
