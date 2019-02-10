@@ -8,8 +8,8 @@ import java.util.List;
 @DiscriminatorValue(value="R")
 public class Resident extends Users{
 
-    @Column(name = "res_id")
-    private Integer id;
+    @Column(name = "user_id", insertable = false, updatable = false)
+    private Integer user_id;
     private String username;
     private String password;
 
@@ -36,11 +36,11 @@ public class Resident extends Users{
     }
 
     public Integer getId() {
-        return id;
+        return user_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {

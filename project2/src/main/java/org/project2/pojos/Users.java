@@ -18,7 +18,7 @@ public class Users {
     @Column(name = "user_id")
     int user_id;
 
-    @Column(name = "user_name")
+    @Column(name = "user_classname")
     String user_classname;
 
     private String username;
@@ -26,11 +26,11 @@ public class Users {
 
     @ManyToMany
     @JoinTable(
-            name="user_roles",
+            name="role_id",
             joinColumns=@JoinColumn(
                     name="user_id", referencedColumnName="user_id"),
             inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="id")
+                    name="role_id", referencedColumnName="role_id")
     )
     private Collection<Role> roles;
     private Integer apt_num;
@@ -105,5 +105,18 @@ public class Users {
 
     public void setRole_id(Integer role_id) {
         this.role_id = role_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "user_id=" + user_id +
+                ", user_classname='" + user_classname + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roles=" + roles +
+                ", apt_num=" + apt_num +
+                ", role_id=" + role_id +
+                '}';
     }
 }

@@ -9,22 +9,22 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int role_id;
     private String name;
 
-    @ManyToMany(mappedBy="roles")
-    private Collection<Resident> residents;
+    @OneToMany(mappedBy="roles")
+    private Collection<Users> users;
 
     @ManyToMany
     @JoinTable(
             name="roles_privileges",
             joinColumns=@JoinColumn(
                     name="role_id",
-                    referencedColumnName="id"
+                    referencedColumnName="role_id"
             ),
             inverseJoinColumns=@JoinColumn(
                     name="privilege_id",
-                    referencedColumnName="id"
+                    referencedColumnName="priv_id"
             )
     )
     private Collection<Privilege>privileges;
@@ -36,12 +36,12 @@ public class Role {
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
+    public int getRole_id() {
+        return role_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setRole_id(int role_id) {
+        this.role_id = role_id;
     }
 
     public String getName() {
@@ -52,12 +52,12 @@ public class Role {
         this.name = name;
     }
 
-    public Collection<Resident> getUsers() {
-        return residents;
+    public Collection<Users> getUsers() {
+        return users;
     }
 
-    public void setUsers(Collection<Resident> residents) {
-        this.residents = residents;
+    public void setUsers(Collection<Users> users) {
+        this.users = users;
     }
 
     public Collection<Privilege> getPrivileges() {
