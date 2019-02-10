@@ -24,14 +24,8 @@ public class Users {
     private String username;
     private String password;
 
-    @ManyToMany
-    @JoinTable(
-            name="role_id",
-            joinColumns=@JoinColumn(
-                    name="user_id", referencedColumnName="user_id"),
-            inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="role_id")
-    )
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
     private Collection<Role> roles;
     private Integer apt_num;
     private Integer role_id;

@@ -17,15 +17,15 @@ public class Role {
 
     @ManyToMany
     @JoinTable(
-            name="roles_privileges",
-            joinColumns=@JoinColumn(
+            name="rolestoprivileges",
+            joinColumns={@JoinColumn(
                     name="role_id",
                     referencedColumnName="role_id"
-            ),
-            inverseJoinColumns=@JoinColumn(
+            )},
+            inverseJoinColumns={@JoinColumn(
                     name="privilege_id",
                     referencedColumnName="priv_id"
-            )
+            )}
     )
     private Collection<Privilege>privileges;
 

@@ -13,19 +13,13 @@ public class Mgmt extends Users{
     private String username;
     private String password;
 
-    @ManyToMany
-    @JoinTable(
-            name="mgmt_roles",
-            joinColumns=@JoinColumn(
-                    name="user_id", referencedColumnName="user_id"),
-            inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="role_id")
-    )
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id")
     private Collection<Role> roles;
 
     public Mgmt() { }
 
-    public Mgmt(int id, String username, String password, Collection<Role> roles) {
+    public Mgmt(int user_id, String username, String password, Collection<Role> roles) {
         this.user_id = user_id;
         this.username = username;
         this.password = password;
