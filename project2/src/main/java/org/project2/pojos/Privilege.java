@@ -8,7 +8,7 @@ import java.util.Collection;
 public class Privilege {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int priv_id;
 
     private String name;
 
@@ -22,12 +22,12 @@ public class Privilege {
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
+    public int getId() {
+        return priv_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(int id) {
+        this.priv_id = priv_id;
     }
 
     public String getName() {

@@ -6,12 +6,10 @@ import java.util.Collection;
 
 @Entity
 @DiscriminatorValue(value="M")
-public class Mgmt {
+public class Mgmt extends Users{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "mgnt_id")
-    private Integer id;
+    @Column(name = "user_id", insertable = false, updatable = false)
+    private int user_id;
     private String username;
     private String password;
 
@@ -19,20 +17,27 @@ public class Mgmt {
     @JoinTable(
             name="mgmt_roles",
             joinColumns=@JoinColumn(
-                    name="mgmt_id", referencedColumnName="id"),
+                    name="user_id", referencedColumnName="user_id"),
             inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="id")
+                    name="role_id", referencedColumnName="role_id")
     )
     private Collection<Role> roles;
 
     public Mgmt() { }
 
-    public Integer getId() {
-        return id;
+    public Mgmt(int id, String username, String password, Collection<Role> roles) {
+        this.user_id = user_id;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {
