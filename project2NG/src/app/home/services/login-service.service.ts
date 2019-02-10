@@ -18,6 +18,7 @@ export class LoginService {
       JSON.stringify({username: username, password: password}),
       {
         headers: {
+          'Authorization': 'Bearer ',
           'Content-Type': 'application/json'
         }
       })

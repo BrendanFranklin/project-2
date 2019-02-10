@@ -867,6 +867,7 @@ var LoginService = /** @class */ (function () {
     LoginService.prototype.authenticate = function (url, username, password, success, fail) {
         return this.http.post(url, JSON.stringify({ username: username, password: password }), {
             headers: {
+                'Authorization': 'Bearer ',
                 'Content-Type': 'application/json'
             }
         })
