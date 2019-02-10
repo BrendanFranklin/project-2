@@ -469,8 +469,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    residentAuth: "http://localhost:8080/login_resident",
-    employeeAuth: "http://localhost:8080/login_mgmt"
+    residentAuth: "http://localhost:8080/login",
+    employeeAuth: "http://localhost:8080/login"
 };
 /*
  * For easier debugging in development mode, you can import the following file
