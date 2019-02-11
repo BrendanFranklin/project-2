@@ -13,8 +13,8 @@ public class Payment {
     private boolean paid;
     private boolean overdue;
 
-    @JoinColumn(name = "res_id", referencedColumnName = "res_id")
-    private Integer resident_id;
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    private Integer user_id;
 
     public Payment() {
     }
@@ -22,7 +22,7 @@ public class Payment {
     public Payment(boolean paid, boolean overdue, Integer resident_id) {
         this.paid = paid;
         this.overdue = overdue;
-        this.resident_id = resident_id;
+        this.user_id = user_id;
     }
 
     public Integer getId() {
@@ -49,11 +49,11 @@ public class Payment {
         this.overdue = overdue;
     }
 
-    public Integer getResident_id() {
-        return resident_id;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setResident_id(Integer resident_id) {
-        this.resident_id = resident_id;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 }

@@ -10,22 +10,23 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int role_id;
-    private String name;
+    private String role_name;
 
-    @OneToMany(mappedBy="roles")
+    @ManyToMany(mappedBy="roles")
     private Collection<Users> users;
 
     @ManyToMany
     @JoinTable(
-            name="roles_privileges",
-            joinColumns=@JoinColumn(
+            name="rolestoprivileges",
+            schema="pretense",
+            joinColumns={@JoinColumn(
                     name="role_id",
                     referencedColumnName="role_id"
-            ),
-            inverseJoinColumns=@JoinColumn(
-                    name="privilege_id",
+            )},
+            inverseJoinColumns={@JoinColumn(
+                    name="priv_id",
                     referencedColumnName="priv_id"
-            )
+            )}
     )
     private Collection<Privilege>privileges;
 
@@ -33,7 +34,7 @@ public class Role {
     }
 
     public Role(String name) {
-        this.name = name;
+        this.role_name = role_name;
     }
 
     public int getRole_id() {
@@ -45,11 +46,11 @@ public class Role {
     }
 
     public String getName() {
-        return name;
+        return role_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String role_name) {
+        this.role_name = role_name;
     }
 
     public Collection<Users> getUsers() {
