@@ -525,7 +525,7 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent.prototype.submit = function () {
         var _this = this;
-        this.login.authenticate(this.authUrl, this.username, this.password, function () { return _this.router.navigate([_this.locationUrl]); }, function (err) {
+        this.login.authenticate(this.authUrl, this.username, this.password, function () { console.log(localStorage.getItem('userToken')); }, function (err) {
             console.log(err);
             _this.shake = true;
             _this.username = "";
@@ -868,11 +868,12 @@ var LoginService = /** @class */ (function () {
         return this.http.post(url, JSON.stringify({ username: username, password: password }), {
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            observe: 'response'
         })
             .toPromise()
             .then(function (resp) {
-            localStorage.setItem('userToken', JSON.stringify(resp));
+            localStorage.setItem('userToken', JSON.stringify(resp.headers.get('Authorization')));
             success();
         }, function (err) {
             fail(err);
