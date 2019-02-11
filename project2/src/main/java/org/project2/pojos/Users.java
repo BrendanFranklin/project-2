@@ -12,8 +12,6 @@ public class Users {
     @Column(name = "user_id")
     int user_id;
 
-    @Column(name = "user_classname")
-    String user_classname;
 
     private String username;
     private String password;
@@ -37,8 +35,7 @@ public class Users {
 
     public Users(){}
 
-    public Users(String user_classname, String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
-        this.user_classname = user_classname;
+    public Users( String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
         this.username = username;
         this.password = password;
         this.roles = roles;
@@ -46,9 +43,6 @@ public class Users {
         this.role_id = role_id;
     }
 
-    public Users(String user_classname){
-        this.user_classname = user_classname;
-    }
 
     public int getUser_id() {
         return user_id;
@@ -58,13 +52,6 @@ public class Users {
         this.user_id = user_id;
     }
 
-    public String getUser_classname() {
-        return user_classname;
-    }
-
-    public void setUser_classname(String user_classname) {
-        this.user_classname = user_classname;
-    }
 
     public String getUsername() {
         return username;
@@ -110,7 +97,6 @@ public class Users {
     public String toString() {
         return "Users{" +
                 "user_id=" + user_id +
-                ", user_classname='" + user_classname + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", roles=" + roles +
