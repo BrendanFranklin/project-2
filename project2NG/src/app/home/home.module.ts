@@ -18,6 +18,7 @@ import { ApplicationComponent } from './application/application.component';
 import {AppartmentlistComponent} from './prospectivepage/components/appartmentlist/appartmentlist.component';
 import { AppformComponent } from './application/appform/appform.component';
 
+
 @NgModule({
   declarations: [AppartmentlistComponent, HomepageComponent, NavbarComponent,
      ProspectivepageComponent, FilterComponent,

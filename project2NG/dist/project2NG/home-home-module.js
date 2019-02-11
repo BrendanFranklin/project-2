@@ -63,7 +63,7 @@ var AppformComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.building{\r\n    background-image: url('aptimg.jpg');\r\n    background-repeat: no-repeat;\r\n    height: 500px;\r\n    width: 1273px;\r\n    background-size: 100% 100%;\r\n    padding: 115px;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9hcHBsaWNhdGlvbi9hcHBsaWNhdGlvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLG1DQUEwRDtJQUMxRCw0QkFBNEI7SUFDNUIsYUFBYTtJQUNiLGFBQWE7SUFDYiwwQkFBMEI7SUFDMUIsY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvYXBwbGljYXRpb24vYXBwbGljYXRpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4uYnVpbGRpbmd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvYXB0aW1nLmpwZycpO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGhlaWdodDogNTAwcHg7XHJcbiAgICB3aWR0aDogMTI3M3B4O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XHJcbiAgICBwYWRkaW5nOiAxMTVweDtcclxufVxyXG5cclxuIl19 */"
+module.exports = "\r\n.building{\r\n    background-image: url('aptimg.jpg');\r\n    background-repeat: no-repeat;\r\n    height: 60%;\r\n    width: 100%;\r\n    background-size: 100% 100%;\r\n    padding: 115px;\r\n}\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9hcHBsaWNhdGlvbi9hcHBsaWNhdGlvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLG1DQUEwRDtJQUMxRCw0QkFBNEI7SUFDNUIsV0FBVztJQUNYLFdBQVc7SUFDWCwwQkFBMEI7SUFDMUIsY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvYXBwbGljYXRpb24vYXBwbGljYXRpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4uYnVpbGRpbmd7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoJy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvYXB0aW1nLmpwZycpO1xyXG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICAgIGhlaWdodDogNjAlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kLXNpemU6IDEwMCUgMTAwJTtcclxuICAgIHBhZGRpbmc6IDExNXB4O1xyXG59XHJcblxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -179,7 +179,7 @@ var EmployeeLoginPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".footer{\r\n    background-color: black;\r\n    height: 150px;\r\n    text-align: left;\r\n    color: gold;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1QkFBdUI7SUFDdkIsYUFBYTtJQUNiLGdCQUFnQjtJQUNoQixXQUFXOztBQUVmIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9vdGVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgICBoZWlnaHQ6IDE1MHB4O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGNvbG9yOiBnb2xkO1xyXG5cclxufVxyXG4iXX0= */"
+module.exports = "\r\n.footer{\r\n    background-color: black;\r\n    text-align: left;\r\n    color: gold;\r\n    height: auto;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksdUJBQXVCO0lBQ3ZCLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsWUFBWTs7QUFFaEIiLCJmaWxlIjoic3JjL2FwcC9ob21lL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4uZm9vdGVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgY29sb3I6IGdvbGQ7XHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcblxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -190,7 +190,7 @@ module.exports = ".footer{\r\n    background-color: black;\r\n    height: 150px;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"footer\" >\r\n  <div class = \"address\">\r\n    123 Fake St\r\n    <br>\r\n    Anytown, USA 45678\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"body\">\r\n<div class = \"footer\" >\r\n  <div class = \"address\">\r\n    123 Fake St\r\n    <br>\r\n    Anytown, USA 45678\r\n  </div>\r\n</div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -235,7 +235,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@font-face{\r\n    font-family: 'Scriptina';\r\n    src: url('SCRIPTIN.ttf') format('truetype');\r\n}\r\n\r\n.banner{\r\n    background-color: black;\r\n    height: 200px;\r\n\r\n}\r\n\r\n.banner-text{\r\n\r\n    text-align: center;\r\n    color: gold;\r\n    font-family: 'Scriptina';\r\n    font-size: 80pt;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsMkNBQXlFO0FBQzdFOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLGFBQWE7O0FBRWpCOztBQUNBOztJQUVJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsd0JBQXdCO0lBQ3hCLGVBQWU7O0FBRW5CIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNle1xyXG4gICAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gICAgc3JjOiB1cmwoLi4vLi4vLi4vYXNzZXRzL2ZvbnRzL3NjcmlwdGluYS9TQ1JJUFRJTi50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxufVxyXG5cclxuLmJhbm5lcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgaGVpZ2h0OiAyMDBweDtcclxuXHJcbn1cclxuLmJhbm5lci10ZXh0e1xyXG5cclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGNvbG9yOiBnb2xkO1xyXG4gICAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gICAgZm9udC1zaXplOiA4MHB0O1xyXG5cclxufVxyXG4iXX0= */"
+module.exports = "@font-face{\r\n    font-family: 'Scriptina';\r\n    src: url('SCRIPTIN.ttf') format('truetype');\r\n}\r\n\r\n.banner{\r\n    background-color: black;\r\n    height: auto;\r\n\r\n}\r\n\r\n.banner-text{\r\n\r\n    text-align: center;\r\n    color: gold;\r\n    font-family: 'Scriptina';\r\n    font-size: 80pt;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsMkNBQXlFO0FBQzdFOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7O0FBRWhCOztBQUNBOztJQUVJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsd0JBQXdCO0lBQ3hCLGVBQWU7O0FBRW5CIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNle1xyXG4gICAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gICAgc3JjOiB1cmwoLi4vLi4vLi4vYXNzZXRzL2ZvbnRzL3NjcmlwdGluYS9TQ1JJUFRJTi50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxufVxyXG5cclxuLmJhbm5lcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG5cclxufVxyXG4uYmFubmVyLXRleHR7XHJcblxyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgY29sb3I6IGdvbGQ7XHJcbiAgICBmb250LWZhbWlseTogJ1NjcmlwdGluYSc7XHJcbiAgICBmb250LXNpemU6IDgwcHQ7XHJcblxyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -246,7 +246,7 @@ module.exports = "@font-face{\r\n    font-family: 'Scriptina';\r\n    src: url('
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"banner\">\r\n  <div class = \"banner-text\">\r\n    the pretense\r\n  </div>\r\n</div>\r\n"
+module.exports = "\r\n<div class = \"banner\">\r\n  <div class = \"banner-text\">\r\n    the pretense\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -426,7 +426,7 @@ var HomeModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body{\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n.building{\r\n  background-image: url('aptimg.jpg');\r\n  background-repeat: no-repeat;\r\n  height: 500px;\r\n  width: 1273px;\r\n  background-size: 100% 100%;\r\n  padding: 115px;\r\n}\r\n.welcome{\r\n  color: gold;\r\n  font-size: 40pt;\r\n  font-family: \"Segoe Script\";\r\n  text-align: center;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lcGFnZS9ob21lcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztFQUNYLFlBQVk7QUFDZDtBQUNBO0VBQ0UsbUNBQTBEO0VBQzFELDRCQUE0QjtFQUM1QixhQUFhO0VBQ2IsYUFBYTtFQUNiLDBCQUEwQjtFQUMxQixjQUFjO0FBQ2hCO0FBRUE7RUFDRSxXQUFXO0VBQ1gsZUFBZTtFQUNmLDJCQUEyQjtFQUMzQixrQkFBa0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWVwYWdlL2hvbWVwYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5e1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG4uYnVpbGRpbmd7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi9hc3NldHMvaW1hZ2VzL2FwdGltZy5qcGcnKTtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGhlaWdodDogNTAwcHg7XHJcbiAgd2lkdGg6IDEyNzNweDtcclxuICBiYWNrZ3JvdW5kLXNpemU6IDEwMCUgMTAwJTtcclxuICBwYWRkaW5nOiAxMTVweDtcclxufVxyXG5cclxuLndlbGNvbWV7XHJcbiAgY29sb3I6IGdvbGQ7XHJcbiAgZm9udC1zaXplOiA0MHB0O1xyXG4gIGZvbnQtZmFtaWx5OiBcIlNlZ29lIFNjcmlwdFwiO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5cclxuIl19 */"
+module.exports = "\r\n.building{\r\n  background-image: url('aptimg.jpg');\r\n  background-repeat: no-repeat;\r\n  background-size: 100% 100%;\r\n  padding: 115px;\r\n}\r\n\r\n.welcome {\r\n  color: gold;\r\n  font-family: \"Segoe Script\";\r\n  text-align: center;\r\n\r\n  height: 100%;\r\n\r\n}\r\n\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lcGFnZS9ob21lcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFLG1DQUEwRDtFQUMxRCw0QkFBNEI7RUFDNUIsMEJBQTBCO0VBQzFCLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsMkJBQTJCO0VBQzNCLGtCQUFrQjs7RUFFbEIsWUFBWTs7QUFFZCIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4uYnVpbGRpbmd7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKCcuLi8uLi8uLi9hc3NldHMvaW1hZ2VzL2FwdGltZy5qcGcnKTtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG4gIHBhZGRpbmc6IDExNXB4O1xyXG59XHJcblxyXG4ud2VsY29tZSB7XHJcbiAgY29sb3I6IGdvbGQ7XHJcbiAgZm9udC1mYW1pbHk6IFwiU2Vnb2UgU2NyaXB0XCI7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG5cclxuICBoZWlnaHQ6IDEwMCU7XHJcblxyXG59XHJcblxyXG5cclxuIl19 */"
 
 /***/ }),
 
@@ -437,7 +437,7 @@ module.exports = "body{\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n.building{\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\r\n<div class = \"building\">\r\n  <app-navbar></app-navbar>\r\n  <div class =\"welcome\">\r\n    <h1>Welcome Home...</h1>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "\r\n<app-header></app-header>\r\n<div class = \"building\">\r\n  <app-navbar></app-navbar>\r\n  <div class =\"welcome\">\r\n    <h1>Welcome Home...</h1>\r\n  </div>\r\n</div>\r\n<app-footer></app-footer>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
