@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
 
   submit() {
      this.login.authenticate(this.authUrl, this.username, this.password,
-     () => this.router.navigate([this.locationUrl]),
+     () => //this.router.navigate([this.locationUrl]),
+     {console.log(localStorage.getItem('userToken'))},
      (err) => {
        console.log(err);
        this.shake=true;

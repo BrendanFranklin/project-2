@@ -19,11 +19,12 @@ export class LoginService {
       {
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        observe: 'response'
       })
       .toPromise()
       .then((resp) => {
-        localStorage.setItem('userToken', JSON.stringify(resp));
+        localStorage.setItem('userToken', JSON.stringify(resp.headers.get('Authorization')));
         success();
       },
       (err) => {
