@@ -10,7 +10,7 @@ public class Privilege {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int priv_id;
 
-    private String name;
+    private String priv_name;
 
     @ManyToMany(mappedBy = "privileges")
     private Collection<Role> roles;
@@ -18,8 +18,8 @@ public class Privilege {
     public Privilege() {
     }
 
-    public Privilege(String name) {
-        this.name = name;
+    public Privilege(String priv_name) {
+        this.priv_name = priv_name;
     }
 
     public int getId() {
@@ -31,11 +31,11 @@ public class Privilege {
     }
 
     public String getName() {
-        return name;
+        return priv_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String priv_name) {
+        this.priv_name = priv_name;
     }
 
     public Collection<Role> getRoles() {

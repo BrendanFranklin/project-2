@@ -6,12 +6,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "Users", schema = "pretense")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-        name = "Discriminator",
-        discriminatorType = DiscriminatorType.STRING
-)
-@DiscriminatorValue(value="U")
 public class Users {
     @Id
     @GeneratedValue
@@ -24,8 +18,19 @@ public class Users {
     private String username;
     private String password;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "role_id")
+    @ManyToMany
+    @JoinTable(
+            name="userstoroles",
+            schema="pretense",
+            joinColumns={@JoinColumn(
+                    name="user_id",
+                    referencedColumnName="user_id"
+            )},
+            inverseJoinColumns={@JoinColumn(
+                    name="role_id",
+                    referencedColumnName="role_id"
+            )}
+    )
     private Collection<Role> roles;
     private Integer apt_num;
     private Integer role_id;
