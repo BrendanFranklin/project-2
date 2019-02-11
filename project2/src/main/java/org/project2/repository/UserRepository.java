@@ -1,13 +1,13 @@
 package org.project2.repository;
 
-import org.project2.pojos.Resident;
+import org.project2.pojos.Users;
 
 import java.util.List;
 
 public interface UserRepository {
 
     //find all residents
-    List<Resident> findAll();
+    List<Users> findAll();
 
     //get rent by resident
     int viewRent();
