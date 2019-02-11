@@ -6,31 +6,28 @@ import java.util.List;
 
 @Entity
 @Table(name = "Users", schema = "pretense")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-        name = "Discriminator",
-        discriminatorType = DiscriminatorType.STRING
-)
-@DiscriminatorValue(value="U")
 public class Users {
     @Id
     @GeneratedValue
     @Column(name = "user_id")
     int user_id;
 
-    @Column(name = "user_name")
-    String user_classname;
 
     private String username;
     private String password;
 
     @ManyToMany
     @JoinTable(
-            name="user_roles",
-            joinColumns=@JoinColumn(
-                    name="user_id", referencedColumnName="user_id"),
-            inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="id")
+            name="userstoroles",
+            schema="pretense",
+            joinColumns={@JoinColumn(
+                    name="user_id",
+                    referencedColumnName="user_id"
+            )},
+            inverseJoinColumns={@JoinColumn(
+                    name="role_id",
+                    referencedColumnName="role_id"
+            )}
     )
     private Collection<Role> roles;
     private Integer apt_num;
@@ -38,8 +35,7 @@ public class Users {
 
     public Users(){}
 
-    public Users(String user_classname, String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
-        this.user_classname = user_classname;
+    public Users( String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
         this.username = username;
         this.password = password;
         this.roles = roles;
@@ -47,9 +43,6 @@ public class Users {
         this.role_id = role_id;
     }
 
-    public Users(String user_classname){
-        this.user_classname = user_classname;
-    }
 
     public int getUser_id() {
         return user_id;
@@ -59,13 +52,6 @@ public class Users {
         this.user_id = user_id;
     }
 
-    public String getUser_classname() {
-        return user_classname;
-    }
-
-    public void setUser_classname(String user_classname) {
-        this.user_classname = user_classname;
-    }
 
     public String getUsername() {
         return username;
@@ -105,5 +91,17 @@ public class Users {
 
     public void setRole_id(Integer role_id) {
         this.role_id = role_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "user_id=" + user_id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roles=" + roles +
+                ", apt_num=" + apt_num +
+                ", role_id=" + role_id +
+                '}';
     }
 }

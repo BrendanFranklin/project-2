@@ -11,10 +11,10 @@ public class Ticket {
     @Column(name = "ticket_id")
     private int id;
 
-    @JoinColumn(name = "author", referencedColumnName = "res_id")
+    @JoinColumn(name = "author", referencedColumnName = "user_id")
     private String author;
 
-    @JoinColumn(name = "resolver", referencedColumnName = "mgmt_id")
+    @JoinColumn(name = "resolver", referencedColumnName = "user_id")
     private String resolver;
 
     @Column(name = "notes")

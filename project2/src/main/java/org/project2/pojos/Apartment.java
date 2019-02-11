@@ -17,7 +17,6 @@ public class Apartment {
     @Column(name = "rent")
     private int rent;
 
-
     public Apartment() { }
 
     public Apartment(Integer apt_num) {

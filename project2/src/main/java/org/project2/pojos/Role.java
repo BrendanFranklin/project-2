@@ -9,23 +9,24 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private String name;
+    private int role_id;
+    private String role_name;
 
     @ManyToMany(mappedBy="roles")
-    private Collection<Resident> residents;
+    private Collection<Users> users;
 
     @ManyToMany
     @JoinTable(
-            name="roles_privileges",
-            joinColumns=@JoinColumn(
+            name="rolestoprivileges",
+            schema="pretense",
+            joinColumns={@JoinColumn(
                     name="role_id",
-                    referencedColumnName="id"
-            ),
-            inverseJoinColumns=@JoinColumn(
-                    name="privilege_id",
-                    referencedColumnName="id"
-            )
+                    referencedColumnName="role_id"
+            )},
+            inverseJoinColumns={@JoinColumn(
+                    name="priv_id",
+                    referencedColumnName="priv_id"
+            )}
     )
     private Collection<Privilege>privileges;
 
@@ -33,31 +34,31 @@ public class Role {
     }
 
     public Role(String name) {
-        this.name = name;
+        this.role_name = role_name;
     }
 
-    public Integer getId() {
-        return id;
+    public int getRole_id() {
+        return role_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setRole_id(int role_id) {
+        this.role_id = role_id;
     }
 
     public String getName() {
-        return name;
+        return role_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String role_name) {
+        this.role_name = role_name;
     }
 
-    public Collection<Resident> getUsers() {
-        return residents;
+    public Collection<Users> getUsers() {
+        return users;
     }
 
-    public void setUsers(Collection<Resident> residents) {
-        this.residents = residents;
+    public void setUsers(Collection<Users> users) {
+        this.users = users;
     }
 
     public Collection<Privilege> getPrivileges() {

@@ -1,10 +1,11 @@
 package org.project2.service;
 
 import org.project2.pojos.Users;
-import org.project2.repository.AppUserRepository;
+import org.project2.repository.ApplicationUserRepository;
 import org.project2.pojos.Privilege;
 import org.project2.pojos.Role;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -19,23 +20,26 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
+@Qualifier
 public class UserDetailServiceImpl implements UserDetailsService {
-    private AppUserRepository appUserRepository;
+    private ApplicationUserRepository applicationUserRepository;
 
     @Autowired
-    public UserDetailServiceImpl(AppUserRepository appUserRepository) {
-        this.appUserRepository = appUserRepository;
+    public UserDetailServiceImpl(ApplicationUserRepository applicationUserRepository) {
+        this.applicationUserRepository = applicationUserRepository;
     }
 
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Users users = appUserRepository.findByUsername(username);
+        Users users = applicationUserRepository.findByUsername(username);
         if(users == null) {
             throw new UsernameNotFoundException(username);
         }
         Collection authorities = getAuthorities(users.getRoles());
-        return new User(users.getUsername(), users.getPassword(), authorities);
+        User user = new User(users.getUsername(), users.getPassword(), authorities);
+        System.out.println("from the DB:" + user);
+        return user;
     }
 
 

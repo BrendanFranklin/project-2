@@ -3,6 +3,7 @@ package org.project2.config;
 import org.project2.security.JWTAuthenticationFilter;
 import org.project2.security.JWTAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -34,7 +35,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
-    public WebConfig(UserDetailsService userDetailsService,
+    public WebConfig(@Qualifier UserDetailsService userDetailsService,
                      BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
@@ -49,6 +50,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
     }
 
@@ -64,5 +66,6 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
                 //disable sessions
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
+        http.headers().frameOptions().disable();
     }
 }
