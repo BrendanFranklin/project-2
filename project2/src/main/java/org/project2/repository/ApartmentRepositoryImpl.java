@@ -16,6 +16,13 @@ public class ApartmentRepositoryImpl implements ApartmentRepository{
 
     @Override
     public List<Apartment> findEmpty(boolean occupied) {
+        Query query = entityManager.createNativeQuery("Select * from pretense.apartment where occupied =? ");
+        query.setParameter(1,occupied);
+
+        if(!query.getResultList().isEmpty()){
+            List<Apartment> apartments = (List<Apartment>) query.getResultList();
+            return apartments;
+        }
         return null;
     }
 

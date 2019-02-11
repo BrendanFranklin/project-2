@@ -10,8 +10,8 @@ public interface ApplicationRepository {
     List<Application> findAll();
 
     //open a application
-    int openApplication();
+    int openApp();
 
     //submit a application
-    void updateApplication();
+    void updateApp();
 }

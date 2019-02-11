@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class ResidentRepositoryImpl implements ResidentRepository{
+public class UserRepositoryImpl implements UserRepository {
     @Override
     public List<Resident> findAll() {
         return null;

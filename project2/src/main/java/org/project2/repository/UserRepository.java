@@ -4,7 +4,7 @@ import org.project2.pojos.Resident;
 
 import java.util.List;
 
-public interface ResidentRepository {
+public interface UserRepository {
 
     //find all residents
     List<Resident> findAll();

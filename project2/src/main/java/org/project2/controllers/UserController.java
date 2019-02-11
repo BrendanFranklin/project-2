@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("resident")
-public class ResidentController {
+public class UserController {
 
     private ResidentService residentService;
 
-    public ResidentController(){}
+    public UserController(){}
 
     @Autowired
     public void setResidentService(ResidentService residentService){

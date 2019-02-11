@@ -9,7 +9,7 @@ public interface TicketRepository {
     List<Ticket> findAll();
 
     // returns the tickets of a specific resident
-    List<Ticket> findResidentTickets(int res_id);
+    List<Ticket> findResidentTickets(int user_id);
 
     // returns a ticket based on a searched ID
     Ticket findTicketById(int ticket_id);
