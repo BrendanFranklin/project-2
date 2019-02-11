@@ -1,11 +1,10 @@
 package org.project2.service;
 
-import org.project2.data.ApplicationUserRepository;
-import org.project2.pojos.Privilege;
 import org.project2.pojos.Users;
+import org.project2.repository.ApplicationUserRepository;
+import org.project2.pojos.Privilege;
 import org.project2.pojos.Role;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -38,6 +37,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         Collection authorities = getAuthorities(users.getRoles());
         return new User(users.getUsername(), users.getPassword(), authorities);
     }
+
 
     public Collection<? extends GrantedAuthority> getAuthorities(Collection<Role> roles) {
         return getGrantedAuthorities(getPrivileges(roles));

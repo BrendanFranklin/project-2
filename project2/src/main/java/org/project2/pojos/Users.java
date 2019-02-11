@@ -2,40 +2,68 @@ package org.project2.pojos;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "Users", schema = "pretense")
 public class Users {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue
+    @Column(name = "user_id")
+    int user_id;
+
+    @Column(name = "user_classname")
+    String user_classname;
+
     private String username;
     private String password;
 
     @ManyToMany
     @JoinTable(
-            name="users_roles",
-            joinColumns=@JoinColumn(
-                    name="user_id", referencedColumnName="id"),
-            inverseJoinColumns=@JoinColumn(
-                    name="role_id", referencedColumnName="id")
+            name="userstoroles",
+            schema="pretense",
+            joinColumns={@JoinColumn(
+                    name="user_id",
+                    referencedColumnName="user_id"
+            )},
+            inverseJoinColumns={@JoinColumn(
+                    name="role_id",
+                    referencedColumnName="role_id"
+            )}
     )
     private Collection<Role> roles;
+    private Integer apt_num;
+    private Integer role_id;
 
-    public Users() {
-    }
+    public Users(){}
 
-    public Users(String username, String password) {
+    public Users(String user_classname, String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
+        this.user_classname = user_classname;
         this.username = username;
         this.password = password;
+        this.roles = roles;
+        this.apt_num = apt_num;
+        this.role_id = role_id;
     }
 
-    public Integer getId() {
-        return id;
+    public Users(String user_classname){
+        this.user_classname = user_classname;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getUser_classname() {
+        return user_classname;
+    }
+
+    public void setUser_classname(String user_classname) {
+        this.user_classname = user_classname;
     }
 
     public String getUsername() {
@@ -60,5 +88,34 @@ public class Users {
 
     public void setRoles(Collection<Role> roles) {
         this.roles = roles;
+    }
+
+    public Integer getApt_num() {
+        return apt_num;
+    }
+
+    public void setApt_num(Integer apt_num) {
+        this.apt_num = apt_num;
+    }
+
+    public Integer getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(Integer role_id) {
+        this.role_id = role_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "user_id=" + user_id +
+                ", user_classname='" + user_classname + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roles=" + roles +
+                ", apt_num=" + apt_num +
+                ", role_id=" + role_id +
+                '}';
     }
 }

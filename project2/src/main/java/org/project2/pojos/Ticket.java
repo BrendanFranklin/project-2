@@ -3,7 +3,7 @@ package org.project2.pojos;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "Ticket", schema = "Pretense")
+@Table (name = "tickets", schema = "Pretense")
 public class Ticket {
 
     @Id
@@ -11,12 +11,10 @@ public class Ticket {
     @Column(name = "ticket_id")
     private int id;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "author", referencedColumnName = "user_id")
     private String author;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "resolver", referencedColumnName = "user_id")
     private String resolver;
 
     @Column(name = "notes")

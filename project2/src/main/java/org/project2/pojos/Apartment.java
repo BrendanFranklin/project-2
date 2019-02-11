@@ -3,30 +3,24 @@ package org.project2.pojos;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Apartment", schema = "Pretense")
+@Table(name = "apartment", schema = "pretense")
 public class Apartment {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "apt_id")
-    private Integer id;
-
     @Column(name = "apt_num")
     private Integer apt_num;
 
+    @Column(name = "apt_style")
+    private String style;
+
+    @Column(name = "rent")
+    private int rent;
 
     public Apartment() { }
 
     public Apartment(Integer apt_num) {
         this.apt_num = apt_num;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public Integer getApt_num() {
@@ -35,5 +29,21 @@ public class Apartment {
 
     public void setApt_num(Integer apt_num) {
         this.apt_num = apt_num;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
+    public int getRent() {
+        return rent;
+    }
+
+    public void setRent(int rent) {
+        this.rent = rent;
     }
 }

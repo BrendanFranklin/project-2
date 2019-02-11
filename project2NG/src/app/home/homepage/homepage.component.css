@@ -1,20 +1,49 @@
-body{
-  width: 100%;
-  height: 100%;
+@font-face{
+  font-family: 'Scriptina';
+  src: url(../../../assets/fonts/scriptina/SCRIPTIN.ttf) format('truetype');
+}
+
+.banner{
+  background-color: black;
+  height: 200px;
+
+}
+.banner-text{
+
+  text-align: center;
+  color: gold;
+  font-family: 'Scriptina';
+  font-size: 80pt;
+
 }
 .building{
   background-image: url('../../../assets/images/aptimg.jpg');
   background-repeat: no-repeat;
-  height: 500px;
-  width: 1273px;
+  height: 700px;
+  width: 100%;
   background-size: 100% 100%;
   padding: 115px;
 }
-
-.welcome{
+.footer{
+  background-color: black;
+  height: 150px;
+  text-align: left;
   color: gold;
-  font-size: 40pt;
-  font-family: "Segoe Script";
-  text-align: center;
+
 }
 
+.navButtons{
+  text-align: center;
+
+}
+
+.button1{
+  background-color: black;
+  color: gold;
+  border: none;
+  margin: 5px;
+  border-radius: 12px;
+  height: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13pt;
+}
