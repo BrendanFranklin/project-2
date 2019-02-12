@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
        this.username="";
        this.password="";
        //this.location.go(`${environment.failLoginUrl}?status=${err.status}&msg=${err.error}`)
-     });
+     }))
   }
   noShake(){
     this.shake=false;

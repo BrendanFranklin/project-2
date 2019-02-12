@@ -31,7 +31,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
         System.out.println(header);
 
         if(header == null || !header.startsWith(PREFIX)) {
-            System.out.println("doFilterInternal if statement");
+            System.out.println("Incorrect Header");
             chain.doFilter(request, response);
             return;
         }

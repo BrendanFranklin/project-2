@@ -4,14 +4,19 @@
 
 export const environment = {
   production: false,
+
+  publicOpenApts: "http://localhost:8080/apt/emptyApt",
+
   residentAuth: "http://localhost:8080/login",
   employeeAuth: "http://localhost:8080/login",
  
-  managerGetTickets: "TODO",
-  managerResolveTicket: "TODO",
+  managerGetTickets: "http://localhost:8080/ticket/allTicket",
+  managerResolveTicket: "http://localhost:8080/ticket/ticketRes",
+
+  managerGetApt: "http://localhost:8080/apt/allApt",
 
 
-  residentGetTickets: "TODO",
+  residentGetTickets: "http://localhost:8080/ticket/ticketId",
   residentGetDetails: "TOOD",
   residentPayRent: "TODO",
 
