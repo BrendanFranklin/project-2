@@ -12,12 +12,12 @@ export class ProspecthandlerService {
   ) { }
   getOpenAppartments(url: string, success, fail ){
     this.http.get(url).toPromise().then((resp)=>
-    {success(resp)},
+    success(resp),
      fail())
   }
 
   submitApplication(url: string, application: Application){
-    this.http.put<Application>(url, JSON.stringify(application)).subscribe();
+    this.http.post<Application>(url, JSON.stringify(application)).subscribe();
   }
 
 

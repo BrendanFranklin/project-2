@@ -5,7 +5,16 @@
 export const environment = {
   production: false,
   residentAuth: "http://localhost:8080/login",
-  employeeAuth: "http://localhost:8080/login"
+  employeeAuth: "http://localhost:8080/login",
+ 
+  managerGetTickets: "TODO",
+  managerResolveTicket: "TODO",
+
+
+  residentGetTickets: "TODO",
+  residentGetDetails: "TOOD",
+  residentPayRent: "TODO",
+
 };
 
 /*

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ticket } from 'src/app/models/ticket';
+import {TickethandlerService} from '../../services/tickethandler.service'
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-ticket-page',
@@ -9,13 +11,24 @@ import { Ticket } from 'src/app/models/ticket';
 export class TicketPageComponent implements OnInit {
 
   manager = true;
+  tickets: Ticket[];
 
-  constructor() { }
+  constructor(private ticketHandler: TickethandlerService) { }
 
   ngOnInit() {
+    this.getTickets();
   }
   resolve(ticket: Ticket){
-    console.log(ticket);
-    //TODO connect it to http
+    this.ticketHandler.resolveTicket(
+      environment.managerResolveTicket,
+      ticket,
+      ()=>this.getTickets(),
+      (err)=>console.log(err))
+  }
+  getTickets(){
+    this.ticketHandler.getTickets(
+      environment.managerGetTickets,
+      (tickets: Ticket[])=>{this.tickets=tickets},
+      (err)=>console.log(err))
   }
 }
