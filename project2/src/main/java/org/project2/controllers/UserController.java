@@ -3,6 +3,7 @@ package org.project2.controllers;
 import org.project2.repository.ApplicationUserRepository;
 import org.project2.pojos.Users;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,5 +28,9 @@ public class UserController {
     public void signUp(@RequestBody Users user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         applicationUserRepository.save(user);
+    }
+
+    public Users getCurrentUser(@AuthenticationPrincipal Users users){
+        return users;
     }
 }

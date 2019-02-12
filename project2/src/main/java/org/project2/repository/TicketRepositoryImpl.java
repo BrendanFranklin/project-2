@@ -60,8 +60,16 @@ public class TicketRepositoryImpl implements TicketRepository{
 
     @Override
     public void updateTicket(int ticket_id) {
+        String author = "";
+        String resolver = "";
+        String notes = "";
 
-        Query query = entityManager.createNativeQuery("Insert into pretense.ticket");
+        Query query = entityManager.createNativeQuery("Insert into pretense.ticket values (?,?,?");
+        query.setParameter(1,author);
+        query.setParameter(2, resolver);
+        query.setParameter(3, notes);
+
+
         
     }
 }
