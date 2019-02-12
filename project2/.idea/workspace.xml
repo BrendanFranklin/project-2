@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbc2c071-a91c-46a7-95d1-2f0ef1261f15" name="Default Changelist" comment="" />
+    <list default="true" id="4edf0c7d-06f4-42f7-a5cb-60defffb332e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -200,12 +199,11 @@
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1385" />
+    <option name="height" value="790" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="437" />
@@ -364,8 +362,8 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bbc2c071-a91c-46a7-95d1-2f0ef1261f15" name="Default Changelist" comment="" />
-      <created>1549418898827</created>
+      <changelist id="4edf0c7d-06f4-42f7-a5cb-60defffb332e" name="Default Changelist" comment="" />
+      <created>1549828588333</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549418898827</updated>
@@ -389,11 +387,11 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3274648" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32765958" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4113475" />
@@ -693,6 +691,7 @@
           <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#Role#0;class#Role#0" />
           </folding>
         </state>
       </provider>

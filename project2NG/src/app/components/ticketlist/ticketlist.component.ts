@@ -23,8 +23,8 @@ export class TicketlistComponent implements OnInit {
     const modalRef = this.modalService.open(DetailsmodalComponent)
     modalRef.componentInstance.ticket = ticket;
     modalRef.componentInstance.employee = this.employee;
-    modalRef.componentInstance.resolveTicket.subscribe((ticket: Ticket)=>{
-    this.resolveTicket.emit(ticket);
+    modalRef.componentInstance.resolveTicket.subscribe((ticket)=>{
+      this.resolveTicket.emit(ticket);
     })
   }
 }

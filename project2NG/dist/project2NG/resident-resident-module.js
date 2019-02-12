@@ -18,7 +18,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>"
 
 /***/ }),
 
