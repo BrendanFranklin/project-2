@@ -11,6 +11,9 @@ public interface TicketRepository {
     // returns the tickets of a specific resident
     List<Ticket> findResidentTickets(int user_id);
 
+    // returns a specific resident's tickets
+    List<Ticket> findResidentTickets();
+
     // returns a ticket based on a searched ID
     Ticket findTicketById(int ticket_id);
 

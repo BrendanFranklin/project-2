@@ -10,5 +10,5 @@ public interface UserRepository {
     List<Users> findAll();
 
     //get rent by resident
-    int viewRent();
+    int viewRole(String username);
 }

@@ -4,6 +4,7 @@ import org.project2.pojos.Ticket;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import org.springframework.security.core.Authentication;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
@@ -16,7 +17,10 @@ public class TicketRepositoryImpl implements TicketRepository{
 
     @Override
     public List<Ticket> findAll() {
-        Query query = entityManager.createNativeQuery("Select * from pretense.tickets");
+        Query query = entityManager.createNativeQuery("Select " +
+                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "from pretense.tickets " +
+                "left join pretense.users on author = user_id");
 
         if(!query.getResultList().isEmpty()){
             List<Ticket> tickets = (List<Ticket>) query.getResultList();
@@ -28,8 +32,28 @@ public class TicketRepositoryImpl implements TicketRepository{
     @Override
     public List<Ticket> findResidentTickets(int user_id) {
 
-        Query query = entityManager.createNativeQuery("Select * from pretense.tickets where author = ?");
+        Query query = entityManager.createNativeQuery("Select " +
+                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "from pretense.tickets " +
+                "left join pretense.users on author = user_id " +
+                "where author = ?");
         query.setParameter(1,user_id);
+
+        if(!query.getResultList().isEmpty()){
+            List<Ticket> tickets = (List<Ticket>) query.getResultList();
+            return tickets;
+        }
+        return null;
+    }
+
+    @Override
+    public List<Ticket> findResidentTickets() {
+        Query query = entityManager.createNativeQuery("Select " +
+                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "from pretense.tickets " +
+                "left join pretense.users on author = user_id " +
+                "where author = ?");
+        query.setParameter(1, 0);
 
         if(!query.getResultList().isEmpty()){
             List<Ticket> tickets = (List<Ticket>) query.getResultList();
@@ -41,7 +65,11 @@ public class TicketRepositoryImpl implements TicketRepository{
     @Override
     public Ticket findTicketById(int ticket_id) {
 
-        Query query = entityManager.createNativeQuery("Select * from prestense.tickets where id=?");
+        Query query = entityManager.createNativeQuery("Select " +
+                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "from prestense.tickets " +
+                "left join pretense.users on author = user_id " +
+                "where id=?");
         query.setParameter(1, ticket_id);
 
         if(!query.getResultList().isEmpty()){
