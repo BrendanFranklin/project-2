@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
+@SuppressWarnings("ALL")
 @Repository
 public class ApartmentRepositoryImpl implements ApartmentRepository{
     @PersistenceContext

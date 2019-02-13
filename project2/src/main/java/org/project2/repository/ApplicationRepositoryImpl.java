@@ -27,12 +27,20 @@ public class ApplicationRepositoryImpl implements ApplicationRepository{
     }
 
     @Override
-    public int openApp() {
-        return 0;
+    public int openApp(String first_name, String last_name, String email, String phone) {
+        Query query = entityManager.createNativeQuery("INSERT into pretense.applications " +
+                "(first_name, last_name, email, phone) values (?,?,?,?)");
+        query.setParameter(1, first_name);
+        query.setParameter(2, last_name);
+        query.setParameter(3, email);
+        query.setParameter(4, phone);
+
+        return query.executeUpdate();
     }
 
     @Override
-    public void updateApp() {
-
+    public void deleteApp(int id) {
+        Query query = entityManager.createNativeQuery("DELETE from pretense.applications where id = ?");
+        query.setParameter(1, id);
     }
 }

@@ -10,8 +10,8 @@ public interface ApplicationRepository {
     List<Application> findAll();
 
     //open a application
-    int openApp();
+    int openApp(String first_name, String last_name, String email, String phone);
 
     //submit a application
-    void updateApp();
+    void deleteApp(int id);
 }

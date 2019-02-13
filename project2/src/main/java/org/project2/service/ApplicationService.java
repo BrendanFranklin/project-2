@@ -24,4 +24,14 @@ public class ApplicationService {
     public List<Application> viewAll(){
         return this.applicationRepository.findAll();
     }
+
+    @Transactional
+    public int openApp(String first_name, String last_name, String email, String phone){
+        return this.applicationRepository.openApp(first_name, last_name, email, phone);
+    }
+
+    @Transactional
+    public void deleteApp(int id){
+        this.applicationRepository.deleteApp(id);
+    }
 }
