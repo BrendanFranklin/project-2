@@ -26,13 +26,16 @@ export class LoginComponent implements OnInit {
   submit() {
      this.login.authenticate(this.authUrl, this.username, this.password,
      () => this.router.navigate([this.locationUrl]),
+     this.login.authenticate(this.authUrl, this.username, this.password,
+     () => // this.router.navigate([this.locationUrl]),
+     {console.log(localStorage.getItem('userToken'))},
      (err) => {
        console.log(err);
        this.shake=true;
        this.username="";
        this.password="";
        //this.location.go(`${environment.failLoginUrl}?status=${err.status}&msg=${err.error}`)
-     });
+     }))
   }
   noShake(){
     this.shake=false;
