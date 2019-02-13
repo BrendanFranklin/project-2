@@ -61,4 +61,12 @@ public class TicketController {
         return new ResponseEntity<>((Ticket)null, HttpStatus.NOT_FOUND);
     }
 
+    @PostMapping(path = "/updateTicket",produces = MediaType.APPLICATION_JSON_VALUE)
+    @PreAuthorize("hasAuthority('update_ticket')")
+    public int updateTicket(@RequestParam(name = "author") String author,
+                            @RequestParam(name = "resolver") String resolver,
+                            @RequestParam(name = "note") String notes){
+        return this.ticketService.updateTicket(author, resolver, notes);
+    }
+
 }
