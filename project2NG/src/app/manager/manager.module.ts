@@ -10,6 +10,8 @@ import { ApplicationsPageComponent } from './applications-page/applications-page
 import { EmployeePageComponent } from './employee-page/employee-page.component';
 import { ManagerhomeComponent } from './managerhome/managerhome.component';
 import { ManmaintComponent } from './manmaint/manmaint.component';
+import {GlobalModule} from '../global/global.module';
+
 
 
 
@@ -23,9 +25,11 @@ import { ManmaintComponent } from './manmaint/manmaint.component';
     ManagerhomeComponent,
     ManmaintComponent,
     ],
+
   imports: [
     CommonModule,
     ManagerRoutingModule,
+    GlobalModule,
   ]
 })
 export class ManagerModule { }
