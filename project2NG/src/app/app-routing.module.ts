@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
   },
   {
-    path:'maintenance',
+    path: 'maintenance',
     loadChildren: './maintenance/maintenance.module#MaintenanceModule'
   },
   {

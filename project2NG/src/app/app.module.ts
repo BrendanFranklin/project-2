@@ -7,7 +7,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoutbarComponent } from './components/logoutbar/logoutbar.component';
-import { TicketlistComponent } from './components/ticketlist/ticketlist.component';
 import { DetailsmodalComponent } from './components/detailsmodal/detailsmodal.component';
 
 
@@ -16,7 +15,6 @@ import { DetailsmodalComponent } from './components/detailsmodal/detailsmodal.co
   declarations: [
     AppComponent,
     LogoutbarComponent,
-    TicketlistComponent,
     DetailsmodalComponent,
   ],
   imports: [
