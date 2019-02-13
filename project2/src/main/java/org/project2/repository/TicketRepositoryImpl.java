@@ -26,16 +26,15 @@ public class TicketRepositoryImpl implements TicketRepository{
     }
 
     @Override
-    public List<Ticket> findResidentTickets(int res_id) {
+    public List<Ticket> findResidentTickets(int user_id) {
 
         Query query = entityManager.createNativeQuery("Select * from pretense.tickets where author = ?");
-        query.setParameter(1,res_id);
+        query.setParameter(1,user_id);
 
         if(!query.getResultList().isEmpty()){
             List<Ticket> tickets = (List<Ticket>) query.getResultList();
             return tickets;
         }
-
         return null;
     }
 
@@ -61,6 +60,16 @@ public class TicketRepositoryImpl implements TicketRepository{
 
     @Override
     public void updateTicket(int ticket_id) {
+        String author = "";
+        String resolver = "";
+        String notes = "";
 
+        Query query = entityManager.createNativeQuery("Insert into pretense.ticket values (?,?,?");
+        query.setParameter(1,author);
+        query.setParameter(2, resolver);
+        query.setParameter(3, notes);
+
+
+        
     }
 }
