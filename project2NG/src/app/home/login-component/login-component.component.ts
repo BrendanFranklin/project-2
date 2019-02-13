@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login-service.service';
+
 @Component({
   selector: 'app-login-component',
   templateUrl: './login-component.component.html',
@@ -11,6 +12,8 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   locationUrl: string;
+  @Input() title: string;
+  @Input() authUrl: string;
 
    constructor(private router: Router,
     private login: LoginService
@@ -21,8 +24,9 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-     this.login.authenticate(this.username, this.password,
-     () => this.router.navigate([this.locationUrl]),
+     this.login.authenticate(this.authUrl, this.username, this.password,
+     () => //this.router.navigate([this.locationUrl]),
+     {console.log(localStorage.getItem('userToken'))},
      (err) => {
        console.log(err);
        this.shake=true;

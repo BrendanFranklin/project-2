@@ -34,13 +34,13 @@ public class TicketController {
 
     @GetMapping(path = "/allTicket", produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('view_ticket')")
-    public ResponseEntity<List<Ticket>> allTicket(@AuthenticationPrincipal Users users){
+    public List<Ticket> allTicket(@AuthenticationPrincipal Users users){
 //        System.out.println("allTicket method");
 //        Users users = Jwts.parser().setSigningKey(SECRET.getBytes())
 //                .parseClaimsJws(token.replace(TOKEN))
         System.out.println(users);
 
-        return new ResponseEntity<List<Ticket>>((List<Ticket>)ticketService.getAllTicket(),HttpStatus.OK);
+        return this.ticketService.getAllTicket();
 
     }
 
@@ -59,6 +59,14 @@ public class TicketController {
             return new ResponseEntity<>(t, HttpStatus.OK);
         }
         return new ResponseEntity<>((Ticket)null, HttpStatus.NOT_FOUND);
+    }
+
+    @PostMapping(path = "/updateTicket",produces = MediaType.APPLICATION_JSON_VALUE)
+    @PreAuthorize("hasAuthority('update_ticket')")
+    public int updateTicket(@RequestParam(name = "author") String author,
+                            @RequestParam(name = "resolver") String resolver,
+                            @RequestParam(name = "note") String notes){
+        return this.ticketService.updateTicket(author, resolver, notes);
     }
 
 }

@@ -13,17 +13,18 @@ export class LoginService {
     private http: HttpClient
     ) { }
 
-  authenticate(username: string, password: string, success, fail) {
-    return this.http.post<any>(environment.authUrl,
+  authenticate(url: string, username: string, password: string, success, fail) {
+    return this.http.post<any>(url,
       JSON.stringify({username: username, password: password}),
       {
         headers: {
           'Content-Type': 'application/json'
-        }
+        },
+        observe: 'response'
       })
       .toPromise()
       .then((resp) => {
-        localStorage.setItem('userToken', JSON.stringify(resp));
+        localStorage.setItem('userToken', JSON.stringify(resp.headers.get('Authorization')));
         success();
       },
       (err) => {

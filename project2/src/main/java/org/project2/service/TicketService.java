@@ -44,4 +44,9 @@ public class TicketService {
         }
     }
 
+    @Transactional
+    public  int updateTicket(String author, String resolver, String notes){
+        return this.ticketRepository.updateTicket(author, resolver, notes);
+    }
+
 }

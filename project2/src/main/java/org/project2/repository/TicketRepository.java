@@ -18,5 +18,5 @@ public interface TicketRepository {
     int openTicket();
 
     // update/close an existing ticket
-    void updateTicket(int ticket_id);
+    int updateTicket(String author, String resolver, String notes);
 }
