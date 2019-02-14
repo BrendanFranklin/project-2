@@ -22,7 +22,9 @@ public class PaymentController {
     @GetMapping(path = "/allPayments", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Payment> allPayments(){ return this.paymentService.findAll();}
 
-    @GetMapping(path = "/paymentAuth", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/paymentAuth",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Payment> paymentByAuthor(@RequestBody Payment payment) {
         return this.paymentService.findByAuthor(payment.getUser_id());
     }

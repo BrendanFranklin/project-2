@@ -16,7 +16,6 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public List<Users> findAll() {
-
         Query query = entityManager.createNativeQuery("select * from pretense.users");
         if(!query.getResultList().isEmpty()){
             List<Users> users = (List<Users>) query.getResultList();
@@ -30,16 +29,14 @@ public class UserRepositoryImpl implements UserRepository {
     public int viewRole(String username) {
         Query query = entityManager.createNativeQuery("SELECT role_id from pretense.users where username = ?");
         query.setParameter(1, username);
-
-        return query.getFirstResult();
-
+        return (int) query.getSingleResult();
     }
 
     @Override
     public int viewUserId(String username) {
         Query query = entityManager.createNativeQuery("SELECT user_id from pretense.users where username = ?");
         query.setParameter(1, username);
-        return query.getFirstResult();
+        return (int) query.getSingleResult();
     }
 
 

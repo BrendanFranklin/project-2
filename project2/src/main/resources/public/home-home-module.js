@@ -528,6 +528,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_login_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/login-service.service */ "./src/app/home/services/login-service.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -550,13 +552,16 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent.prototype.reroute = function () {
-        //   this.login.checkRole(environment.checkResident,
-        //     ()=>this.router.navigate(['/resident']),
-        //   ()=>this.login.checkRole(environment.checkmaintenance,
-        //     ()=>this.router.navigate(['/maintenance']),
-        //     ()=>this.login.checkRole(environment.checkManager,
-        //       ()=>this.router.navigate(['/manager']),
-        //       ()=>this.shake=true)))
+        //get ID
+        this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].loginGetUserId, this.username, function (resp) {
+            localStorage.setItem('userId', resp);
+            console.log(localStorage.getItem('userRole'));
+        }, function () { });
+        //getRole
+        this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].loginGetRoleId, this.username, function (resp) {
+            localStorage.setItem('userRole', resp);
+            console.log(localStorage.getItem('userRole'));
+        }, function () { });
     };
     LoginComponent.prototype.noShake = function () {
         this.shake = false;
@@ -954,10 +959,12 @@ var LoginService = /** @class */ (function () {
     //     },
     //     (err)=>fail(err))
     // }
-    LoginService.prototype.checkRole = function (url, success, fail) {
-        this.http.get(url, { headers: {
-                Authorization: localStorage.getItem('userToken')
-            } }).toPromise().then(success(), fail());
+    LoginService.prototype.checkRole = function (url, username, success, fail) {
+        this.http.post(url, JSON.stringify({ username: username }), { headers: {
+                'Authorization': localStorage.getItem('userToken'),
+                'Content-Type': 'application/json'
+            },
+        }).toPromise().then(function (resp) { return success(resp); }, fail());
     };
     LoginService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -1005,7 +1012,7 @@ var ProspecthandlerService = /** @class */ (function () {
         }, fail());
     };
     ProspecthandlerService.prototype.submitApplication = function (url, application) {
-        this.http.post(url, JSON.stringify(application)).subscribe();
+        this.http.post(url, JSON.stringify(application), { headers: { 'Content-Type': 'application/json' } }).subscribe();
     };
     ProspecthandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

@@ -26,7 +26,7 @@ public class ApplicationController {
         return this.applicationService.viewAll();
     }
 
-    @PostMapping(path = "/openApp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/openApp", consumes = MediaType.APPLICATION_JSON_VALUE)
     public int openApp(@RequestBody Application app){
         return this.applicationService.openApp(
                 app.getFirst_name(),
@@ -35,7 +35,7 @@ public class ApplicationController {
                 app.getPhone());
     }
 
-    @PostMapping(path = "/deleteApp")
+    @PostMapping(path = "/deleteApp", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void deleteApp(@RequestBody Application app){
         this.applicationService.deleteApp(app.getId());
     }
