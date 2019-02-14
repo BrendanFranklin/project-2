@@ -961,8 +961,8 @@ var LoginService = /** @class */ (function () {
     // }
     LoginService.prototype.checkRole = function (url, username, success, fail) {
         this.http.post(url, JSON.stringify({ username: username }), { headers: {
-                Authorization: localStorage.getItem('userToken'),
-                username: username
+                'Authorization': localStorage.getItem('userToken'),
+                'Content-Type': 'application/json'
             },
         }).toPromise().then(function (resp) { return success(resp); }, fail());
     };
@@ -1012,7 +1012,7 @@ var ProspecthandlerService = /** @class */ (function () {
         }, fail());
     };
     ProspecthandlerService.prototype.submitApplication = function (url, application) {
-        this.http.post(url, JSON.stringify(application)).subscribe();
+        this.http.post(url, JSON.stringify(application), { headers: { 'Content-Type': 'application/json' } }).subscribe();
     };
     ProspecthandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

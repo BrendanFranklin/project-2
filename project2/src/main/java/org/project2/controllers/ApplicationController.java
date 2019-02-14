@@ -26,7 +26,7 @@ public class ApplicationController {
         return this.applicationService.viewAll();
     }
 
-    @PostMapping(path = "/openApp", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/openApp", consumes = MediaType.APPLICATION_JSON_VALUE)
     public int openApp(@RequestBody Application app){
         return this.applicationService.openApp(
                 app.getFirst_name(),

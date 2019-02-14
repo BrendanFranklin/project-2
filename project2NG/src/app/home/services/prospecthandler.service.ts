@@ -12,7 +12,8 @@ export class ProspecthandlerService {
     private http: HttpClient
   ) { }
   getOpenAppartments(url: string, success, fail ){
-    this.http.get<any>(url).toPromise().then((resp)=>{
+    this.http.get<any>(url
+    ).toPromise().then((resp)=>{
       let apartments: Apartment[]=[];
       resp.forEach(apartment=>{
         let newAp = new Apartment(
@@ -30,7 +31,7 @@ export class ProspecthandlerService {
   }
 
   submitApplication(url: string, application){
-    this.http.post<any>(url, JSON.stringify(application)).subscribe();
+    this.http.post<any>(url, JSON.stringify(application),{headers:{'Content-Type': 'application/json'}}).subscribe();
   }
 
 

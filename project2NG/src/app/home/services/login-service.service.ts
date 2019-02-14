@@ -47,7 +47,8 @@ export class LoginService {
   checkRole(url: string,username: string, success, fail){
     this.http.post<any>(url,JSON.stringify({username: username}),
       {headers:{
-        Authorization:localStorage.getItem('userToken'),
+        'Authorization': localStorage.getItem('userToken'),
+        'Content-Type': 'application/json'
       },
     }
     ).toPromise().then((resp)=>success(resp),
