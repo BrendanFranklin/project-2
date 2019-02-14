@@ -9,7 +9,7 @@
 
 }
 .banner-text{
-
+    cursor: pointer;
     text-align: center;
     color: gold;
     font-family: 'Scriptina';

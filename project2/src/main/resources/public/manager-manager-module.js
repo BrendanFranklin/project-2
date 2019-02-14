@@ -1,5 +1,44 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["manager-manager-module"],{
 
+/***/ "./src/app/global/global.module.ts":
+/*!*****************************************!*\
+  !*** ./src/app/global/global.module.ts ***!
+  \*****************************************/
+/*! exports provided: GlobalModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalModule", function() { return GlobalModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ticketlist/ticketlist.component */ "./src/app/components/ticketlist/ticketlist.component.ts");
+
+
+
+
+var GlobalModule = /** @class */ (function () {
+    function GlobalModule() {
+    }
+    GlobalModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+            ],
+            exports: [
+                _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"]
+            ]
+        })
+    ], GlobalModule);
+    return GlobalModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/manager/apartments-page/apartments-page.component.css":
 /*!***********************************************************************!*\
   !*** ./src/app/manager/apartments-page/apartments-page.component.css ***!

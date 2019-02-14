@@ -5,6 +5,7 @@ import {ApplicationsPageComponent} from './applications-page/applications-page.c
 import {RentPageComponent} from './rent-page/rent-page.component';
 import {ManagerhomeComponent} from './managerhome/managerhome.component';
 import {ManmaintComponent} from './manmaint/manmaint.component';
+import {UsersPageComponent} from './users-page/users-page.component';
 
 const routes: Routes = [
   { path: 'apts',
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home',
     pathMatch: 'full'},
   { path: 'maint',
-    component: ManmaintComponent}
+    component: ManmaintComponent},
+  { path: 'users',
+    component: UsersPageComponent}
 ];
 
 @NgModule({

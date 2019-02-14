@@ -24,3 +24,8 @@
     color: gold;
     background-color: black;
 }
+
+.listButt:hover{
+    color: black;
+    background-color: gold;
+}

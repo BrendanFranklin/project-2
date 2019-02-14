@@ -3,25 +3,23 @@
     background-color: black;
     color: gold;
     height: 150px;
-    padding-top: 25px;
-    padding-bottom: 50px;
-
+    padding: 25px;
 }
-
 .address{
     text-align: left;
 }
 
 .socialMedia{
     text-align: right;
-
-
+    position: relative;
+    bottom: 65px;
+    right: 0;
 
 }
 .wrapper {
     display: inline-flex;
     margin: 0;
-    padding: 0;
+    padding: 0px;
 }
 
 i {
