@@ -46,13 +46,13 @@ public class TicketController {
 
     }
 
-    @PostMapping(path = "/ticketRes")
+    @PostMapping(path = "/ticketRes", consumes = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('open_ticket')")
     public List<Ticket> ticketByRes(@RequestBody Ticket ticket){
         return this.ticketService.getTicketByRes(ticket.getAuthor());
     }
 
-    @GetMapping(path = "/ticketId")
+    @PostMapping(path = "/ticketId", consumes = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('view_ticket')")
     public ResponseEntity<Ticket> ticketById(@RequestBody Ticket ticket){
         Ticket t =  ticketService.getTicketById(ticket.getId());
@@ -63,7 +63,7 @@ public class TicketController {
         return new ResponseEntity<>((Ticket)null, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping(path = "/updateTicket",produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/updateTicket", produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('update_ticket')")
     public int updateTicket(@RequestBody Ticket ticket){
         return this.ticketService.updateTicket(

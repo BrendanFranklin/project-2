@@ -41,12 +41,12 @@ public class UserController {
         return users;
     }
 
-    @PostMapping(value = "/roleid", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/roleid", consumes = MediaType.APPLICATION_JSON_VALUE)
     public int getRoleId(@RequestBody Users user){
         return this.userRepository.viewRole(user.getUsername());
     }
 
-    @PostMapping("/userid")
+    @PostMapping(path = "/userid", consumes = MediaType.APPLICATION_JSON_VALUE)
     public int getUserId(@RequestBody Users user){
         return this.userRepository.viewUserId(user.getUsername());
     }

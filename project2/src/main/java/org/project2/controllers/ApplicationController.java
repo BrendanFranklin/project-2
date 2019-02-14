@@ -35,7 +35,7 @@ public class ApplicationController {
                 app.getPhone());
     }
 
-    @PostMapping(path = "/deleteApp")
+    @PostMapping(path = "/deleteApp", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void deleteApp(@RequestBody Application app){
         this.applicationService.deleteApp(app.getId());
     }
