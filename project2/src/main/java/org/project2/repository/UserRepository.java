@@ -8,7 +8,4 @@ public interface UserRepository {
 
     //find all residents
     List<Users> findAll();
-
-    //get rent by resident
-    int viewRent();
 }
