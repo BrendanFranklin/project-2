@@ -5,8 +5,7 @@ import org.project2.pojos.Users;
 import org.project2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,12 +34,15 @@ public class UserController {
     @GetMapping("/getresident")
     public void getResidentRole(){}
 
-    @PreAuthorize("maintenance")
-    @GetMapping("/getmaintenance")
-    public void getMaintenanceRole(){}
-
+    @PreAuthorize("resident")
+    @GetMapping("/getresident")
+    public void getResident(){}
 
     @PreAuthorize("manager")
     @GetMapping("/getmanager")
     public void getManager(){}
+
+    @PreAuthorize("maintenance")
+    @GetMapping("/getmaintenance")
+    public void getMaintenance(){}
 }
