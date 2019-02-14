@@ -6,7 +6,8 @@ import { DetailsmodalComponent } from '../components/detailsmodal/detailsmodal.c
 
 @NgModule({
   declarations: [TicketlistComponent,
-  LogoutbarComponent],
+  LogoutbarComponent,
+  DetailsmodalComponent],
   imports: [
     CommonModule
   ],
