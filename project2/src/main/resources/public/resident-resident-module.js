@@ -167,7 +167,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\"></app-ticketlist>"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>"
 
 /***/ }),
 
@@ -183,13 +183,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketpageComponent", function() { return TicketpageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var TicketpageComponent = /** @class */ (function () {
-    function TicketpageComponent() {
+    function TicketpageComponent(ticketHandler) {
+        this.ticketHandler = ticketHandler;
         this.manager = false;
     }
     TicketpageComponent.prototype.ngOnInit = function () {
+    };
+    TicketpageComponent.prototype.getTickets = function () {
+        var _this = this;
+        this.ticketHandler.getTickets(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].residentGetTickets, function (tickets) { _this.tickets = tickets; }, function (err) { return console.log(err); });
     };
     TicketpageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -197,7 +206,7 @@ var TicketpageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./ticketpage.component.html */ "./src/app/resident/ticketpage/ticketpage.component.html"),
             styles: [__webpack_require__(/*! ./ticketpage.component.css */ "./src/app/resident/ticketpage/ticketpage.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__["TickethandlerService"]])
     ], TicketpageComponent);
     return TicketpageComponent;
 }());

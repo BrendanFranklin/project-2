@@ -1,5 +1,44 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["manager-manager-module"],{
 
+/***/ "./src/app/global/global.module.ts":
+/*!*****************************************!*\
+  !*** ./src/app/global/global.module.ts ***!
+  \*****************************************/
+/*! exports provided: GlobalModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalModule", function() { return GlobalModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ticketlist/ticketlist.component */ "./src/app/components/ticketlist/ticketlist.component.ts");
+
+
+
+
+var GlobalModule = /** @class */ (function () {
+    function GlobalModule() {
+    }
+    GlobalModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+            ],
+            exports: [
+                _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"]
+            ]
+        })
+    ], GlobalModule);
+    return GlobalModule;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/manager/apartments-page/apartments-page.component.css":
 /*!***********************************************************************!*\
   !*** ./src/app/manager/apartments-page/apartments-page.component.css ***!
@@ -7,7 +46,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvYXBhcnRtZW50cy1wYWdlL2FwYXJ0bWVudHMtcGFnZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9hcGFydG1lbnRzLXBhZ2UvYXBhcnRtZW50cy1wYWdlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9tYW5hZ2VyL2FwYXJ0bWVudHMtcGFnZS9hcGFydG1lbnRzLXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYW5tYW5iYW57XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -18,7 +57,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- view apartments -->\r\n<p>\r\n  apartments-page works!\r\n</p>\r\n"
+module.exports = "<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n"
 
 /***/ }),
 
@@ -63,7 +102,7 @@ var ApartmentsPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvYXBwbGljYXRpb25zLXBhZ2UvYXBwbGljYXRpb25zLXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9hcHBsaWNhdGlvbnMtcGFnZS9hcHBsaWNhdGlvbnMtcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvbWFuYWdlci9hcHBsaWNhdGlvbnMtcGFnZS9hcHBsaWNhdGlvbnMtcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hbm1hbmJhbntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -74,7 +113,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  applications-page works!\r\n</p>\r\n"
+module.exports = "<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n"
 
 /***/ }),
 
@@ -119,7 +158,7 @@ var ApplicationsPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".navDiv{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9jb21wb25lbnRzL25hdmJhci9uYXZiYXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvY29tcG9uZW50cy9uYXZiYXIvbmF2YmFyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2RGl2e1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -130,7 +169,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  navbar works!\r\n</p>\r\n"
+module.exports = "<div class=\"navDiv\">\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/maint']\">Maintenance</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/apts']\">Apartments</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/apps']\">Applications</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/rent']\">Rent</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/home']\">Manager Home</button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -175,7 +214,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvZW1wbG95ZWUtcGFnZS9lbXBsb3llZS1wYWdlLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9lbXBsb3llZS1wYWdlL2VtcGxveWVlLXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvZW1wbG95ZWUtcGFnZS9lbXBsb3llZS1wYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFubWFuYmFue1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -186,7 +225,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- add new maintenance -->\r\n<p>\r\n  employee-page works!\r\n</p>\r\n"
+module.exports = "<h1 class=\"manmanban\">Manager Employee Access</h1>\r\n<app-navbar></app-navbar>\r\n"
 
 /***/ }),
 
@@ -237,10 +276,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _apartments_page_apartments_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./apartments-page/apartments-page.component */ "./src/app/manager/apartments-page/apartments-page.component.ts");
+/* harmony import */ var _applications_page_applications_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./applications-page/applications-page.component */ "./src/app/manager/applications-page/applications-page.component.ts");
+/* harmony import */ var _rent_page_rent_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./rent-page/rent-page.component */ "./src/app/manager/rent-page/rent-page.component.ts");
+/* harmony import */ var _managerhome_managerhome_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./managerhome/managerhome.component */ "./src/app/manager/managerhome/managerhome.component.ts");
+/* harmony import */ var _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./manmaint/manmaint.component */ "./src/app/manager/manmaint/manmaint.component.ts");
 
 
 
-var routes = [];
+
+
+
+
+
+var routes = [
+    { path: 'apts',
+        component: _apartments_page_apartments_page_component__WEBPACK_IMPORTED_MODULE_3__["ApartmentsPageComponent"] },
+    { path: 'apps',
+        component: _applications_page_applications_page_component__WEBPACK_IMPORTED_MODULE_4__["ApplicationsPageComponent"] },
+    { path: 'rent',
+        component: _rent_page_rent_page_component__WEBPACK_IMPORTED_MODULE_5__["RentPageComponent"] },
+    { path: 'home',
+        component: _managerhome_managerhome_component__WEBPACK_IMPORTED_MODULE_6__["ManagerhomeComponent"] },
+    { path: '', redirectTo: 'home',
+        pathMatch: 'full' },
+    { path: 'maint',
+        component: _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_7__["ManmaintComponent"] }
+];
 var ManagerRoutingModule = /** @class */ (function () {
     function ManagerRoutingModule() {
     }
@@ -277,6 +339,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rent_page_rent_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./rent-page/rent-page.component */ "./src/app/manager/rent-page/rent-page.component.ts");
 /* harmony import */ var _applications_page_applications_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./applications-page/applications-page.component */ "./src/app/manager/applications-page/applications-page.component.ts");
 /* harmony import */ var _employee_page_employee_page_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./employee-page/employee-page.component */ "./src/app/manager/employee-page/employee-page.component.ts");
+/* harmony import */ var _managerhome_managerhome_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./managerhome/managerhome.component */ "./src/app/manager/managerhome/managerhome.component.ts");
+/* harmony import */ var _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./manmaint/manmaint.component */ "./src/app/manager/manmaint/manmaint.component.ts");
+/* harmony import */ var _global_global_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../global/global.module */ "./src/app/global/global.module.ts");
+
+
+
 
 
 
@@ -292,14 +360,135 @@ var ManagerModule = /** @class */ (function () {
     }
     ManagerModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"], _users_page_users_page_component__WEBPACK_IMPORTED_MODULE_5__["UsersPageComponent"], _apartments_page_apartments_page_component__WEBPACK_IMPORTED_MODULE_6__["ApartmentsPageComponent"], _rent_page_rent_page_component__WEBPACK_IMPORTED_MODULE_7__["RentPageComponent"], _applications_page_applications_page_component__WEBPACK_IMPORTED_MODULE_8__["ApplicationsPageComponent"], _employee_page_employee_page_component__WEBPACK_IMPORTED_MODULE_9__["EmployeePageComponent"]],
+            declarations: [_components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_4__["NavbarComponent"],
+                _users_page_users_page_component__WEBPACK_IMPORTED_MODULE_5__["UsersPageComponent"],
+                _apartments_page_apartments_page_component__WEBPACK_IMPORTED_MODULE_6__["ApartmentsPageComponent"],
+                _rent_page_rent_page_component__WEBPACK_IMPORTED_MODULE_7__["RentPageComponent"],
+                _applications_page_applications_page_component__WEBPACK_IMPORTED_MODULE_8__["ApplicationsPageComponent"],
+                _employee_page_employee_page_component__WEBPACK_IMPORTED_MODULE_9__["EmployeePageComponent"],
+                _managerhome_managerhome_component__WEBPACK_IMPORTED_MODULE_10__["ManagerhomeComponent"],
+                _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_11__["ManmaintComponent"],
+            ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                _manager_routing_module__WEBPACK_IMPORTED_MODULE_3__["ManagerRoutingModule"]
+                _manager_routing_module__WEBPACK_IMPORTED_MODULE_3__["ManagerRoutingModule"],
+                _global_global_module__WEBPACK_IMPORTED_MODULE_12__["GlobalModule"],
             ]
         })
     ], ManagerModule);
     return ManagerModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/managerhome/managerhome.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/manager/managerhome/managerhome.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".manbanner{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9tYW5hZ2VyaG9tZS9tYW5hZ2VyaG9tZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvbWFuYWdlci9tYW5hZ2VyaG9tZS9tYW5hZ2VyaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hbmJhbm5lcntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/manager/managerhome/managerhome.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/manager/managerhome/managerhome.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 class=\"manbanner\">Manager Portal Home</h1>\n<app-navbar></app-navbar>\n"
+
+/***/ }),
+
+/***/ "./src/app/manager/managerhome/managerhome.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/manager/managerhome/managerhome.component.ts ***!
+  \**************************************************************/
+/*! exports provided: ManagerhomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManagerhomeComponent", function() { return ManagerhomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ManagerhomeComponent = /** @class */ (function () {
+    function ManagerhomeComponent() {
+    }
+    ManagerhomeComponent.prototype.ngOnInit = function () {
+    };
+    ManagerhomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-managerhome',
+            template: __webpack_require__(/*! ./managerhome.component.html */ "./src/app/manager/managerhome/managerhome.component.html"),
+            styles: [__webpack_require__(/*! ./managerhome.component.css */ "./src/app/manager/managerhome/managerhome.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ManagerhomeComponent);
+    return ManagerhomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/manmaint/manmaint.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/manager/manmaint/manmaint.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9tYW5tYWludC9tYW5tYWludC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvbWFuYWdlci9tYW5tYWludC9tYW5tYWludC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hbm1hbmJhbntcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/manager/manmaint/manmaint.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/manager/manmaint/manmaint.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h1 class=\"manmanban\">Manager Maintenance Access</h1>\n<app-navbar></app-navbar>\n<app-ticketlist></app-ticketlist>\n"
+
+/***/ }),
+
+/***/ "./src/app/manager/manmaint/manmaint.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/manager/manmaint/manmaint.component.ts ***!
+  \********************************************************/
+/*! exports provided: ManmaintComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManmaintComponent", function() { return ManmaintComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ManmaintComponent = /** @class */ (function () {
+    function ManmaintComponent() {
+    }
+    ManmaintComponent.prototype.ngOnInit = function () {
+    };
+    ManmaintComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-manmaint',
+            template: __webpack_require__(/*! ./manmaint.component.html */ "./src/app/manager/manmaint/manmaint.component.html"),
+            styles: [__webpack_require__(/*! ./manmaint.component.css */ "./src/app/manager/manmaint/manmaint.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ManmaintComponent);
+    return ManmaintComponent;
 }());
 
 
@@ -313,7 +502,7 @@ var ManagerModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvcmVudC1wYWdlL3JlbnQtcGFnZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci9yZW50LXBhZ2UvcmVudC1wYWdlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9tYW5hZ2VyL3JlbnQtcGFnZS9yZW50LXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYW5tYW5iYW57XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -324,7 +513,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- add mark rent overdue or payed -->\r\n<p>\r\n  rent-page works!\r\n</p>\r\n"
+module.exports = "<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n"
 
 /***/ }),
 

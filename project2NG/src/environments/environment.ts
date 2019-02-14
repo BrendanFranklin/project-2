@@ -6,6 +6,12 @@ export const environment = {
   production: false,
 
   publicOpenApts: "http://localhost:8080/apt/emptyApt",
+  publicSubmitApp: "TDOO",
+
+  checkResident: "http://localhost:8080/users/getresident",
+  checkManager: "http://localhost:8080/users/getmanager",
+  checkmaintenance: "http://localhost:8080/users/getmaintenance",
+
 
   residentAuth: "http://localhost:8080/login",
   employeeAuth: "http://localhost:8080/login",

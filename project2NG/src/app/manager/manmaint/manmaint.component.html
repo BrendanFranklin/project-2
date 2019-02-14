@@ -1,3 +1,4 @@
+<app-logoutbar></app-logoutbar>
 <h1 class="manmanban">Manager Maintenance Access</h1>
 <app-navbar></app-navbar>
-<app-ticketlist></app-ticketlist>
+<app-ticketlist [manager]="manager" (resolveTicket)="resolve($event)" [tickets]="tickets"></app-ticketlist>

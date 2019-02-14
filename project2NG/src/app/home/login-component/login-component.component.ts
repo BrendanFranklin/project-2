@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login-service.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login-component',
@@ -11,7 +12,6 @@ export class LoginComponent implements OnInit {
   shake: boolean;
   username: string;
   password: string;
-  locationUrl: string;
   @Input() title: string;
   @Input() authUrl: string;
 
@@ -25,18 +25,25 @@ export class LoginComponent implements OnInit {
 
   submit() {
      this.login.authenticate(this.authUrl, this.username, this.password,
-     () => this.router.navigate([this.locationUrl]),
-     this.login.authenticate(this.authUrl, this.username, this.password,
-     () => // this.router.navigate([this.locationUrl]),
-     {console.log(localStorage.getItem('userToken'))},
+      ()=>this.reroute(),
      (err) => {
        console.log(err);
        this.shake=true;
        this.username="";
        this.password="";
-       //this.location.go(`${environment.failLoginUrl}?status=${err.status}&msg=${err.error}`)
-     }))
+     })
   }
+ 
+  reroute(){
+    this.login.checkRole(environment.checkResident,
+      ()=>this.router.navigate(['/resident']),
+    ()=>this.login.checkRole(environment.checkmaintenance,
+      ()=>this.router.navigate(['/maintenance']),
+      ()=>this.login.checkRole(environment.checkManager,
+        ()=>this.router.navigate(['/manager']),
+        ()=>this.shake=true)))
+  }
+ 
   noShake(){
     this.shake=false;
   }

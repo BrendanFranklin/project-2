@@ -11,6 +11,8 @@ import { EmployeePageComponent } from './employee-page/employee-page.component';
 import { ManagerhomeComponent } from './managerhome/managerhome.component';
 import { ManmaintComponent } from './manmaint/manmaint.component';
 import {GlobalModule} from '../global/global.module';
+import {FormsModule} from '@angular/forms';
+
 
 
 
@@ -30,6 +32,7 @@ import {GlobalModule} from '../global/global.module';
     CommonModule,
     ManagerRoutingModule,
     GlobalModule,
+    FormsModule
   ]
 })
 export class ManagerModule { }
