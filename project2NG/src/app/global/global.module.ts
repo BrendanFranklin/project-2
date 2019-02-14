@@ -7,10 +7,12 @@ import {UserlistComponent} from '../components/userlist/userlist.component';
 import {ApartmentlistComponent} from '../components/apartmentlist/apartmentlist.component';
 import {RentlistComponent} from '../components/rentlist/rentlist.component';
 import {ApplicationlistComponent} from '../components/applicationlist/applicationlist.component';
+import {MaintformComponent} from '../components/maintform/maintform.component';
 
 
 @NgModule({
   declarations: [
+      MaintformComponent,
       ApplicationlistComponent,
       ApartmentlistComponent,
       RentlistComponent,
@@ -22,6 +24,7 @@ import {ApplicationlistComponent} from '../components/applicationlist/applicatio
     CommonModule
   ],
   exports: [
+      MaintformComponent,
       ApplicationlistComponent,
       ApartmentlistComponent,
       RentlistComponent,
