@@ -5,6 +5,7 @@ import org.project2.pojos.Users;
 import org.project2.repository.UserRepository;
 import org.project2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -40,13 +41,14 @@ public class UserController {
         return users;
     }
 
-    @GetMapping("/roleid")
-    public int getRoleId(@RequestParam(name = "username") String username){
+    @PostMapping(path = "/roleid" /*consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE*/)
+    public int getRoleId(@RequestBody String username){
+        System.out.println();
         return this.userRepository.viewRole(username);
     }
 
-    @GetMapping("/userid")
-    public int getUserId(@RequestParam(name = "username") String username){
+    @PostMapping("/userid")
+    public int getUserId(@RequestAttribute) {
         return this.userRepository.viewUserId(username);
     }
 

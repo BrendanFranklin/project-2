@@ -44,10 +44,13 @@ export class LoginService {
   //     },
   //     (err)=>fail(err))
   // }
-  checkRole(url: string, success, fail){
-    this.http.get<any>(url,
+  checkRole(url: string,username: string, success, fail){
+    this.http.post<any>(url,JSON.stringify({username: username}),
       {headers:{
-        Authorization:localStorage.getItem('userToken')
-      }}).toPromise().then(success(),fail())
+        Authorization:localStorage.getItem('userToken'),
+      },
+    }
+    ).toPromise().then((resp)=>success(resp),
+    fail())
   }
 }

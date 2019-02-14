@@ -35,13 +35,16 @@ export class LoginComponent implements OnInit {
   }
  
    reroute(){
-  //   this.login.checkRole(environment.checkResident,
-  //     ()=>this.router.navigate(['/resident']),
-  //   ()=>this.login.checkRole(environment.checkmaintenance,
-  //     ()=>this.router.navigate(['/maintenance']),
-  //     ()=>this.login.checkRole(environment.checkManager,
-  //       ()=>this.router.navigate(['/manager']),
-  //       ()=>this.shake=true)))
+     //get ID
+    this.login.checkRole(environment.loginGetUserId,this.username,
+      (resp)=>{localStorage.setItem('userId', resp);
+      console.log(localStorage.getItem('userRole'))},
+      ()=>{})
+      //getRole
+    this.login.checkRole(environment.loginGetRoleId,this.username,
+      (resp)=>{localStorage.setItem('userRole', resp);
+        console.log(localStorage.getItem('userRole'))},
+      ()=>{})
    }
  
   noShake(){
