@@ -1,4 +1,3 @@
-package org.project2.repository;
 
 import org.project2.pojos.Payment;
 import org.springframework.stereotype.Repository;

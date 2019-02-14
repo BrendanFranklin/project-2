@@ -2,6 +2,7 @@ package org.project2.repository;
 
 import org.project2.pojos.Apartment;
 import org.project2.pojos.Users;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -25,17 +26,5 @@ public class UserRepositoryImpl implements UserRepository {
         }
 
         return null;
-    }
-
-    @Override
-    public int viewRole(String username) {
-
-        Query query = entityManager.createNativeQuery("SELECT role_id from pretense.users where username = ?");
-        query.setParameter(1,username);
-
-        System.out.println("run");
-
-        return query.getFirstResult();
-
     }
 }

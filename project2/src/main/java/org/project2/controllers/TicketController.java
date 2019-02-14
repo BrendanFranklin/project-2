@@ -42,15 +42,6 @@ public class TicketController {
     @GetMapping(path = "/allTicket", produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('view_ticket')")
     public List<Ticket> allTicket(){
-
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println("name " + auth.getName());
-        System.out.println("principal " + auth.getPrincipal());
-
-        System.out.println(userService.viewRole(auth.getName()));
-
-
-        System.out.println(auth.getAuthorities().toString());
         return this.ticketService.getAllTicket();
 
     }
