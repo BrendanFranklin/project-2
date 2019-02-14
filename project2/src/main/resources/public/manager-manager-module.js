@@ -1,44 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["manager-manager-module"],{
 
-/***/ "./src/app/global/global.module.ts":
-/*!*****************************************!*\
-  !*** ./src/app/global/global.module.ts ***!
-  \*****************************************/
-/*! exports provided: GlobalModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalModule", function() { return GlobalModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ticketlist/ticketlist.component */ "./src/app/components/ticketlist/ticketlist.component.ts");
-
-
-
-
-var GlobalModule = /** @class */ (function () {
-    function GlobalModule() {
-    }
-    GlobalModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"]],
-            imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
-            ],
-            exports: [
-                _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"]
-            ]
-        })
-    ], GlobalModule);
-    return GlobalModule;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/manager/apartments-page/apartments-page.component.css":
 /*!***********************************************************************!*\
   !*** ./src/app/manager/apartments-page/apartments-page.component.css ***!
@@ -57,7 +18,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n<app-apartmentlist></app-apartmentlist>\r\n"
 
 /***/ }),
 
@@ -113,7 +74,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n<app-applicationlist></app-applicationlist>\r\n"
 
 /***/ }),
 
@@ -169,7 +130,7 @@ module.exports = ".navDiv{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMapp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navDiv\">\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/maint']\">Maintenance</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/apts']\">Apartments</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/apps']\">Applications</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/rent']\">Rent</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/home']\">Manager Home</button>\r\n</div>\r\n"
+module.exports = "<div class=\"navDiv\">\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/home']\">Manager Home</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/maint']\">Maintenance</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/apts']\">Apartments</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/apps']\">Applications</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/rent']\">Rent</button>\r\n  <button class=\"manbutton\" [routerLink]=\"['/manager/users']\">Users</button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -225,7 +186,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"manmanban\">Manager Employee Access</h1>\r\n<app-navbar></app-navbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Employee Access</h1>\r\n<app-navbar></app-navbar>\r\n"
 
 /***/ }),
 
@@ -281,6 +242,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rent_page_rent_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./rent-page/rent-page.component */ "./src/app/manager/rent-page/rent-page.component.ts");
 /* harmony import */ var _managerhome_managerhome_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./managerhome/managerhome.component */ "./src/app/manager/managerhome/managerhome.component.ts");
 /* harmony import */ var _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./manmaint/manmaint.component */ "./src/app/manager/manmaint/manmaint.component.ts");
+/* harmony import */ var _users_page_users_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./users-page/users-page.component */ "./src/app/manager/users-page/users-page.component.ts");
+
 
 
 
@@ -301,7 +264,9 @@ var routes = [
     { path: '', redirectTo: 'home',
         pathMatch: 'full' },
     { path: 'maint',
-        component: _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_7__["ManmaintComponent"] }
+        component: _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_7__["ManmaintComponent"] },
+    { path: 'users',
+        component: _users_page_users_page_component__WEBPACK_IMPORTED_MODULE_8__["UsersPageComponent"] }
 ];
 var ManagerRoutingModule = /** @class */ (function () {
     function ManagerRoutingModule() {
@@ -342,6 +307,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _managerhome_managerhome_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./managerhome/managerhome.component */ "./src/app/manager/managerhome/managerhome.component.ts");
 /* harmony import */ var _manmaint_manmaint_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./manmaint/manmaint.component */ "./src/app/manager/manmaint/manmaint.component.ts");
 /* harmony import */ var _global_global_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../global/global.module */ "./src/app/global/global.module.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 
@@ -373,6 +340,7 @@ var ManagerModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _manager_routing_module__WEBPACK_IMPORTED_MODULE_3__["ManagerRoutingModule"],
                 _global_global_module__WEBPACK_IMPORTED_MODULE_12__["GlobalModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_13__["FormsModule"]
             ]
         })
     ], ManagerModule);
@@ -401,7 +369,7 @@ module.exports = ".manbanner{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"manbanner\">Manager Portal Home</h1>\n<app-navbar></app-navbar>\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manbanner\">Manager Portal Home</h1>\r\n<app-navbar></app-navbar>\r\n"
 
 /***/ }),
 
@@ -457,7 +425,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"manmanban\">Manager Maintenance Access</h1>\n<app-navbar></app-navbar>\n<app-ticketlist></app-ticketlist>\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-ticketlist [manager]=\"manager\" (resolveTicket)=\"resolve($event)\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 
@@ -473,12 +441,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManmaintComponent", function() { return ManmaintComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var ManmaintComponent = /** @class */ (function () {
-    function ManmaintComponent() {
+    function ManmaintComponent(ticketHandler) {
+        this.ticketHandler = ticketHandler;
+        this.manager = true;
     }
     ManmaintComponent.prototype.ngOnInit = function () {
+        this.getTickets();
+    };
+    ManmaintComponent.prototype.resolve = function (ticket) {
+        var _this = this;
+        this.ticketHandler.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerResolveTicket, ticket, function () { return _this.getTickets(); }, function (err) { return console.log(err); });
+    };
+    ManmaintComponent.prototype.getTickets = function () {
+        var _this = this;
+        this.ticketHandler.getTickets(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetTickets, function (tickets) { _this.tickets = tickets; }, function (err) { return console.log(err); });
     };
     ManmaintComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -486,7 +469,7 @@ var ManmaintComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./manmaint.component.html */ "./src/app/manager/manmaint/manmaint.component.html"),
             styles: [__webpack_require__(/*! ./manmaint.component.css */ "./src/app/manager/manmaint/manmaint.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__["TickethandlerService"]])
     ], ManmaintComponent);
     return ManmaintComponent;
 }());
@@ -513,7 +496,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rent-page></app-rent-page>\r\n"
 
 /***/ }),
 
@@ -558,7 +541,7 @@ var RentPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvdXNlcnMtcGFnZS91c2Vycy1wYWdlLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".usebanner{\r\n    text-align: center;\r\n}\r\n.newUser{\r\n    text-align: center;\r\n    font-size: small;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWFuYWdlci91c2Vycy1wYWdlL3VzZXJzLXBhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL21hbmFnZXIvdXNlcnMtcGFnZS91c2Vycy1wYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudXNlYmFubmVye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbi5uZXdVc2Vye1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiBzbWFsbDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -569,7 +552,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- create new residents, assign an apartment going to need to view empty apartments-->\r\n<p>\r\n  users-page works!\r\n</p>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"usebanner\">Add/Manage Users</h1>\r\n<app-navbar></app-navbar>\r\n\r\n<div class=\"newUser\">\r\n  <h5>Add New User</h5>\r\n  <form #submission=\"ngForm\" class=\"newUserform\">\r\n\r\n      First Name:\r\n      <input type=\"text\" size=\"10\">\r\n      Last Name:\r\n      <input type=\"text\" size=\"10\">\r\n      Email:\r\n      <input type=\"text\" size=\"20\">\r\n      Username:\r\n      <input type=\"text\" size=\"10\">\r\n      Password:\r\n      <input type=\"text\" size=\"10\">\r\n      Role:\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"false\" [checked]=\"!resident\">Employee\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"true\" [checked]=\"resident\" >Resident\r\n      <label *ngIf=\"resident\">\r\n        | Apt Number\r\n      <input type=\"text\" size=\"3\"  >\r\n      </label>\r\n  </form>\r\n</div>\r\n<app-userlist></app-userlist>\r\n"
 
 /***/ }),
 

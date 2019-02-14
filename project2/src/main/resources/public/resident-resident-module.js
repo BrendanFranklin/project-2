@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc2lkZW50L2FwYXJ0bWVudGRldGFpbHNwYWdlL2FwYXJ0bWVudGRldGFpbHNwYWdlLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".resBan{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzaWRlbnQvYXBhcnRtZW50ZGV0YWlsc3BhZ2UvYXBhcnRtZW50ZGV0YWlsc3BhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3Jlc2lkZW50L2FwYXJ0bWVudGRldGFpbHNwYWdlL2FwYXJ0bWVudGRldGFpbHNwYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVzQmFue1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -18,7 +18,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n\r\n<button [routerLink]=\"'/maintenance'\">Track/Submit Maintenance\r\n</button>\r\n"
 
 /***/ }),
 
@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _apartmentdetailspage_apartmentdetailspage_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./apartmentdetailspage/apartmentdetailspage.component */ "./src/app/resident/apartmentdetailspage/apartmentdetailspage.component.ts");
 /* harmony import */ var _ticketpage_ticketpage_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ticketpage/ticketpage.component */ "./src/app/resident/ticketpage/ticketpage.component.ts");
-/* harmony import */ var _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ticketlist/ticketlist.component */ "./src/app/components/ticketlist/ticketlist.component.ts");
+/* harmony import */ var _global_global_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../global/global.module */ "./src/app/global/global.module.ts");
 
 
 
@@ -138,7 +138,7 @@ var ResidentModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _resident_routing_module__WEBPACK_IMPORTED_MODULE_3__["ResidentRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_7__["TicketlistComponent"]
+                _global_global_module__WEBPACK_IMPORTED_MODULE_7__["GlobalModule"]
             ]
         })
     ], ResidentModule);
@@ -167,7 +167,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 
