@@ -20,4 +20,7 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public List<Users> findAll(){ return this.userRepository.findAll();}
+
+    @Transactional
+    public int viewRole(String username){ return this.userRepository.viewRole(username);}
 }

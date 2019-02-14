@@ -28,8 +28,10 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter{
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         String header = request.getHeader(HEADER_STRING);
+        System.out.println(header);
 
         if(header == null || !header.startsWith(PREFIX)) {
+            System.out.println("doFilterInternal if statement");
             chain.doFilter(request, response);
             return;
         }
@@ -48,6 +50,8 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter{
                     .parseClaimsJws(token.replace(PREFIX, ""));
             String user = claims.getBody().getSubject();
             ArrayList<String> scopes = (ArrayList<String>)claims.getBody().get("scope");
+
+            System.out.println(scopes);
 
             if(user != null) {
                 return new UsernamePasswordAuthenticationToken(user, null, getAuthorities(scopes));
