@@ -30,9 +30,7 @@ public class UserController {
         applicationUserRepository.save(user);
     }
 
-    @PreAuthorize("resident")
-    @GetMapping("/getresident")
-    public void getResidentRole(){}
+
 
     @PreAuthorize("resident")
     @GetMapping("/getresident")

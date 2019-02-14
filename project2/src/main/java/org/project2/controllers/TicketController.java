@@ -65,10 +65,18 @@ public class TicketController {
 
     @PostMapping(path = "/updateTicket",produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('update_ticket')")
-    public int updateTicket(@RequestParam(name = "author") String author,
+    public int updateTicket(@RequestParam(name = "ticket_id") int ticket_id,
                             @RequestParam(name = "resolver") String resolver,
-                            @RequestParam(name = "note") String notes){
-        return this.ticketService.updateTicket(author, resolver, notes);
+                            @RequestParam(name = "note") String notes,
+                            @RequestParam(name = "resolved")boolean resolved){
+        return this.ticketService.updateTicket(ticket_id, resolver, notes, resolved);
+    }
+
+    @PostMapping(path = "/openTicket", produces = MediaType.APPLICATION_JSON_VALUE)
+    public int openTicket(
+                          @RequestParam(name = "author") String author,
+                          @RequestParam(name = "description")String description){
+        return this.ticketService.openTicket(author,description);
     }
 
 }

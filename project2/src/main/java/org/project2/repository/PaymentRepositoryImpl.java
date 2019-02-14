@@ -1,5 +1,7 @@
+package org.project2.repository;
 
 import org.project2.pojos.Payment;
+import org.project2.repository.PaymentRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -8,7 +10,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 @Repository
-public class PaymentRepositoryImpl implements PaymentRepository {
+public class PaymentRepositoryImpl implements PaymentRepository  {
 
 
     @PersistenceContext
