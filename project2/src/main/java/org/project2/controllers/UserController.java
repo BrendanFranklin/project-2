@@ -2,13 +2,14 @@ package org.project2.controllers;
 
 import org.project2.repository.ApplicationUserRepository;
 import org.project2.pojos.Users;
+import org.project2.repository.UserRepository;
 import org.project2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
@@ -16,13 +17,17 @@ public class UserController {
 
     private ApplicationUserRepository applicationUserRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private UserRepository userRepository;
     private UserService userService;
 
     @Autowired
     public UserController(ApplicationUserRepository applicationUserRepository,
-                          BCryptPasswordEncoder bCryptPasswordEncoder) {
+                          BCryptPasswordEncoder bCryptPasswordEncoder,
+                          UserRepository userRepository,
+                          UserService userService) {
         this.applicationUserRepository = applicationUserRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.userRepository = userRepository;
     }
 
     @PostMapping("/sign-up")
@@ -31,22 +36,22 @@ public class UserController {
         applicationUserRepository.save(user);
     }
 
-
-    @PreAuthorize("hasAuthority('resident')")
-    @GetMapping("/getresident")
-    public int getResident(){
-        return 0;
+    public Users getCurrentUser(@AuthenticationPrincipal Users users) {
+        return users;
     }
 
-    @PreAuthorize("hasAuthority('manager')")
-    @GetMapping("/getmanager")
-    public int getManager(){
-        return 0;
+    @GetMapping("/roleid")
+    public int getRoleId(@RequestParam(name = "username") String username){
+        return this.userRepository.viewRole(username);
     }
 
-    @PreAuthorize("hasAuthority('maintenance')")
-    @GetMapping("/getmaintenance")
-    public int getMaintenance(){
-        return 0;
+    @GetMapping("/userid")
+    public int getUserId(@RequestParam(name = "username") String username){
+        return this.userRepository.viewUserId(username);
+    }
+
+    @GetMapping("/findall")
+    public List<Users> findAll(){
+        return this.userService.findAll();
     }
 }

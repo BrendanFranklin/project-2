@@ -18,8 +18,8 @@ public interface TicketRepository {
     Ticket findTicketById(int ticket_id);
 
     // open/create a new ticket
-    int openTicket();
+    int openTicket(String author, String description);
 
     // update/close an existing ticket
-    int updateTicket(String author, String resolver, String notes);
+    int updateTicket(int ticket_id, String resolver, String notes, boolean resolved);
 }
