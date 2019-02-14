@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Ticket} from '../../models/ticket';
 
 
 @Component({
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaintformComponent implements OnInit {
 
-  constructor() { }
+  ticket: Ticket;
+
+  constructor() {
+  }
 
   ngOnInit() {
+
   }
 
 }
