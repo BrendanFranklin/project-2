@@ -40,15 +40,10 @@ public class UserController {
         return users;
     }
 
-    @GetMapping("/roleid")
-    public int getRoleId(@RequestParam(name = "username") String username){
-        return this.userRepository.viewRole(username);
-    }
+    @PreAuthorize("maintenance")
+    @GetMapping("/getmaintenance")
+    public void getMaintenanceRole(){}
 
-    @GetMapping("/userid")
-    public int getUserId(@RequestParam(name = "username") String username){
-        return this.userRepository.viewUserId(username);
-    }
 
     @GetMapping("/findall")
     public List<Users> findAll(){

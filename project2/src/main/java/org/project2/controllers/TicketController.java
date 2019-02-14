@@ -48,14 +48,14 @@ public class TicketController {
 
     @GetMapping(path = "/ticketRes")
     @PreAuthorize("hasAuthority('open_ticket')")
-    public List<Ticket> ticketByRes(@RequestParam(name = "user") int user_id){
-        return this.ticketService.getTicketByRes(user_id);
+    public List<Ticket> ticketByRes(@RequestBody Ticket ticket){
+        return this.ticketService.getTicketByRes(ticket.getAuthor());
     }
 
     @GetMapping(path = "/ticketId")
     @PreAuthorize("hasAuthority('view_ticket')")
-    public ResponseEntity<Ticket> ticketById(@RequestParam(name = "id") int ticket_id){
-        Ticket t =  ticketService.getTicketById(ticket_id);
+    public ResponseEntity<Ticket> ticketById(@RequestBody Ticket ticket){
+        Ticket t =  ticketService.getTicketById(ticket.getId());
 
         if(t != null){
             return new ResponseEntity<>(t, HttpStatus.OK);
@@ -65,18 +65,17 @@ public class TicketController {
 
     @PostMapping(path = "/updateTicket",produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('update_ticket')")
-    public int updateTicket(@RequestParam(name = "ticket_id") int ticket_id,
-                            @RequestParam(name = "resolver") String resolver,
-                            @RequestParam(name = "note") String notes,
-                            @RequestParam(name = "resolved")boolean resolved){
-        return this.ticketService.updateTicket(ticket_id, resolver, notes, resolved);
+    public int updateTicket(@RequestBody Ticket ticket){
+        return this.ticketService.updateTicket(
+                ticket.getId(),
+                ticket.getResolver(),
+                ticket.getNotes(),
+                ticket.isResolved());
     }
 
     @PostMapping(path = "/openTicket", produces = MediaType.APPLICATION_JSON_VALUE)
-    public int openTicket(
-                          @RequestParam(name = "author") String author,
-                          @RequestParam(name = "description")String description){
-        return this.ticketService.openTicket(author,description);
+    public int openTicket(@RequestBody Ticket ticket){
+        return this.ticketService.openTicket(ticket.getAuthor(), ticket.getDescription());
     }
 
 }

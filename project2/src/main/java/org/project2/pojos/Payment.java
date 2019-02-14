@@ -19,7 +19,7 @@ public class Payment {
     public Payment() {
     }
 
-    public Payment(boolean paid, boolean overdue, Integer resident_id) {
+    public Payment(boolean paid, boolean overdue, Integer user_id) {
         this.paid = paid;
         this.overdue = overdue;
         this.user_id = user_id;

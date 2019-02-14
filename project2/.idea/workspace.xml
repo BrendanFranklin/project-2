@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="aed0303d-de36-414e-b63b-faafa7aef62a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" afterDir="false" />
@@ -16,6 +17,9 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt" afterDir="false" />
     </list>
+=======
+    <list default="true" id="aed0303d-de36-414e-b63b-faafa7aef62a" name="Default Changelist" comment="" />
+>>>>>>> Mike
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,32 +31,68 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
+<<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="627">
               <caret line="74" column="46" lean-forward="true" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+=======
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="76" column="54" lean-forward="true" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="658">
+              <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+              <folding>
+                <element signature="e#1608#1609#0" expanded="true" />
+                <element signature="e#1669#1670#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#1812#1813#0" expanded="true" />
+              </folding>
+>>>>>>> Mike
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/service/TicketService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+>>>>>>> Mike
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/service/TicketService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
               <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+>>>>>>> Mike
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -108,6 +148,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="634">
               <caret line="97" column="70" selection-start-line="97" selection-start-column="70" selection-end-line="97" selection-end-column="70" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-917">
+              <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+>>>>>>> Mike
             </state>
           </provider>
         </entry>
@@ -122,6 +168,7 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/PaymentRepositoryImpl.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" />
@@ -134,13 +181,34 @@
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/service/TicketService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+>>>>>>> Mike
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+>>>>>>> Mike
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,6 +250,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -191,6 +268,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="pojos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,12 +279,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Mike
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+>>>>>>> Mike
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,7 +315,11 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550110995836" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550173515922" />
+>>>>>>> Mike
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -230,14 +334,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Project2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="Project2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="project2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.project2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.project2.Project2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -257,10 +355,15 @@
       <workItem from="1550110108722" duration="991000" />
       <workItem from="1550111163232" duration="2562000" />
       <workItem from="1550156635605" duration="4446000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1550171629602" duration="2685000" />
+>>>>>>> Mike
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="7999000" />
   </component>
   <component name="ToolWindowManager">
@@ -268,6 +371,15 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+=======
+    <option name="totallyTimeSpent" value="10684000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
+>>>>>>> Mike
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -275,9 +387,16 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.27951807" />
+=======
+      <window_info anchor="bottom" id="SonarLint" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27903682" />
+>>>>>>> Mike
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,13 +420,50 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="SonarLint" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.27903682" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32907802" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32907802" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="30">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
@@ -373,6 +529,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
           <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+=======
+        <state relative-caret-position="114">
+          <caret line="254" column="44" selection-start-line="254" selection-start-column="44" selection-end-line="254" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.4.RELEASE/spring-webmvc-5.1.4.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.4.RELEASE/spring-webmvc-5.1.4.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/accept/ContentNegotiationStrategy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/web/accept/AbstractMappingContentNegotiationStrategy.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE-sources.jar!/org/springframework/web/accept/ContentNegotiationStrategy.java" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="121" selection-start-line="1" selection-start-column="121" selection-end-line="1" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/Project2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding>
             <element signature="e#1088#1089#0" expanded="true" />
             <element signature="e#1149#1150#0" expanded="true" />
@@ -380,6 +577,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/PaymentRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/PaymentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+>>>>>>> Mike
+          <folding>
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/PaymentRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -401,12 +621,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+=======
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Apartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Privilege.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+>>>>>>> Mike
+          <folding>
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -453,11 +728,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2037#2038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="26" column="70" lean-forward="true" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/service/TicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="22" column="64" lean-forward="true" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="76" column="54" lean-forward="true" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
+>>>>>>> Mike
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="555">
           <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding>
@@ -492,6 +827,15 @@
             <element signature="e#1979#1980#0" expanded="true" />
             <element signature="e#2032#2033#0" expanded="true" />
             <element signature="e#2078#2079#0" expanded="true" />
+=======
+        <state relative-caret-position="658">
+          <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
+          <folding>
+            <element signature="e#1608#1609#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+>>>>>>> Mike
           </folding>
         </state>
       </provider>

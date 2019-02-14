@@ -16,7 +16,10 @@ public class Ticket {
     private Timestamp submitted;
 
     @JoinColumn(name = "author", referencedColumnName = "user_id")
-    private String author;
+    private int author;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "resolved")
     private boolean resolved;
@@ -25,9 +28,9 @@ public class Ticket {
     private Timestamp updated;
 
     @JoinColumn(name = "resolver", referencedColumnName = "user_id")
-    private String resolver;
+    private int resolver;
 
-    @Column(name = "description")
+    @Column(name = "notes")
     private String notes;
 
     @Transient
@@ -44,43 +47,19 @@ public class Ticket {
         this.id = id;
     }
 
-    public Timestamp getSubmitted() {
-        return submitted;
-    }
-
-    public void setSubmitted(Timestamp submitted) {
-        this.submitted = submitted;
-    }
-
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(int author) {
         this.author = author;
-    }
-
-    public boolean isResolved() {
-        return resolved;
-    }
-
-    public void setResolved(boolean resolved) {
-        this.resolved = resolved;
-    }
-
-    public Timestamp getUpdated() {
-        return updated;
-    }
-
-    public void setUpdated(Timestamp updated) {
-        this.updated = updated;
     }
 
     public String getResolver() {
         return resolver;
     }
 
-    public void setResolver(String resolver) {
+    public void setResolver(int resolver) {
         this.resolver = resolver;
     }
 
@@ -90,13 +69,5 @@ public class Ticket {
 
     public void setNotes(String notes) {
         this.notes = notes;
-    }
-
-    public Users getUserTickets() {
-        return userTickets;
-    }
-
-    public void setUserTickets(Users userTickets) {
-        this.userTickets = userTickets;
     }
 }
