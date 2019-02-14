@@ -33,7 +33,9 @@ public class UserRepositoryImpl implements UserRepository {
         Query query = entityManager.createNativeQuery("SELECT role_id from pretense.users where username = ?");
         query.setParameter(1,username);
 
+        System.out.println("run");
 
         return query.getFirstResult();
+
     }
 }
