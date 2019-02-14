@@ -16,15 +16,21 @@ public class Ticket {
     private Timestamp submitted;
 
     @JoinColumn(name = "author", referencedColumnName = "user_id")
-    private String author;
-
-    @Column(name = "resolved")
-    private Timestamp resolved;
-
-    @JoinColumn(name = "resolver", referencedColumnName = "user_id")
-    private String resolver;
+    private int author;
 
     @Column(name = "description")
+    private String description;
+
+    @Column(name = "resolved")
+    private boolean resolved;
+
+    @Column(name = "updated")
+    private Timestamp updated;
+
+    @JoinColumn(name = "resolver", referencedColumnName = "user_id")
+    private int resolver;
+
+    @Column(name = "notes")
     private String notes;
 
     @Transient
@@ -41,19 +47,43 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getAuthor() {
+    public Timestamp getSubmitted() {
+        return submitted;
+    }
+
+    public void setSubmitted(Timestamp submitted) {
+        this.submitted = submitted;
+    }
+
+    public int getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(int author) {
         this.author = author;
     }
 
-    public String getResolver() {
+    public boolean isResolved() {
+        return resolved;
+    }
+
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
+    }
+
+    public Timestamp getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Timestamp updated) {
+        this.updated = updated;
+    }
+
+    public int getResolver() {
         return resolver;
     }
 
-    public void setResolver(String resolver) {
+    public void setResolver(int resolver) {
         this.resolver = resolver;
     }
 
@@ -63,5 +93,21 @@ public class Ticket {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Users getUserTickets() {
+        return userTickets;
+    }
+
+    public void setUserTickets(Users userTickets) {
+        this.userTickets = userTickets;
     }
 }

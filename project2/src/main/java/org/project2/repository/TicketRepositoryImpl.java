@@ -37,23 +37,7 @@ public class TicketRepositoryImpl implements TicketRepository{
                 "from pretense.tickets " +
                 "left join pretense.users on author = user_id " +
                 "where author = ?");
-        query.setParameter(1,user_id);
-
-        if(!query.getResultList().isEmpty()){
-            List<Ticket> tickets = (List<Ticket>) query.getResultList();
-            return tickets;
-        }
-        return null;
-    }
-
-    @Override
-    public List<Ticket> findResidentTickets() {
-        Query query = entityManager.createNativeQuery("Select " +
-                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
-                "from pretense.tickets " +
-                "left join pretense.users on author = user_id " +
-                "where author = ?");
-        query.setParameter(1, 0);
+        query.setParameter(1, user_id);
 
         if(!query.getResultList().isEmpty()){
             List<Ticket> tickets = (List<Ticket>) query.getResultList();
@@ -81,19 +65,25 @@ public class TicketRepositoryImpl implements TicketRepository{
     }
 
     @Override
-    public int openTicket() {
+    public int openTicket(int author, String description) {
+        Query query = entityManager.createNativeQuery("insert into pretense.tickets " +
+                "(author, description, submitted) values (?,?,now())");
+        query.setParameter(1, author);
+        query.setParameter(2, description);
 
-        return 0;
+        return query.executeUpdate();
+
     }
 
     @Override
-    public int updateTicket(String author, String resolver, String notes) {
+    public int updateTicket(int ticket_id, int resolver, String notes, boolean resolved) {
 
-        Query query = entityManager.createNativeQuery("Insert into pretense.ticket +" +
-                "(author, resolver, notes) values (?,?,?");
-        query.setParameter(1,author);
-        query.setParameter(2, resolver);
-        query.setParameter(3, notes);
+        Query query = entityManager.createNativeQuery("update pretense.tickets " +
+                "set resolver=?, notes=?, resolved=?, updated = now() where ticket_id = ?");
+        query.setParameter(4,ticket_id);
+        query.setParameter(1, resolver);
+        query.setParameter(2, notes);
+        query.setParameter(3, resolved);
 
         return query.executeUpdate();
     }

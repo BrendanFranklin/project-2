@@ -1,4 +1,5 @@
 -------------------------------------------------------------------------------
 Test set: org.project2.Project2ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.899 s - in org.project2.Project2ApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 135.707 s - in org.project2.Project2ApplicationTests
+

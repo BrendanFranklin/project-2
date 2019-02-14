@@ -1,6 +1,5 @@
 package org.project2.repository;
 
-import org.project2.pojos.Apartment;
 import org.project2.pojos.Users;
 import org.springframework.stereotype.Repository;
 
@@ -42,4 +41,6 @@ public class UserRepositoryImpl implements UserRepository {
         query.setParameter(1, username);
         return query.getFirstResult();
     }
+
+
 }

@@ -38,7 +38,6 @@ public class UserDetailServiceImpl implements UserDetailsService {
         }
         Collection authorities = getAuthorities(users.getRoles());
         User user = new User(users.getUsername(), users.getPassword(), authorities);
-        System.out.println("from the DB:" + user);
         return user;
     }
 
