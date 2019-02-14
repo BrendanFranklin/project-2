@@ -27,15 +27,16 @@ public class ApplicationController {
     }
 
     @PostMapping(path = "/openApp", produces = MediaType.APPLICATION_JSON_VALUE)
-    public int openApp(@RequestParam(name = "first_name") String first_name,
-                       @RequestParam(name = "last_name") String last_name,
-                       @RequestParam(name = "email") String email,
-                       @RequestParam(name = "phone") String phone){
-        return this.applicationService.openApp(first_name, last_name, email, phone);
+    public int openApp(@RequestBody Application app){
+        return this.applicationService.openApp(
+                app.getFirst_name(),
+                app.getLast_name(),
+                app.getEmail(),
+                app.getPhone());
     }
 
     @PostMapping(path = "/deleteApp")
-    public void deleteApp(@RequestParam(name = "id") int id){
-        this.applicationService.deleteApp(id);
+    public void deleteApp(@RequestBody Application app){
+        this.applicationService.deleteApp(app.getId());
     }
 }

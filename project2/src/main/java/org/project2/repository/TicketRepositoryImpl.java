@@ -37,23 +37,7 @@ public class TicketRepositoryImpl implements TicketRepository{
                 "from pretense.tickets " +
                 "left join pretense.users on author = user_id " +
                 "where author = ?");
-        query.setParameter(1,user_id);
-
-        if(!query.getResultList().isEmpty()){
-            List<Ticket> tickets = (List<Ticket>) query.getResultList();
-            return tickets;
-        }
-        return null;
-    }
-
-    @Override
-    public List<Ticket> findResidentTickets() {
-        Query query = entityManager.createNativeQuery("Select " +
-                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
-                "from pretense.tickets " +
-                "left join pretense.users on author = user_id " +
-                "where author = ?");
-        query.setParameter(1, 0);
+        query.setParameter(1, user_id);
 
         if(!query.getResultList().isEmpty()){
             List<Ticket> tickets = (List<Ticket>) query.getResultList();
@@ -81,7 +65,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     }
 
     @Override
-    public int openTicket(String author, String description) {
+    public int openTicket(int author, String description) {
         Query query = entityManager.createNativeQuery("insert into pretense.tickets " +
                 "(author, description, submitted) values (?,?,now())");
         query.setParameter(1, author);
@@ -92,7 +76,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     }
 
     @Override
-    public int updateTicket(int ticket_id, String resolver, String notes, boolean resolved) {
+    public int updateTicket(int ticket_id, int resolver, String notes, boolean resolved) {
 
         Query query = entityManager.createNativeQuery("update pretense.tickets " +
                 "set resolver=?, notes=?, resolved=?, updated = now() where ticket_id = ?");

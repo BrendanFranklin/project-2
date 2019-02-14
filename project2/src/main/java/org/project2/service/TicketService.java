@@ -45,12 +45,12 @@ public class TicketService {
     }
 
     @Transactional
-    public  int updateTicket(int ticket_id, String resolver, String notes, boolean resolved){
+    public  int updateTicket(int ticket_id, int resolver, String notes, boolean resolved){
         return this.ticketRepository.updateTicket(ticket_id, resolver, notes, resolved);
     }
 
     @Transactional
-    public int openTicket( String author, String description){
+    public int openTicket(int author, String description){
         return this.ticketRepository.openTicket(author,description);
     }
 
