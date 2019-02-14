@@ -47,7 +47,15 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getAuthor() {
+    public Timestamp getSubmitted() {
+        return submitted;
+    }
+
+    public void setSubmitted(Timestamp submitted) {
+        this.submitted = submitted;
+    }
+
+    public int getAuthor() {
         return author;
     }
 
@@ -55,7 +63,23 @@ public class Ticket {
         this.author = author;
     }
 
-    public String getResolver() {
+    public boolean isResolved() {
+        return resolved;
+    }
+
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
+    }
+
+    public Timestamp getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Timestamp updated) {
+        this.updated = updated;
+    }
+
+    public int getResolver() {
         return resolver;
     }
 
@@ -69,5 +93,21 @@ public class Ticket {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Users getUserTickets() {
+        return userTickets;
+    }
+
+    public void setUserTickets(Users userTickets) {
+        this.userTickets = userTickets;
     }
 }

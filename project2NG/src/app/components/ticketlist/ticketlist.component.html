@@ -6,19 +6,17 @@
           <th scope="col">Ticket ID</th>
           <th scope="col">Author</th>
           <th scope="col">Submitted</th>
-          <th scope="col">Resolved</th>
-          <th scope="col">Description</th>
+          <th scope="col">Date Resolved</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor = "let ticket of tickets"
         (click) = "detailView(ticket)">
           <th scope="row">{{ticket.id}}</th>
-          <td>{{ticket.author}}</td>
-          <td>{{ticket.submitted.getMonth()+1}}/{{ticket.submitted.getDate()}}/{{ticket.submitted.getFullYear()}}</td>
-          <td *ngIf="reimb.resolved > reimb.submitted" >{{ticket.resolved.getMonth()+1}}/{{ticket.resolved.getDate()}}/{{ticket.resolved.getFullYear()}}</td>
+          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>
+          <td>{{reimb.submitted.getMonth()+1}}/{{reimb.submitted.getDate()}}/{{reimb.submitted.getFullYear()}}</td>
+          <td *ngIf="reimb.resolved > reimb.submitted" >{{reimb.resolved.getMonth()+1}}/{{reimb.resolved.getDate()}}/{{reimb.resolved.getFullYear()}}</td>
           <td *ngIf="reimb.resolved < reimb.submitted">Unresolved</td>
-          <td>{{ticket.description}}</td>
         </tr>
     </tbody>
     </table>

@@ -363,7 +363,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Resolved</th>\r\n          <th scope=\"col\">Description</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.author}}</td>\r\n          <td>{{ticket.submitted.getMonth()+1}}/{{ticket.submitted.getDate()}}/{{ticket.submitted.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved > reimb.submitted\" >{{ticket.resolved.getMonth()+1}}/{{ticket.resolved.getDate()}}/{{ticket.resolved.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved < reimb.submitted\">Unresolved</td>\r\n          <td>{{ticket.description}}</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Request ID</th>\r\n          <th scope=\"col\">Name</th>\r\n          <th scope=\"col\">Amount</th>\r\n          <th scope=\"col\">Type</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Resolved</th>\r\n          <th scope=\"col\">Status</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{reimb.iD}}</th>\r\n          <td>{{reimb.firstName}} {{reimb.lastName}}</td>\r\n          <td>{{reimb.amount}}</td>\r\n          <td>{{reimb.type}}</td>\r\n          <td>{{reimb.submitted.getMonth()+1}}/{{reimb.submitted.getDate()}}/{{reimb.submitted.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved > reimb.submitted\" >{{reimb.resolved.getMonth()+1}}/{{reimb.resolved.getDate()}}/{{reimb.resolved.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved < reimb.submitted\">Unresolved</td>\r\n          <td>{{reimb.status}}</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -439,13 +439,7 @@ var TicketlistComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
 var Ticket = /** @class */ (function () {
-    function Ticket(id, submitted, resolved, description, author, resolver) {
-        this.id = id;
-        this.submitted = submitted;
-        this.resolved = resolved;
-        this.description = description;
-        this.author = author;
-        this.resolver = resolver;
+    function Ticket() {
     }
     return Ticket;
 }());

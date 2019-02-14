@@ -4,8 +4,29 @@
 
 export const environment = {
   production: false,
+
+  publicOpenApts: "http://localhost:8080/apt/emptyApt",
+  publicSubmitApp: "http://localhost:8080/application/openApp",
+
+  
+  loginGetRoleId: "http://localhost:8080/users/roleid",
+  loginGetUserId: "http://localhost:8080/users/userid",
+
+
   residentAuth: "http://localhost:8080/login",
-  employeeAuth: "http://localhost:8080/login"
+  employeeAuth: "http://localhost:8080/login",
+ 
+  managerGetTickets: "http://localhost:8080/ticket/allTicket",
+  managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
+
+  managerGetApt: "http://localhost:8080/apt/allApt",
+
+  //
+  residentGetTickets: "http://localhost:8080/ticket/ticketRes",
+  //send user ID: author
+  residentGetRentDetails: "http://localhost8080/payment/paymentAuth",
+  residentPayRent: "TODO",
+
 };
 
 /*

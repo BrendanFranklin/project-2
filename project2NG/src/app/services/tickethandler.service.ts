@@ -10,8 +10,32 @@ export class TickethandlerService {
 
   constructor(private http: HttpClient) { }
 
-  getTickets(url, success, fail){
-    this.http.get<Ticket[]>(url, {headers:{bearer: localStorage.getItem('userToken')} })
-    .toPromise().then((resp)=>success(resp), fail())
+  getTickets(url: string, success, fail){
+    this.http.get<Ticket[]>(url, {headers:{Authorization: localStorage.getItem('userToken')}})
+    .toPromise().then((resp)=>success(resp),(err)=>fail(err))
+  }
+
+  resolveTicket(url: string, ticket:Ticket, success, fail){
+    this.http.post<any>(url, 
+      {headers:{Authorization:localStorage.getItem('userToken')},
+     body:JSON.stringify(ticket)})
+    .toPromise().then((resp)=>{
+      let tickets: Ticket[];
+      resp.foreach(ticket=>tickets.push(this.ticketParse(ticket)));
+      success(tickets)},
+      (err)=>fail(err))
+  }
+  ticketParse(ticket){
+    let parsedTicket = new Ticket(
+      ticket[0],
+      ticket[1],
+      ticket[2],
+      ticket[3],
+      ticket[4],
+      ticket[5],
+      ticket[6],
+      ticket[7]
+      );
+      return parsedTicket
   }
 }

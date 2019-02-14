@@ -11,7 +11,7 @@ import { Ticket } from 'src/app/models/ticket';
 export class TicketlistComponent implements OnInit {
 
   @Input() tickets: Ticket[];
-  @Input() employee: boolean;
+  @Input() manager: boolean;
   @Output() resolveTicket: EventEmitter<Ticket> = new EventEmitter();
 
   constructor(private modalService: NgbModal) { }
@@ -22,7 +22,7 @@ export class TicketlistComponent implements OnInit {
   detailView(ticket: Ticket){
     const modalRef = this.modalService.open(DetailsmodalComponent)
     modalRef.componentInstance.ticket = ticket;
-    modalRef.componentInstance.employee = this.employee;
+    modalRef.componentInstance.manager = this.manager;
     modalRef.componentInstance.resolveTicket.subscribe((ticket)=>{
       this.resolveTicket.emit(ticket);
     })

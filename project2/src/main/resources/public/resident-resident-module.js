@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc2lkZW50L2FwYXJ0bWVudGRldGFpbHNwYWdlL2FwYXJ0bWVudGRldGFpbHNwYWdlLmNvbXBvbmVudC5jc3MifQ== */"
+module.exports = ".resBan{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzaWRlbnQvYXBhcnRtZW50ZGV0YWlsc3BhZ2UvYXBhcnRtZW50ZGV0YWlsc3BhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3Jlc2lkZW50L2FwYXJ0bWVudGRldGFpbHNwYWdlL2FwYXJ0bWVudGRldGFpbHNwYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVzQmFue1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */"
 
 /***/ }),
 
@@ -18,7 +18,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n\r\n<button [routerLink]=\"'/maintenance'\">Track/Submit Maintenance\r\n</button>\r\n"
 
 /***/ }),
 
@@ -167,7 +167,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 

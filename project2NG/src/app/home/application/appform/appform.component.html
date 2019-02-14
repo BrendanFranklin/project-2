@@ -6,15 +6,16 @@
   We can't wait to see you!
 </p>
 <div>
-<form>
+<form #submission="ngForm" novalidate (ngSubmit)="submit()">
   First Name<br>
-  <input type="text"><br>
+  <input type="text" #name="ngModel" [(ngModel)]="application.first_name" required name="first_name"><br>
   Last Name<br>
-  <input type=""text><br>
+  <input type="text" #name="ngModel" [(ngModel)]="application.last_name" required name="last_name"><br>
   Phone<br>
-  <input type="text"> <input type="radio">Landline <input type="radio"> Mobile<br>
+  <input type="text" #name="ngModel" [(ngModel)]="application.phone" required name="phone"> <br> <input type="radio" name="phone">Landline <input type="radio" name="phone"> Mobile<br>
   Email<br>
-  <input type="text"><br>
+  <input type="text" #name="ngModel" [(ngModel)]="application.email" required name="email"><br>
+  <button type="submit" class="btn btn-primary" [disabled]="!submission.valid">Submit</button>
 </form>
 </div>
 </div>

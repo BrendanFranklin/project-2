@@ -5,11 +5,11 @@
 
 .banner{
     background-color: black;
-    height: 200px;
+    height: auto;
 
 }
 .banner-text{
-
+    cursor: pointer;
     text-align: center;
     color: gold;
     font-family: 'Scriptina';
