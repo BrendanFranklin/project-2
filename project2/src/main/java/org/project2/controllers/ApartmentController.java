@@ -29,7 +29,6 @@ public class ApartmentController {
     }
 
     @GetMapping(path = "/emptyApt", produces = MediaType.APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasAuthority('view_apt')")
     public List<Apartment> emptyApt(@RequestParam(required = false, value = "occupied") boolean occupied){
         return this.apartmentService.emptyApt(false);
     }

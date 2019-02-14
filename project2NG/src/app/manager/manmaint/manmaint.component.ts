@@ -21,7 +21,7 @@ export class ManmaintComponent implements OnInit {
   }
   resolve(ticket: Ticket){
     this.ticketHandler.resolveTicket(
-      environment.managerResolveTicket,
+      environment.managerUpdateTicket,
       ticket,
       ()=>this.getTickets(),
       (err)=>console.log(err))

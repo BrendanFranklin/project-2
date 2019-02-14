@@ -11,13 +11,13 @@ export class TickethandlerService {
   constructor(private http: HttpClient) { }
 
   getTickets(url: string, success, fail){
-    this.http.post<Ticket[]>(url, {headers:{Authorization: localStorage.getItem('userToken')}})
+    this.http.get<Ticket[]>(url, {headers:{Authorization: localStorage.getItem('userToken')}})
     .toPromise().then((resp)=>success(resp),(err)=>fail(err))
   }
 
   resolveTicket(url: string, ticket:Ticket, success, fail){
     this.http.post<any>(url, 
-      {headers:{Authorization: localStorage.getItem('userToken')},
+      {headers:{Authorization:localStorage.getItem('userToken')},
      body:JSON.stringify(ticket)})
     .toPromise().then((resp)=>{
       let tickets: Ticket[];

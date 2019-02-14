@@ -321,7 +321,7 @@ var TickethandlerService = /** @class */ (function () {
         this.http = http;
     }
     TickethandlerService.prototype.getTickets = function (url, success, fail) {
-        this.http.post(url, { headers: { Authorization: localStorage.getItem('userToken') } })
+        this.http.get(url, { headers: { Authorization: localStorage.getItem('userToken') } })
             .toPromise().then(function (resp) { return success(resp); }, function (err) { return fail(err); });
     };
     TickethandlerService.prototype.resolveTicket = function (url, ticket, success, fail) {

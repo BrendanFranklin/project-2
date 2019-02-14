@@ -53,7 +53,8 @@ var AppformComponent = /** @class */ (function () {
         this.application = new src_app_models_application__WEBPACK_IMPORTED_MODULE_2__["Application"]("", "", "", "");
     };
     AppformComponent.prototype.submit = function () {
-        this.prospectHandler.submitApplication(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].publicSubmitApp, this.application);
+        this.prospectHandler.submitApplication(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].publicSubmitApp, { first_name: this.application.first_name,
+            last_name: this.application.last_name, email: this.application.email, phone: this.application.phone });
         this.router.navigate(['']);
     };
     AppformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -527,8 +528,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_login_service_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/login-service.service */ "./src/app/home/services/login-service.service.ts");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
-
 
 
 
@@ -551,8 +550,13 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent.prototype.reroute = function () {
-        var _this = this;
-        this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].checkResident, function () { return _this.router.navigate(['/resident']); }, function () { return _this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].checkmaintenance, function () { return _this.router.navigate(['/maintenance']); }, function () { return _this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].checkManager, function () { return _this.router.navigate(['/manager']); }, function () { return _this.shake = true; }); }); });
+        //   this.login.checkRole(environment.checkResident,
+        //     ()=>this.router.navigate(['/resident']),
+        //   ()=>this.login.checkRole(environment.checkmaintenance,
+        //     ()=>this.router.navigate(['/maintenance']),
+        //     ()=>this.login.checkRole(environment.checkManager,
+        //       ()=>this.router.navigate(['/manager']),
+        //       ()=>this.shake=true)))
     };
     LoginComponent.prototype.noShake = function () {
         this.shake = false;
@@ -655,7 +659,7 @@ module.exports = ".aptList{\r\n    color: gold;\r\n    background-color: black;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class =\"aptBack\">\r\n  <div  class = \"aptList\">\r\n    <table class=\"aptTable\" >\r\n      <thead class=\"tabHead\">\r\n      <tr>\r\n        <th style=\"text-align: center\">Apt Type</th>\r\n        <th>Floor Plan</th>\r\n        <th>Bed/Bath</th>\r\n        <th>Sq Footage</th>\r\n        <th>Apply</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <tr>\r\n        <th scope=\"row\">Studio</th>\r\n        <td class=\"zoom\"><img  width=\"75px\" height=\"75\" src=\"../../../assets/images/studio.JPG\"></td>\r\n        <td>0/1</td>\r\n        <td>450</td>\r\n        <td>\r\n          <button type=\"button\" class=\"listButt\" [routerLink]=\"['/apply']\">Available<br>{{stuioNum}}</button>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <th scope=\"row\">1 Bedroom</th>\r\n        <td class=\"zoom\"><img width=\"75px\" height=\"75px\" src=\"../../../assets/images/onebed.JPG\"></td>\r\n        <td>1/1</td>\r\n        <td>650</td>\r\n        <td>\r\n          <button  type=\"button\" class=\"listButt\" [routerLink]=\"['/apply']\">Available<br>{{oneBedNum}}</button>\r\n        </td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class =\"aptBack\">\r\n  <div  class = \"aptList\">\r\n    <table class=\"aptTable\" >\r\n      <thead class=\"tabHead\">\r\n      <tr>\r\n        <th style=\"text-align: center\">Apt Type</th>\r\n        <th>Floor Plan</th>\r\n        <th>Bed/Bath</th>\r\n        <th>Sq Footage</th>\r\n        <th>Apply</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <tr>\r\n        <th scope=\"row\">Studio</th>\r\n        <td class=\"zoom\"><img  width=\"75px\" height=\"75\" src=\"../../../assets/images/studio.JPG\"></td>\r\n        <td>0/1</td>\r\n        <td>450</td>\r\n        <td>\r\n          <button type=\"button\" class=\"listButt\" [routerLink]=\"['/apply']\">Available<br>{{studioNum}}</button>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <th scope=\"row\">1 Bedroom</th>\r\n        <td class=\"zoom\"><img width=\"75px\" height=\"75px\" src=\"../../../assets/images/onebed.JPG\"></td>\r\n        <td>1/1</td>\r\n        <td>650</td>\r\n        <td>\r\n          <button  type=\"button\" class=\"listButt\" [routerLink]=\"['/apply']\">Available<br>{{oneBedNum}}</button>\r\n        </td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -802,7 +806,16 @@ var ProspectivepageComponent = /** @class */ (function () {
         this.prospecthandler = prospecthandler;
     }
     ProspectivepageComponent.prototype.ngOnInit = function () {
-        this.getOpenApartments();
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.getOpenApartments()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
     ProspectivepageComponent.prototype.getOpenApartments = function () {
         var _this = this;
@@ -810,10 +823,10 @@ var ProspectivepageComponent = /** @class */ (function () {
             _this.studioNum = 0;
             _this.oneBedNum = 0;
             apartments.forEach(function (apartment) {
-                if (apartment.apt_style == 'studio') {
+                if (apartment.apt_style == "studio") {
                     _this.studioNum++;
                 }
-                if (apartment.apt_style == '1-bedroom') {
+                if (apartment.apt_style == "1-bedroom") {
                     _this.oneBedNum++;
                 }
             });
@@ -923,7 +936,7 @@ var LoginService = /** @class */ (function () {
         })
             .toPromise()
             .then(function (resp) {
-            localStorage.setItem('userToken', JSON.stringify(resp.headers.get('Authorization')));
+            localStorage.setItem('userToken', resp.headers.get('Authorization'));
             success();
         }, function (err) {
             fail(err);
@@ -972,6 +985,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/apartment */ "./src/app/models/apartment.ts");
+
 
 
 
@@ -981,7 +996,12 @@ var ProspecthandlerService = /** @class */ (function () {
     }
     ProspecthandlerService.prototype.getOpenAppartments = function (url, success, fail) {
         this.http.get(url).toPromise().then(function (resp) {
-            return success(resp);
+            var apartments = [];
+            resp.forEach(function (apartment) {
+                var newAp = new src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__["Apartment"](apartment[0], apartment[1], apartment[2], apartment[3]);
+                apartments.push(newAp);
+            });
+            success(apartments);
         }, fail());
     };
     ProspecthandlerService.prototype.submitApplication = function (url, application) {
@@ -994,6 +1014,30 @@ var ProspecthandlerService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], ProspecthandlerService);
     return ProspecthandlerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/models/apartment.ts":
+/*!*************************************!*\
+  !*** ./src/app/models/apartment.ts ***!
+  \*************************************/
+/*! exports provided: Apartment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Apartment", function() { return Apartment; });
+var Apartment = /** @class */ (function () {
+    function Apartment(apt_num, apt_style, rent, occupied) {
+        this.apt_num = apt_num;
+        this.apt_style = apt_style;
+        this.rent = rent;
+        this.occupied = occupied;
+    }
+    return Apartment;
 }());
 
 

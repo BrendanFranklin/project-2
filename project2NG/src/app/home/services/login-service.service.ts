@@ -24,7 +24,7 @@ export class LoginService {
       })
       .toPromise()
       .then((resp) => {
-        localStorage.setItem('userToken', JSON.stringify(resp.headers.get('Authorization')));
+        localStorage.setItem('userToken', resp.headers.get('Authorization'));
         success();
       },
       (err) => {
@@ -47,7 +47,7 @@ export class LoginService {
   checkRole(url: string, success, fail){
     this.http.get<any>(url,
       {headers:{
-        Authorization: localStorage.getItem('userToken')
+        Authorization:localStorage.getItem('userToken')
       }}).toPromise().then(success(),fail())
   }
 }

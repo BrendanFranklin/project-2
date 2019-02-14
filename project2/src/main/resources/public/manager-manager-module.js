@@ -450,7 +450,7 @@ var ManmaintComponent = /** @class */ (function () {
     };
     ManmaintComponent.prototype.resolve = function (ticket) {
         var _this = this;
-        this.ticketHandler.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerResolveTicket, ticket, function () { return _this.getTickets(); }, function (err) { return console.log(err); });
+        this.ticketHandler.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateTicket, ticket, function () { return _this.getTickets(); }, function (err) { return console.log(err); });
     };
     ManmaintComponent.prototype.getTickets = function () {
         var _this = this;

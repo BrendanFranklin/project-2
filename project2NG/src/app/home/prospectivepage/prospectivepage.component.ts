@@ -15,20 +15,21 @@ export class ProspectivepageComponent implements OnInit {
 
   constructor(private prospecthandler: ProspecthandlerService ) { }
 
-  ngOnInit() {
-    this.getOpenApartments();
+  async ngOnInit() {
+    await this.getOpenApartments();
   }
   getOpenApartments(){
     this.prospecthandler.getOpenAppartments(environment.publicOpenApts,
        (apartments: Apartment[])=>
        {this.studioNum = 0;
         this.oneBedNum = 0;
-         apartments.forEach((apartment: Apartment)=>
-        {if(apartment.apt_style=='studio'){
+         apartments.forEach(apartment =>
+        {if(apartment.apt_style=="studio"){
           this.studioNum++;
-        }if(apartment.apt_style=='1-bedroom'){
+        }if(apartment.apt_style=="1-bedroom"){
           this.oneBedNum++;
-        }})},
+        }
+      })},
        (err)=>console.log(err))
 
   }
