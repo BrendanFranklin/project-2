@@ -31,7 +31,7 @@ public class UserRepositoryImpl implements UserRepository {
         Query query = entityManager.createNativeQuery("SELECT role_id from pretense.users where username = ?");
         query.setParameter(1, username);
 
-        return query.getFirstResult();
+        return (int) query.getSingleResult();
 
     }
 
@@ -39,7 +39,7 @@ public class UserRepositoryImpl implements UserRepository {
     public int viewUserId(String username) {
         Query query = entityManager.createNativeQuery("SELECT user_id from pretense.users where username = ?");
         query.setParameter(1, username);
-        return query.getFirstResult();
+        return (int) query.getSingleResult();
     }
 
 

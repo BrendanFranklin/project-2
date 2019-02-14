@@ -46,7 +46,7 @@ public class TicketController {
 
     }
 
-    @GetMapping(path = "/ticketRes")
+    @PostMapping(path = "/ticketRes")
     @PreAuthorize("hasAuthority('open_ticket')")
     public List<Ticket> ticketByRes(@RequestBody Ticket ticket){
         return this.ticketService.getTicketByRes(ticket.getAuthor());

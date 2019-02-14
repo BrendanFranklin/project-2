@@ -38,12 +38,18 @@ export class LoginComponent implements OnInit {
      //get ID
     this.login.checkRole(environment.loginGetUserId,this.username,
       (resp)=>{localStorage.setItem('userId', resp);
-      console.log(localStorage.getItem('userRole'))},
+      console.log(localStorage.getItem('userId'))},
       ()=>{})
       //getRole
     this.login.checkRole(environment.loginGetRoleId,this.username,
       (resp)=>{localStorage.setItem('userRole', resp);
-        console.log(localStorage.getItem('userRole'))},
+        if(resp==1){
+          this.router.navigate(['/resident'])
+        }if(resp==2){
+          this.router.navigate(['/manager'])
+        }if(resp==3){
+          this.router.navigate(['/maintenance'])
+        }},
       ()=>{})
    }
  

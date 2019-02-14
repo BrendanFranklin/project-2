@@ -2,21 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aed0303d-de36-414e-b63b-faafa7aef62a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/common.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/maintenance-maintenance-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/maintenance-maintenance-module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/polyfills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/resident-resident-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/resident-resident-module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/runtime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/home/services/login-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/home/services/login-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/home/services/prospecthandler.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/home/services/prospecthandler.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="476">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -48,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
+            <state relative-caret-position="357">
               <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
             </state>
           </provider>
@@ -58,16 +58,34 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+            <state relative-caret-position="323">
+              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -120,14 +138,15 @@
         <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/PaymentRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/service/TicketService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
       </list>
     </option>
@@ -293,16 +312,18 @@
       <workItem from="1550156635605" duration="4446000" />
       <workItem from="1550171629602" duration="2685000" />
       <workItem from="1550174816827" duration="1794000" />
+      <workItem from="1550180802855" duration="1510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12478000" />
+    <option name="totallyTimeSpent" value="13988000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26778522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -312,13 +333,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27903682" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27903682" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
@@ -483,17 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-          <folding>
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1029">
@@ -512,10 +522,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="26" column="70" lean-forward="true" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+        <state relative-caret-position="510">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -547,27 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="77" column="54" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -575,10 +571,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
