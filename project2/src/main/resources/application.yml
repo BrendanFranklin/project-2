@@ -1,7 +1,13 @@
 spring:
   jpa:
-    hibernate:
-      ddl-auto: validate
+    properties:
+      hibernate:
+        ddl-auto: validate
+      temp:
+        user_jdbc_metadata_defaults: false
+      jdbc:
+        lob:
+          non_contextual_creation: false
   datasource:
     platform: postgres
     driver-class-name: org.postgresql.Driver
