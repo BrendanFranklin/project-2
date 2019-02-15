@@ -18,7 +18,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n<app-apartmentlist></app-apartmentlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n<app-apartmentlist [apts]=\"apts\"></app-apartmentlist>\r\n"
 
 /***/ }),
 
@@ -34,12 +34,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApartmentsPageComponent", function() { return ApartmentsPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_apartment_handler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/apartment-handler.service */ "./src/app/manager/services/apartment-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var ApartmentsPageComponent = /** @class */ (function () {
-    function ApartmentsPageComponent() {
+    function ApartmentsPageComponent(aptHandler) {
+        this.aptHandler = aptHandler;
     }
     ApartmentsPageComponent.prototype.ngOnInit = function () {
+        this.getApts();
+    };
+    ApartmentsPageComponent.prototype.getApts = function () {
+        var _this = this;
+        this.aptHandler.getApts(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetApt, function (apts) { _this.apts = apts; }, function () { });
     };
     ApartmentsPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -47,7 +57,7 @@ var ApartmentsPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./apartments-page.component.html */ "./src/app/manager/apartments-page/apartments-page.component.html"),
             styles: [__webpack_require__(/*! ./apartments-page.component.css */ "./src/app/manager/apartments-page/apartments-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_apartment_handler_service__WEBPACK_IMPORTED_MODULE_2__["ApartmentHandlerService"]])
     ], ApartmentsPageComponent);
     return ApartmentsPageComponent;
 }());
@@ -528,6 +538,57 @@ var RentPageComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], RentPageComponent);
     return RentPageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/services/apartment-handler.service.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/manager/services/apartment-handler.service.ts ***!
+  \***************************************************************/
+/*! exports provided: ApartmentHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApartmentHandlerService", function() { return ApartmentHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/apartment */ "./src/app/models/apartment.ts");
+
+
+
+
+var ApartmentHandlerService = /** @class */ (function () {
+    function ApartmentHandlerService(http) {
+        this.http = http;
+    }
+    ApartmentHandlerService.prototype.getApts = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var apts = [];
+            resp.forEach(function (apt) {
+                apts.push(_this.parseApt(apt));
+            });
+            success(apts);
+        }),
+            fail();
+    };
+    ApartmentHandlerService.prototype.parseApt = function (apt) {
+        var newAp = new src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__["Apartment"](apt[0], apt[1], apt[2], apt[3]);
+        return newAp;
+    };
+    ApartmentHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ApartmentHandlerService);
+    return ApartmentHandlerService;
 }());
 
 

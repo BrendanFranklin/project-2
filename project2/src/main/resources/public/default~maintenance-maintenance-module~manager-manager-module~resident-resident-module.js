@@ -18,7 +18,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Apt Num</th>\r\n        <th scope=\"col\">Style</th>\r\n        <th scope=\"col\">Rent</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <th scope=\"row\"></th>\r\n      <td></td>\r\n      <td></td>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Apt Num</th>\r\n        <th scope=\"col\">Style</th>\r\n        <th scope=\"col\">Rent</th>\r\n        <th scope=\"col\">Occupied</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let apt of apts\">\r\n      <th scope=\"row\">{{apt.apt_num}}</th>\r\n      <td>{{apt.apt_style}}</td>\r\n      <td>{{apt.rent}}</td>\r\n      <td>{{apt.occupied}}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -41,6 +41,10 @@ var ApartmentlistComponent = /** @class */ (function () {
     }
     ApartmentlistComponent.prototype.ngOnInit = function () {
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ApartmentlistComponent.prototype, "apts", void 0);
     ApartmentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-apartmentlist',

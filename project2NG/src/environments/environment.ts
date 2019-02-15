@@ -21,6 +21,8 @@ export const environment = {
 
   managerGetApt: "http://localhost:8080/apt/allApt",
 
+  managerGetApps: "http://localhost:8080/application/viewAll",
+
   //
   residentGetTickets: "http://localhost:8080/ticket/ticketRes",
   //send user ID: author

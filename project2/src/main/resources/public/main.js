@@ -10,21 +10,25 @@
 var map = {
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
+		"common",
 		"home-home-module"
 	],
 	"./maintenance/maintenance.module": [
 		"./src/app/maintenance/maintenance.module.ts",
 		"default~maintenance-maintenance-module~manager-manager-module~resident-resident-module",
+		"common",
 		"maintenance-maintenance-module"
 	],
 	"./manager/manager.module": [
 		"./src/app/manager/manager.module.ts",
 		"default~maintenance-maintenance-module~manager-manager-module~resident-resident-module",
+		"common",
 		"manager-manager-module"
 	],
 	"./resident/resident.module": [
 		"./src/app/resident/resident.module.ts",
 		"default~maintenance-maintenance-module~manager-manager-module~resident-resident-module",
+		"common",
 		"resident-resident-module"
 	]
 };
@@ -357,8 +361,8 @@ var TickethandlerService = /** @class */ (function () {
     // }
     TickethandlerService.prototype.ticketParse = function (ticket) {
         var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(), ticket[2], ticket[3], new Date(), ticket[5], ticket[6], ticket[7]);
-        parsedTicket.submitted = ticket[1];
-        parsedTicket.resolved = ticket[4];
+        parsedTicket.submitted.setTime(ticket[1]);
+        parsedTicket.resolved.setTime(ticket[4]);
         console.log(parsedTicket);
         return parsedTicket;
     };
