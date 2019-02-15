@@ -425,7 +425,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-ticketlist [manager]=\"manager\" (resolveTicket)=\"resolve($event)\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-maintform></app-maintform>\r\n<app-ticketlist [manager]=\"manager\" (resolveTicket)=\"resolve($event)\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 
@@ -496,7 +496,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rent-page></app-rent-page>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rentlist></app-rentlist>\r\n"
 
 /***/ }),
 

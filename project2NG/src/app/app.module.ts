@@ -6,6 +6,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
 
 
 
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
+    TicketDetailsComponent,
   ],
   imports: [
     BrowserModule,

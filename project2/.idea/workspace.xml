@@ -6,17 +6,11 @@
 =======
 >>>>>>> MatthewTest
     <list default="true" id="aed0303d-de36-414e-b63b-faafa7aef62a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/common.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/maintenance-maintenance-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/maintenance-maintenance-module.js" afterDir="false" />
@@ -24,12 +18,12 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/polyfills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/resident-resident-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/resident-resident-module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/resident-resident-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/resident-resident-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/runtime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.project2.Project2ApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.project2.Project2ApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/components/ticketlist/ticketlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/components/ticketlist/ticketlist.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/models/ticket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/models/ticket.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/services/tickethandler.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/services/tickethandler.service.ts" afterDir="false" />
     </list>
 <<<<<<< HEAD
 =======
@@ -47,6 +41,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +58,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+=======
+>>>>>>> MatthewTest
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
 >>>>>>> MatthewTest
           <provider selected="true" editor-type-id="text-editor">
@@ -87,7 +84,20 @@
 >>>>>>> Mike
 =======
             <state relative-caret-position="85">
+<<<<<<< HEAD
               <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+>>>>>>> MatthewTest
+=======
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
 >>>>>>> MatthewTest
             </state>
           </provider>
@@ -132,8 +142,8 @@
 =======
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+            <state relative-caret-position="323">
+              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -141,8 +151,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="205">
               <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+>>>>>>> MatthewTest
+=======
+            <state relative-caret-position="425">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
 >>>>>>> MatthewTest
             </state>
           </provider>
@@ -258,11 +273,16 @@
     <panes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="PackagesPane" />
 =======
 >>>>>>> Mike
       <pane id="Scope" />
 =======
+>>>>>>> MatthewTest
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
 >>>>>>> MatthewTest
       <pane id="ProjectPane">
         <subPane>
@@ -371,6 +391,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -379,12 +406,15 @@
       </pane>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <pane id="PackagesPane" />
 >>>>>>> Mike
 =======
       <pane id="PackagesPane" />
       <pane id="Scope" />
+>>>>>>> MatthewTest
+=======
 >>>>>>> MatthewTest
     </panes>
   </component>
@@ -397,12 +427,16 @@
     <property name="aspect.path.notification.shown" value="true" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550110995836" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550173515922" />
 >>>>>>> Mike
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550183916111" />
+>>>>>>> MatthewTest
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550191102279" />
 >>>>>>> MatthewTest
   </component>
   <component name="RunDashboard">
@@ -448,11 +482,16 @@
       <workItem from="1550171629602" duration="2685000" />
       <workItem from="1550174816827" duration="1794000" />
       <workItem from="1550180802855" duration="1510000" />
+<<<<<<< HEAD
+>>>>>>> MatthewTest
+=======
+      <workItem from="1550185230977" duration="3186000" />
 >>>>>>> MatthewTest
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="7999000" />
@@ -467,16 +506,23 @@
 =======
     <option name="totallyTimeSpent" value="13988000" />
 >>>>>>> MatthewTest
+=======
+    <option name="totallyTimeSpent" value="17174000" />
+>>>>>>> MatthewTest
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
 >>>>>>> Mike
 =======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26778522" />
+>>>>>>> MatthewTest
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27181208" />
 >>>>>>> MatthewTest
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
@@ -499,7 +545,11 @@
 =======
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41076487" />
+>>>>>>> MatthewTest
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41076487" />
 >>>>>>> MatthewTest
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -765,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -781,6 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="342">
           <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
@@ -821,8 +865,24 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/UserController.java">
 >>>>>>> MatthewTest
       <provider selected="true" editor-type-id="text-editor">
+=======
+>>>>>>> MatthewTest
         <state relative-caret-position="510">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
@@ -830,6 +890,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepositoryImpl.java">
+>>>>>>> MatthewTest
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java">
+>>>>>>> MatthewTest
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -847,16 +941,7 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/TicketRepositoryImpl.java">
->>>>>>> MatthewTest
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
@@ -865,41 +950,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApplicationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/ApartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="72" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="427">
           <caret line="76" column="54" lean-forward="true" selection-start-line="76" selection-start-column="54" selection-end-line="76" selection-end-column="54" />
@@ -908,11 +959,16 @@
         <state relative-caret-position="476">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
 >>>>>>> MatthewTest
+=======
+        <state relative-caret-position="221">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+>>>>>>> MatthewTest
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="555">
@@ -963,13 +1019,17 @@
         <state relative-caret-position="85">
           <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
 >>>>>>> MatthewTest
+=======
+        <state relative-caret-position="293">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+>>>>>>> MatthewTest
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>

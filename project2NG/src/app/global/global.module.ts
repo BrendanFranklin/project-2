@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TicketlistComponent} from '../components/ticketlist/ticketlist.component';
 import { LogoutbarComponent } from '../components/logoutbar/logoutbar.component';
-import { DetailsmodalComponent } from '../components/detailsmodal/detailsmodal.component';
 import {UserlistComponent} from '../components/userlist/userlist.component';
 import {ApartmentlistComponent} from '../components/apartmentlist/apartmentlist.component';
 import {RentlistComponent} from '../components/rentlist/rentlist.component';
@@ -18,8 +17,7 @@ import {MaintformComponent} from '../components/maintform/maintform.component';
       RentlistComponent,
       UserlistComponent,
       TicketlistComponent,
-  LogoutbarComponent,
-  DetailsmodalComponent],
+      LogoutbarComponent],
   imports: [
     CommonModule
   ],
@@ -31,7 +29,6 @@ import {MaintformComponent} from '../components/maintform/maintform.component';
       UserlistComponent,
       TicketlistComponent,
       LogoutbarComponent,
-      DetailsmodalComponent,
 
   ]
 })
