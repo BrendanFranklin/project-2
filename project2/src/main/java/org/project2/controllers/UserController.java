@@ -33,10 +33,10 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/sign-up")
+    @PostMapping(path = "/sign-up", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void signUp(@RequestBody Users user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        userService.addNewUser(user);
+        this.userService.addNewUser(user);
         if(user.getApt_num() != null){
             this.userService.updateApt(user.getApt_num());
         }

@@ -26,4 +26,9 @@ public class PaymentService {
     public List<Payment> findByAuthor(int author){
         return this.paymentRepository.findByAuthor(author);
     }
+
+    @Transactional
+    public void makePayment(Payment payment){
+        this.paymentRepository.makePayment(payment);
+    }
 }

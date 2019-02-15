@@ -1,76 +1,119 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~maintenance-maintenance-module~manager-manager-module~resident-resident-module"],{
 
-/***/ "./src/app/components/detailsmodal/detailsmodal.component.css":
-/*!********************************************************************!*\
-  !*** ./src/app/components/detailsmodal/detailsmodal.component.css ***!
-  \********************************************************************/
+/***/ "./src/app/components/apartmentlist/apartmentlist.component.css":
+/*!**********************************************************************!*\
+  !*** ./src/app/components/apartmentlist/apartmentlist.component.css ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".navButtons{\r\n    text-align: center;\r\n}\r\n.button1{\r\n    background-color: black;\r\n    color: gold;\r\n    border: none;\r\n    margin: 5px;\r\n    border-radius: 12px;\r\n    height: 30px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n    font-size: 13pt;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9kZXRhaWxzbW9kYWwvZGV0YWlsc21vZGFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLHVCQUF1QjtJQUN2QixXQUFXO0lBQ1gsWUFBWTtJQUNaLFdBQVc7SUFDWCxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLDRDQUE0QztJQUM1QyxlQUFlO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9kZXRhaWxzbW9kYWwvZGV0YWlsc21vZGFsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2QnV0dG9uc3tcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4uYnV0dG9uMXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgY29sb3I6IGdvbGQ7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBtYXJnaW46IDVweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEycHg7XHJcbiAgICBoZWlnaHQ6IDMwcHg7XHJcbiAgICBmb250LWZhbWlseTogJ1RpbWVzIE5ldyBSb21hbicsIFRpbWVzLCBzZXJpZjtcclxuICAgIGZvbnQtc2l6ZTogMTNwdDtcclxufVxyXG4iXX0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXBhcnRtZW50bGlzdC9hcGFydG1lbnRsaXN0LmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
-/***/ "./src/app/components/detailsmodal/detailsmodal.component.html":
+/***/ "./src/app/components/apartmentlist/apartmentlist.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/apartmentlist/apartmentlist.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Apt Num</th>\r\n        <th scope=\"col\">Style</th>\r\n        <th scope=\"col\">Rent</th>\r\n        <th scope=\"col\">Occupied</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let apt of apts\">\r\n      <th scope=\"row\">{{apt.apt_num}}</th>\r\n      <td>{{apt.apt_style}}</td>\r\n      <td>{{apt.rent}}</td>\r\n      <td>{{apt.occupied}}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/apartmentlist/apartmentlist.component.ts":
 /*!*********************************************************************!*\
-  !*** ./src/app/components/detailsmodal/detailsmodal.component.html ***!
+  !*** ./src/app/components/apartmentlist/apartmentlist.component.ts ***!
   \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"modal-header\">\r\n  <h4 class=\"modal-title\">Ticket: #{{ticket.id}}</h4>\r\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n  {{ticket.authorFirstName}}{{ticket.authorLastName}}\r\n</div>\r\n<div class=\"modal-footer\">\r\n  <button type=\"button\" class=\"resolve\" (click)=\"resolve()\" *ngIf=\"employee\"></button>\r\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/components/detailsmodal/detailsmodal.component.ts":
-/*!*******************************************************************!*\
-  !*** ./src/app/components/detailsmodal/detailsmodal.component.ts ***!
-  \*******************************************************************/
-/*! exports provided: DetailsmodalComponent */
+/*! exports provided: ApartmentlistComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsmodalComponent", function() { return DetailsmodalComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApartmentlistComponent", function() { return ApartmentlistComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var src_app_models_ticket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/ticket */ "./src/app/models/ticket.ts");
 
 
-
-
-var DetailsmodalComponent = /** @class */ (function () {
-    function DetailsmodalComponent(activeModal) {
-        this.activeModal = activeModal;
-        this.resolveTicket = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+var ApartmentlistComponent = /** @class */ (function () {
+    function ApartmentlistComponent() {
     }
-    DetailsmodalComponent.prototype.ngOnInit = function () {
-    };
-    DetailsmodalComponent.prototype.resolve = function () {
-        this.resolveTicket.emit(this.ticket);
+    ApartmentlistComponent.prototype.ngOnInit = function () {
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", src_app_models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"])
-    ], DetailsmodalComponent.prototype, "ticket", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
-    ], DetailsmodalComponent.prototype, "manager", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
-    ], DetailsmodalComponent.prototype, "resolveTicket", void 0);
-    DetailsmodalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ApartmentlistComponent.prototype, "apts", void 0);
+    ApartmentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-detailsmodal',
-            template: __webpack_require__(/*! ./detailsmodal.component.html */ "./src/app/components/detailsmodal/detailsmodal.component.html"),
-            styles: [__webpack_require__(/*! ./detailsmodal.component.css */ "./src/app/components/detailsmodal/detailsmodal.component.css")]
+            selector: 'app-apartmentlist',
+            template: __webpack_require__(/*! ./apartmentlist.component.html */ "./src/app/components/apartmentlist/apartmentlist.component.html"),
+            styles: [__webpack_require__(/*! ./apartmentlist.component.css */ "./src/app/components/apartmentlist/apartmentlist.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
-    ], DetailsmodalComponent);
-    return DetailsmodalComponent;
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ApartmentlistComponent);
+    return ApartmentlistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/applicationlist/applicationlist.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/applicationlist/applicationlist.component.css ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXBwbGljYXRpb25saXN0L2FwcGxpY2F0aW9ubGlzdC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/applicationlist/applicationlist.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/applicationlist/applicationlist.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">First Name</th>\r\n        <th scope=\"col\">Last Name</th>\r\n        <th scope=\"col\">Email</th>\r\n        <th scope=\"col\">Phone</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let app of apps\">\r\n          <td>{{app.first_name}}</td>\r\n          <td>{{app.last_name}}</td>\r\n          <td>{{app.email}}</td>\r\n          <td>{{app.phone}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/applicationlist/applicationlist.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/applicationlist/applicationlist.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: ApplicationlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationlistComponent", function() { return ApplicationlistComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ApplicationlistComponent = /** @class */ (function () {
+    function ApplicationlistComponent() {
+    }
+    ApplicationlistComponent.prototype.ngOnInit = function () {
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ApplicationlistComponent.prototype, "apps", void 0);
+    ApplicationlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-applicationlist',
+            template: __webpack_require__(/*! ./applicationlist.component.html */ "./src/app/components/applicationlist/applicationlist.component.html"),
+            styles: [__webpack_require__(/*! ./applicationlist.component.css */ "./src/app/components/applicationlist/applicationlist.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ApplicationlistComponent);
+    return ApplicationlistComponent;
 }());
 
 
@@ -140,6 +183,136 @@ var LogoutbarComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/maintform/maintform.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/maintform/maintform.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".maintsub{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9tYWludGZvcm0vbWFpbnRmb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksa0JBQWtCOztBQUV0QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWFpbnRmb3JtL21haW50Zm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW50c3Vie1xyXG5cclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuXHJcbn1cclxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/components/maintform/maintform.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/maintform/maintform.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"maintsub\">\r\n  <h5>New Maintenance Request</h5>\r\n  <form class=\"maintform\">\r\n    Apt Num:\r\n    <input  type=\"text\" size=\"3\">\r\n    <br>\r\n    Description:\r\n    <input  type=\"text\" size=\"100\">\r\n    <button>Submit</button>\r\n  </form>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/maintform/maintform.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/maintform/maintform.component.ts ***!
+  \*************************************************************/
+/*! exports provided: MaintformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaintformComponent", function() { return MaintformComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MaintformComponent = /** @class */ (function () {
+    function MaintformComponent() {
+    }
+    MaintformComponent.prototype.ngOnInit = function () {
+    };
+    MaintformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-maintform',
+            template: __webpack_require__(/*! ./maintform.component.html */ "./src/app/components/maintform/maintform.component.html"),
+            styles: [__webpack_require__(/*! ./maintform.component.css */ "./src/app/components/maintform/maintform.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MaintformComponent);
+    return MaintformComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/rentlist/rentlist.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/rentlist/rentlist.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvcmVudGxpc3QvcmVudGxpc3QuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/rentlist/rentlist.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/rentlist/rentlist.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Resident ID</th>\r\n        <th scope=\"col\">Payed</th>\r\n        <th scope=\"col\">Overdue</th>\r\n        <th scope=\"col\">Options</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let payment of payments\">\r\n          <td scope=\"row\">{{payment.user_id}}</td>\r\n          <td>{{payment.paid}}</td>\r\n          <td>{{payment.overdue}}</td>\r\n          <td>\r\n              <div class=\"btn-group btn-group-sm\" role=\"group\">\r\n                  <button type=\"button\" class=\"btn btn-danger\" (click)=\"update(1, payment)\">Overdue</button>\r\n                  <button type=\"button\" class=\"btn btn-success\" (click)=\"update(2, payment)\">Paid</button>\r\n              </div>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/rentlist/rentlist.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/rentlist/rentlist.component.ts ***!
+  \***********************************************************/
+/*! exports provided: RentlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RentlistComponent", function() { return RentlistComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var RentlistComponent = /** @class */ (function () {
+    function RentlistComponent() {
+        this.updatePayment = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    RentlistComponent.prototype.ngOnInit = function () {
+    };
+    RentlistComponent.prototype.update = function (change, payment) {
+        if (change == 1) {
+            payment.overdue = true;
+        }
+        if (change == 2) {
+            payment.paid = true;
+        }
+        this.updatePayment.emit(payment);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], RentlistComponent.prototype, "payments", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], RentlistComponent.prototype, "updatePayment", void 0);
+    RentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-rentlist',
+            template: __webpack_require__(/*! ./rentlist.component.html */ "./src/app/components/rentlist/rentlist.component.html"),
+            styles: [__webpack_require__(/*! ./rentlist.component.css */ "./src/app/components/rentlist/rentlist.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], RentlistComponent);
+    return RentlistComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/ticketlist/ticketlist.component.css":
 /*!****************************************************************!*\
   !*** ./src/app/components/ticketlist/ticketlist.component.css ***!
@@ -158,7 +331,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Date Resolved</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>\r\n          <td>{{reimb.submitted.getMonth()+1}}/{{reimb.submitted.getDate()}}/{{reimb.submitted.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved > reimb.submitted\" >{{reimb.resolved.getMonth()+1}}/{{reimb.resolved.getDate()}}/{{reimb.resolved.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved < reimb.submitted\">Unresolved</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Date Resolved</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>\r\n          <td>{{ticket.submitted}}</td>\r\n          <td>{{ticket.resolved}}</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -174,27 +347,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketlistComponent", function() { return TicketlistComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var _detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../detailsmodal/detailsmodal.component */ "./src/app/components/detailsmodal/detailsmodal.component.ts");
+/* harmony import */ var src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
 
 var TicketlistComponent = /** @class */ (function () {
-    function TicketlistComponent(modalService) {
-        this.modalService = modalService;
+    function TicketlistComponent(ticketHandler, router) {
+        this.ticketHandler = ticketHandler;
+        this.router = router;
         this.resolveTicket = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     TicketlistComponent.prototype.ngOnInit = function () {
     };
     TicketlistComponent.prototype.detailView = function (ticket) {
-        var _this = this;
-        var modalRef = this.modalService.open(_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_3__["DetailsmodalComponent"]);
-        modalRef.componentInstance.ticket = ticket;
-        modalRef.componentInstance.manager = this.manager;
-        modalRef.componentInstance.resolveTicket.subscribe(function (ticket) {
-            _this.resolveTicket.emit(ticket);
-        });
+        this.ticketHandler.detailTicket = ticket;
+        this.router.navigate(['/ticketdeets']);
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -214,9 +383,70 @@ var TicketlistComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./ticketlist.component.html */ "./src/app/components/ticketlist/ticketlist.component.html"),
             styles: [__webpack_require__(/*! ./ticketlist.component.css */ "./src/app/components/ticketlist/ticketlist.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__["TickethandlerService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], TicketlistComponent);
     return TicketlistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/userlist/userlist.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/userlist/userlist.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdXNlcmxpc3QvdXNlcmxpc3QuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/userlist/userlist.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/userlist/userlist.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">User ID</th>\r\n        <th scope=\"col\">Name</th>\r\n        <th scope=\"col\">email</th>\r\n        <th scope=\"col\">Role</th>\r\n        <th scope=\"col\">Apartment Number</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let user of users\">\r\n          <td scope=\"row\">{{user.id}}</td>\r\n          <td>{{user.first_name}} {{user.last_name}}</td>\r\n          <td>{{user.email}}</td>\r\n          <td>{{user.role}}</td>\r\n          <td>{{user.apt_num}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/userlist/userlist.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/userlist/userlist.component.ts ***!
+  \***********************************************************/
+/*! exports provided: UserlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserlistComponent", function() { return UserlistComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var UserlistComponent = /** @class */ (function () {
+    function UserlistComponent() {
+    }
+    UserlistComponent.prototype.ngOnInit = function () {
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], UserlistComponent.prototype, "users", void 0);
+    UserlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-userlist',
+            template: __webpack_require__(/*! ./userlist.component.html */ "./src/app/components/userlist/userlist.component.html"),
+            styles: [__webpack_require__(/*! ./userlist.component.css */ "./src/app/components/userlist/userlist.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], UserlistComponent);
+    return UserlistComponent;
 }());
 
 
@@ -238,7 +468,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ticketlist/ticketlist.component */ "./src/app/components/ticketlist/ticketlist.component.ts");
 /* harmony import */ var _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/logoutbar/logoutbar.component */ "./src/app/components/logoutbar/logoutbar.component.ts");
-/* harmony import */ var _components_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/detailsmodal/detailsmodal.component */ "./src/app/components/detailsmodal/detailsmodal.component.ts");
+/* harmony import */ var _components_userlist_userlist_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/userlist/userlist.component */ "./src/app/components/userlist/userlist.component.ts");
+/* harmony import */ var _components_apartmentlist_apartmentlist_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/apartmentlist/apartmentlist.component */ "./src/app/components/apartmentlist/apartmentlist.component.ts");
+/* harmony import */ var _components_rentlist_rentlist_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/rentlist/rentlist.component */ "./src/app/components/rentlist/rentlist.component.ts");
+/* harmony import */ var _components_applicationlist_applicationlist_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/applicationlist/applicationlist.component */ "./src/app/components/applicationlist/applicationlist.component.ts");
+/* harmony import */ var _components_maintform_maintform_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/maintform/maintform.component */ "./src/app/components/maintform/maintform.component.ts");
+
+
+
+
 
 
 
@@ -250,101 +488,30 @@ var GlobalModule = /** @class */ (function () {
     }
     GlobalModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"],
-                _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_4__["LogoutbarComponent"],
-                _components_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_5__["DetailsmodalComponent"]],
+            declarations: [
+                _components_maintform_maintform_component__WEBPACK_IMPORTED_MODULE_9__["MaintformComponent"],
+                _components_applicationlist_applicationlist_component__WEBPACK_IMPORTED_MODULE_8__["ApplicationlistComponent"],
+                _components_apartmentlist_apartmentlist_component__WEBPACK_IMPORTED_MODULE_6__["ApartmentlistComponent"],
+                _components_rentlist_rentlist_component__WEBPACK_IMPORTED_MODULE_7__["RentlistComponent"],
+                _components_userlist_userlist_component__WEBPACK_IMPORTED_MODULE_5__["UserlistComponent"],
+                _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"],
+                _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_4__["LogoutbarComponent"]
+            ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
             ],
             exports: [
+                _components_maintform_maintform_component__WEBPACK_IMPORTED_MODULE_9__["MaintformComponent"],
+                _components_applicationlist_applicationlist_component__WEBPACK_IMPORTED_MODULE_8__["ApplicationlistComponent"],
+                _components_apartmentlist_apartmentlist_component__WEBPACK_IMPORTED_MODULE_6__["ApartmentlistComponent"],
+                _components_rentlist_rentlist_component__WEBPACK_IMPORTED_MODULE_7__["RentlistComponent"],
+                _components_userlist_userlist_component__WEBPACK_IMPORTED_MODULE_5__["UserlistComponent"],
                 _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_3__["TicketlistComponent"],
                 _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_4__["LogoutbarComponent"],
-                _components_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_5__["DetailsmodalComponent"]
             ]
         })
     ], GlobalModule);
     return GlobalModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/models/ticket.ts":
-/*!**********************************!*\
-  !*** ./src/app/models/ticket.ts ***!
-  \**********************************/
-/*! exports provided: Ticket */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
-var Ticket = /** @class */ (function () {
-    function Ticket(id, submitted, authorFirstName, authorLastName, resolved, resolver_id, description, apt_num) {
-        this.id = id;
-        this.submitted = submitted;
-        this.authorFirstName = authorFirstName;
-        this.authorLastName = authorLastName;
-        this.resolved = resolved;
-        this.resolver_id = resolver_id;
-        this.description = description;
-        this.apt_num = apt_num;
-    }
-    return Ticket;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/tickethandler.service.ts":
-/*!***************************************************!*\
-  !*** ./src/app/services/tickethandler.service.ts ***!
-  \***************************************************/
-/*! exports provided: TickethandlerService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TickethandlerService", function() { return TickethandlerService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _models_ticket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/ticket */ "./src/app/models/ticket.ts");
-
-
-
-
-var TickethandlerService = /** @class */ (function () {
-    function TickethandlerService(http) {
-        this.http = http;
-    }
-    TickethandlerService.prototype.getTickets = function (url, success, fail) {
-        this.http.get(url, { headers: { Authorization: localStorage.getItem('userToken') } })
-            .toPromise().then(function (resp) { return success(resp); }, function (err) { return fail(err); });
-    };
-    TickethandlerService.prototype.resolveTicket = function (url, ticket, success, fail) {
-        var _this = this;
-        this.http.post(url, { headers: { Authorization: localStorage.getItem('userToken') },
-            body: JSON.stringify(ticket) })
-            .toPromise().then(function (resp) {
-            var tickets;
-            resp.foreach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
-            success(tickets);
-        }, function (err) { return fail(err); });
-    };
-    TickethandlerService.prototype.ticketParse = function (ticket) {
-        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], ticket[1], ticket[2], ticket[3], ticket[4], ticket[5], ticket[6], ticket[7]);
-        return parsedTicket;
-    };
-    TickethandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], TickethandlerService);
-    return TickethandlerService;
 }());
 
 

@@ -43,4 +43,13 @@ public class PaymentRepositoryImpl implements PaymentRepository  {
 
         return null;
     }
+
+    @Override
+    public void makePayment(Payment payment){
+        Query query = entityManager.createNativeQuery("update pretense.payment set " +
+                "paid = ?, overdue = ?, date_paid = current(date)");
+        query.setParameter(1, payment.isPaid());
+        query.setParameter(2, payment.isOverdue());
+        query.executeUpdate();
+    }
 }

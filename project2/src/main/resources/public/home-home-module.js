@@ -196,7 +196,7 @@ var EmployeeLoginPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n.footer{\r\n    background-color: black;\r\n    color: gold;\r\n    height: 150px;\r\n    padding-top: 25px;\r\n    padding-bottom: 50px;\r\n\r\n}\r\n\r\n.address{\r\n    text-align: left;\r\n}\r\n\r\n.socialMedia{\r\n    text-align: right;\r\n\r\n\r\n\r\n}\r\n\r\n.wrapper {\r\n    display: inline-flex;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\ni {\r\n    padding: 0px 10px;\r\n}\r\n\r\n.wrapper i:nth-child(1) {\r\n    cursor: pointer;\r\n    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);\r\n    transition: all ease-in-out 150ms;\r\n}\r\n\r\n.wrapper i:nth-child(1):hover {\r\n    margin-top: -10px;\r\n    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);\r\n    -webkit-transform: translate(0, -8);\r\n            transform: translate(0, -8);\r\n}\r\n\r\n.wrapper i:nth-child(2) {\r\n    cursor: pointer;\r\n    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);\r\n    transition: all ease-in-out 150ms;\r\n}\r\n\r\n.wrapper i:nth-child(2):hover {\r\n    margin-top: -10px;\r\n    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);\r\n    -webkit-transform: translate(0, -8);\r\n            transform: translate(0, -8);\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFdBQVc7SUFDWCxhQUFhO0lBQ2IsaUJBQWlCO0lBQ2pCLG9CQUFvQjs7QUFFeEI7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxpQkFBaUI7Ozs7QUFJckI7O0FBQ0E7SUFDSSxvQkFBb0I7SUFDcEIsU0FBUztJQUNULFVBQVU7QUFDZDs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGVBQWU7SUFDZiw0Q0FBNEM7SUFDNUMsaUNBQWlDO0FBQ3JDOztBQUVBO0lBQ0ksaUJBQWlCO0lBQ2pCLDZDQUE2QztJQUM3QyxtQ0FBMkI7WUFBM0IsMkJBQTJCO0FBQy9COztBQUVBO0lBQ0ksZUFBZTtJQUNmLDRDQUE0QztJQUM1QyxpQ0FBaUM7QUFDckM7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsNkNBQTZDO0lBQzdDLG1DQUEyQjtZQUEzQiwyQkFBMkI7QUFDL0IiLCJmaWxlIjoic3JjL2FwcC9ob21lL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG4uZm9vdGVye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgICBjb2xvcjogZ29sZDtcclxuICAgIGhlaWdodDogMTUwcHg7XHJcbiAgICBwYWRkaW5nLXRvcDogMjVweDtcclxuICAgIHBhZGRpbmctYm90dG9tOiA1MHB4O1xyXG5cclxufVxyXG5cclxuLmFkZHJlc3N7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG4uc29jaWFsTWVkaWF7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxuXHJcblxyXG5cclxufVxyXG4ud3JhcHBlciB7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbn1cclxuXHJcbmkge1xyXG4gICAgcGFkZGluZzogMHB4IDEwcHg7XHJcbn1cclxuXHJcbi53cmFwcGVyIGk6bnRoLWNoaWxkKDEpIHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHRleHQtc2hhZG93OiAwcHggN3B4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjQpO1xyXG4gICAgdHJhbnNpdGlvbjogYWxsIGVhc2UtaW4tb3V0IDE1MG1zO1xyXG59XHJcblxyXG4ud3JhcHBlciBpOm50aC1jaGlsZCgxKTpob3ZlciB7XHJcbiAgICBtYXJnaW4tdG9wOiAtMTBweDtcclxuICAgIHRleHQtc2hhZG93OiAwcHggMTZweCAxMHB4IHJnYmEoMCwgMCwgMCwgMC4zKTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIC04KTtcclxufVxyXG5cclxuLndyYXBwZXIgaTpudGgtY2hpbGQoMikge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgdGV4dC1zaGFkb3c6IDBweCA3cHggMTBweCByZ2JhKDAsIDAsIDAsIDAuNCk7XHJcbiAgICB0cmFuc2l0aW9uOiBhbGwgZWFzZS1pbi1vdXQgMTUwbXM7XHJcbn1cclxuXHJcbi53cmFwcGVyIGk6bnRoLWNoaWxkKDIpOmhvdmVyIHtcclxuICAgIG1hcmdpbi10b3A6IC0xMHB4O1xyXG4gICAgdGV4dC1zaGFkb3c6IDBweCAxNnB4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjMpO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCwgLTgpO1xyXG59XHJcbiJdfQ== */"
+module.exports = "\r\n.footer{\r\n    background-color: black;\r\n    color: gold;\r\n    height: 150px;\r\n    padding: 25px;\r\n}\r\n.address{\r\n    text-align: left;\r\n}\r\n.socialMedia{\r\n    text-align: right;\r\n    position: relative;\r\n    bottom: 65px;\r\n    right: 0;\r\n\r\n}\r\n.wrapper {\r\n    display: inline-flex;\r\n    margin: 0;\r\n    padding: 0px;\r\n}\r\ni {\r\n    padding: 0px 10px;\r\n}\r\n.wrapper i:nth-child(1) {\r\n    cursor: pointer;\r\n    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);\r\n    transition: all ease-in-out 150ms;\r\n}\r\n.wrapper i:nth-child(1):hover {\r\n    margin-top: -10px;\r\n    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);\r\n    -webkit-transform: translate(0, -8);\r\n            transform: translate(0, -8);\r\n}\r\n.wrapper i:nth-child(2) {\r\n    cursor: pointer;\r\n    text-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);\r\n    transition: all ease-in-out 150ms;\r\n}\r\n.wrapper i:nth-child(2):hover {\r\n    margin-top: -10px;\r\n    text-shadow: 0px 16px 10px rgba(0, 0, 0, 0.3);\r\n    -webkit-transform: translate(0, -8);\r\n            transform: translate(0, -8);\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFdBQVc7SUFDWCxhQUFhO0lBQ2IsYUFBYTtBQUNqQjtBQUNBO0lBQ0ksZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixRQUFROztBQUVaO0FBQ0E7SUFDSSxvQkFBb0I7SUFDcEIsU0FBUztJQUNULFlBQVk7QUFDaEI7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjtBQUVBO0lBQ0ksZUFBZTtJQUNmLDRDQUE0QztJQUM1QyxpQ0FBaUM7QUFDckM7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQiw2Q0FBNkM7SUFDN0MsbUNBQTJCO1lBQTNCLDJCQUEyQjtBQUMvQjtBQUVBO0lBQ0ksZUFBZTtJQUNmLDRDQUE0QztJQUM1QyxpQ0FBaUM7QUFDckM7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQiw2Q0FBNkM7SUFDN0MsbUNBQTJCO1lBQTNCLDJCQUEyQjtBQUMvQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5mb290ZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuICAgIGNvbG9yOiBnb2xkO1xyXG4gICAgaGVpZ2h0OiAxNTBweDtcclxuICAgIHBhZGRpbmc6IDI1cHg7XHJcbn1cclxuLmFkZHJlc3N7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG4uc29jaWFsTWVkaWF7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGJvdHRvbTogNjVweDtcclxuICAgIHJpZ2h0OiAwO1xyXG5cclxufVxyXG4ud3JhcHBlciB7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDBweDtcclxufVxyXG5cclxuaSB7XHJcbiAgICBwYWRkaW5nOiAwcHggMTBweDtcclxufVxyXG5cclxuLndyYXBwZXIgaTpudGgtY2hpbGQoMSkge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgdGV4dC1zaGFkb3c6IDBweCA3cHggMTBweCByZ2JhKDAsIDAsIDAsIDAuNCk7XHJcbiAgICB0cmFuc2l0aW9uOiBhbGwgZWFzZS1pbi1vdXQgMTUwbXM7XHJcbn1cclxuXHJcbi53cmFwcGVyIGk6bnRoLWNoaWxkKDEpOmhvdmVyIHtcclxuICAgIG1hcmdpbi10b3A6IC0xMHB4O1xyXG4gICAgdGV4dC1zaGFkb3c6IDBweCAxNnB4IDEwcHggcmdiYSgwLCAwLCAwLCAwLjMpO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCwgLTgpO1xyXG59XHJcblxyXG4ud3JhcHBlciBpOm50aC1jaGlsZCgyKSB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB0ZXh0LXNoYWRvdzogMHB4IDdweCAxMHB4IHJnYmEoMCwgMCwgMCwgMC40KTtcclxuICAgIHRyYW5zaXRpb246IGFsbCBlYXNlLWluLW91dCAxNTBtcztcclxufVxyXG5cclxuLndyYXBwZXIgaTpudGgtY2hpbGQoMik6aG92ZXIge1xyXG4gICAgbWFyZ2luLXRvcDogLTEwcHg7XHJcbiAgICB0ZXh0LXNoYWRvdzogMHB4IDE2cHggMTBweCByZ2JhKDAsIDAsIDAsIDAuMyk7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgwLCAtOCk7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -207,7 +207,7 @@ module.exports = "\r\n.footer{\r\n    background-color: black;\r\n    color: gol
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"body\">\r\n<div class = \"footer\" >\r\n  <div class = \"address\">\r\n    123 Fake St\r\n    <br>\r\n    Anytown, USA 45678\r\n  </div>\r\n\r\n  <div class=\"socialMedia\">\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n    <div class=\"wrapper\">\r\n      <i class=\"fa fa-5x fa-facebook-square\"></i>\r\n      <i class=\"fa fa-5x fa-twitter-square\"></i>\r\n    </div>\r\n  </div>\r\n</div>\r\n</div>\r\n"
+module.exports = "<div class = \"footer\" >\r\n  <div class = \"address\">\r\n    123 Fake St\r\n    <br>\r\n    Anytown, USA 45678\r\n    <br>\r\n    Leasing Office # (555) 555-555\r\n  </div>\r\n\r\n  <div class=\"socialMedia\">\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n    <div class=\"wrapper\">\r\n      <i class=\"fa fa-5x fa-facebook-square\"></i>\r\n      <i class=\"fa fa-5x fa-twitter-square\"></i>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -252,7 +252,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@font-face{\r\n    font-family: 'Scriptina';\r\n    src: url('SCRIPTIN.ttf') format('truetype');\r\n}\r\n\r\n.banner{\r\n    background-color: black;\r\n    height: auto;\r\n\r\n}\r\n\r\n.banner-text{\r\n\r\n    text-align: center;\r\n    color: gold;\r\n    font-family: 'Scriptina';\r\n    font-size: 80pt;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsMkNBQXlFO0FBQzdFOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7O0FBRWhCOztBQUNBOztJQUVJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsd0JBQXdCO0lBQ3hCLGVBQWU7O0FBRW5CIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNle1xyXG4gICAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gICAgc3JjOiB1cmwoLi4vLi4vLi4vYXNzZXRzL2ZvbnRzL3NjcmlwdGluYS9TQ1JJUFRJTi50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxufVxyXG5cclxuLmJhbm5lcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG5cclxufVxyXG4uYmFubmVyLXRleHR7XHJcblxyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgY29sb3I6IGdvbGQ7XHJcbiAgICBmb250LWZhbWlseTogJ1NjcmlwdGluYSc7XHJcbiAgICBmb250LXNpemU6IDgwcHQ7XHJcblxyXG59XHJcbiJdfQ== */"
+module.exports = "@font-face{\r\n    font-family: 'Scriptina';\r\n    src: url('SCRIPTIN.ttf') format('truetype');\r\n}\r\n\r\n.banner{\r\n    background-color: black;\r\n    height: auto;\r\n\r\n}\r\n\r\n.banner-text{\r\n    cursor: pointer;\r\n    text-align: center;\r\n    color: gold;\r\n    font-family: 'Scriptina';\r\n    font-size: 80pt;\r\n\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3QkFBd0I7SUFDeEIsMkNBQXlFO0FBQzdFOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7O0FBRWhCOztBQUNBO0lBQ0ksZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsd0JBQXdCO0lBQ3hCLGVBQWU7O0FBRW5CIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAZm9udC1mYWNle1xyXG4gICAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gICAgc3JjOiB1cmwoLi4vLi4vLi4vYXNzZXRzL2ZvbnRzL3NjcmlwdGluYS9TQ1JJUFRJTi50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxufVxyXG5cclxuLmJhbm5lcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG5cclxufVxyXG4uYmFubmVyLXRleHR7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBjb2xvcjogZ29sZDtcclxuICAgIGZvbnQtZmFtaWx5OiAnU2NyaXB0aW5hJztcclxuICAgIGZvbnQtc2l6ZTogODBwdDtcclxuXHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -263,7 +263,7 @@ module.exports = "@font-face{\r\n    font-family: 'Scriptina';\r\n    src: url('
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class = \"banner\">\r\n  <div class = \"banner-text\">\r\n    the pretense\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "\r\n<div class = \"banner\">\r\n  <div class = \"banner-text\" (click)=\"goHome()\">\r\n    the pretense\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -279,12 +279,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
+    function HeaderComponent(router) {
+        this.router = router;
     }
     HeaderComponent.prototype.ngOnInit = function () {
+    };
+    HeaderComponent.prototype.goHome = function () {
+        this.router.navigate(['']);
     };
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -292,7 +298,7 @@ var HeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./header.component.html */ "./src/app/home/header/header.component.html"),
             styles: [__webpack_require__(/*! ./header.component.css */ "./src/app/home/header/header.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -552,15 +558,24 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent.prototype.reroute = function () {
+        var _this = this;
         //get ID
         this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].loginGetUserId, this.username, function (resp) {
             localStorage.setItem('userId', resp);
-            console.log(localStorage.getItem('userRole'));
+            console.log(localStorage.getItem('userId'));
         }, function () { });
         //getRole
         this.login.checkRole(src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].loginGetRoleId, this.username, function (resp) {
             localStorage.setItem('userRole', resp);
-            console.log(localStorage.getItem('userRole'));
+            if (resp == 1) {
+                _this.router.navigate(['/resident']);
+            }
+            if (resp == 2) {
+                _this.router.navigate(['/manager']);
+            }
+            if (resp == 3) {
+                _this.router.navigate(['/maintenance']);
+            }
         }, function () { });
     };
     LoginComponent.prototype.noShake = function () {
@@ -653,7 +668,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".aptList{\r\n    color: gold;\r\n    background-color: black;\r\n}\r\n\r\n.aptTable{\r\n    font-size: 15pt;\r\n    border-spacing: 20px;\r\n    border-collapse: separate;\r\n    width: 100%;\r\n}\r\n\r\n.tabHead{\r\n    text-align: left;\r\n}\r\n\r\n.zoom:hover {\r\n    -webkit-transform: scale(3.0);\r\n            transform: scale(3.0);\r\n}\r\n\r\n.listButt{\r\n    cursor: pointer;\r\n    border-color: gold;\r\n    color: gold;\r\n    background-color: black;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9wcm9zcGVjdGl2ZXBhZ2UvY29tcG9uZW50cy9hcHBhcnRtZW50bGlzdC9hcHBhcnRtZW50bGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixvQkFBb0I7SUFDcEIseUJBQXlCO0lBQ3pCLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLDZCQUFxQjtZQUFyQixxQkFBcUI7QUFDekI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCx1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9ob21lL3Byb3NwZWN0aXZlcGFnZS9jb21wb25lbnRzL2FwcGFydG1lbnRsaXN0L2FwcGFydG1lbnRsaXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXB0TGlzdHtcclxuICAgIGNvbG9yOiBnb2xkO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5hcHRUYWJsZXtcclxuICAgIGZvbnQtc2l6ZTogMTVwdDtcclxuICAgIGJvcmRlci1zcGFjaW5nOiAyMHB4O1xyXG4gICAgYm9yZGVyLWNvbGxhcHNlOiBzZXBhcmF0ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4udGFiSGVhZHtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbn1cclxuXHJcbi56b29tOmhvdmVyIHtcclxuICAgIHRyYW5zZm9ybTogc2NhbGUoMy4wKTtcclxufVxyXG5cclxuLmxpc3RCdXR0e1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgYm9yZGVyLWNvbG9yOiBnb2xkO1xyXG4gICAgY29sb3I6IGdvbGQ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxufVxyXG4iXX0= */"
+module.exports = ".aptList{\r\n    color: gold;\r\n    background-color: black;\r\n}\r\n\r\n.aptTable{\r\n    font-size: 15pt;\r\n    border-spacing: 20px;\r\n    border-collapse: separate;\r\n    width: 100%;\r\n}\r\n\r\n.tabHead{\r\n    text-align: left;\r\n}\r\n\r\n.zoom:hover {\r\n    -webkit-transform: scale(3.0);\r\n            transform: scale(3.0);\r\n}\r\n\r\n.listButt{\r\n    cursor: pointer;\r\n    border-color: gold;\r\n    color: gold;\r\n    background-color: black;\r\n}\r\n\r\n.listButt:hover{\r\n    color: black;\r\n    background-color: gold;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9wcm9zcGVjdGl2ZXBhZ2UvY29tcG9uZW50cy9hcHBhcnRtZW50bGlzdC9hcHBhcnRtZW50bGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixvQkFBb0I7SUFDcEIseUJBQXlCO0lBQ3pCLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLDZCQUFxQjtZQUFyQixxQkFBcUI7QUFDekI7O0FBRUE7SUFDSSxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCx1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxZQUFZO0lBQ1osc0JBQXNCO0FBQzFCIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9wcm9zcGVjdGl2ZXBhZ2UvY29tcG9uZW50cy9hcHBhcnRtZW50bGlzdC9hcHBhcnRtZW50bGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFwdExpc3R7XHJcbiAgICBjb2xvcjogZ29sZDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG59XHJcblxyXG4uYXB0VGFibGV7XHJcbiAgICBmb250LXNpemU6IDE1cHQ7XHJcbiAgICBib3JkZXItc3BhY2luZzogMjBweDtcclxuICAgIGJvcmRlci1jb2xsYXBzZTogc2VwYXJhdGU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnRhYkhlYWR7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG59XHJcblxyXG4uem9vbTpob3ZlciB7XHJcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDMuMCk7XHJcbn1cclxuXHJcbi5saXN0QnV0dHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGJvcmRlci1jb2xvcjogZ29sZDtcclxuICAgIGNvbG9yOiBnb2xkO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn1cclxuXHJcbi5saXN0QnV0dDpob3ZlcntcclxuICAgIGNvbG9yOiBibGFjaztcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGdvbGQ7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -1021,54 +1036,6 @@ var ProspecthandlerService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], ProspecthandlerService);
     return ProspecthandlerService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/models/apartment.ts":
-/*!*************************************!*\
-  !*** ./src/app/models/apartment.ts ***!
-  \*************************************/
-/*! exports provided: Apartment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Apartment", function() { return Apartment; });
-var Apartment = /** @class */ (function () {
-    function Apartment(apt_num, apt_style, rent, occupied) {
-        this.apt_num = apt_num;
-        this.apt_style = apt_style;
-        this.rent = rent;
-        this.occupied = occupied;
-    }
-    return Apartment;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/models/application.ts":
-/*!***************************************!*\
-  !*** ./src/app/models/application.ts ***!
-  \***************************************/
-/*! exports provided: Application */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Application", function() { return Application; });
-var Application = /** @class */ (function () {
-    function Application(first_name, last_name, email, phone) {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.email = email;
-        this.phone = phone;
-    }
-    return Application;
 }());
 
 

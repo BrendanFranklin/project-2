@@ -10,7 +10,11 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "payment_id")
     private Integer id;
+
+    @Column(name = "paid")
     private boolean paid;
+
+    @Column(name = "overdue")
     private boolean overdue;
 
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
