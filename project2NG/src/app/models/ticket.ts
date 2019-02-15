@@ -1,7 +1,11 @@
 export class Ticket{
-    constructor(public id: number, public submitted: Date ,
+    constructor(public id: number,
+         public submitted: string ,
         public authorFirstName: string,
         public authorLastName: string,
-         public resolved: Date, public resolver_id: number,
-         public description: string, public apt_num: number){}
+        public description: string,
+        public resolved: boolean,
+          public resolver_id: number,
+          public notes: string,
+          public apt_num: number){}
 }

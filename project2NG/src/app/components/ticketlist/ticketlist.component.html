@@ -14,9 +14,8 @@
         (click) = "detailView(ticket)">
           <th scope="row">{{ticket.id}}</th>
           <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>
-          <td>{{ticket.submitted.getMonth()+1}}/{{ticket.submitted.getDate()}}/{{ticket.submitted.getFullYear()}}</td>
-          <td *ngIf="ticket.resolved > ticket.submitted" >{{ticket.resolved.getMonth()+1}}/{{ticket.resolved.getDate()}}/{{ticket.resolved.getFullYear()}}</td>
-          <td *ngIf="ticket.resolved < ticket.submitted">Unresolved</td>
+          <td>{{ticket.submitted}}</td>
+          <td>{{ticket.resolved}}</td>
         </tr>
     </tbody>
     </table>

@@ -12,7 +12,9 @@ public class Users {
     @Column(name = "user_id")
     int user_id;
 
-
+    private String first_name;
+    private String last_name;
+    private String email;
     private String username;
     private String password;
 

@@ -42,4 +42,8 @@ export class UserHandlerService {
     }
     return newUser;
   }
+
+  createUser(url, user, success){
+    this.http.post<any>(url, user).toPromise().then(success())
+  }
 }

@@ -32,4 +32,11 @@ export class RentHandlerService {
 
     return newRent;
   }
+
+  updateRent(rent: Payment, url: string, success){
+    this.http.post<any>(url, JSON.stringify("rent"),
+    {headers:{'Authorization': localStorage.getItem('userToken'),
+        'content-type': 'application/json'}}
+      ).toPromise().then(success())
+  }
 }

@@ -20,11 +20,13 @@ export const environment = {
   managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
 
   managerGetRent: "http://localhost:8080/payment/allPayments",
+  managerUpdateRent: "TODO",
 
   managerGetApt: "http://localhost:8080/apt/allApt",
   managerGetApps: "http://localhost:8080/application/viewAll",
 
   managerGetUsers: "http://localhost:8080/users/findall",
+  managerMakeUser: "http://localhost:8080/users/sign-up",
 
   //
   residentGetTickets: "http://localhost:8080/ticket/ticketRes",

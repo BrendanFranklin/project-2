@@ -294,14 +294,15 @@ var TicketDetailsComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
 var Ticket = /** @class */ (function () {
-    function Ticket(id, submitted, authorFirstName, authorLastName, resolved, resolver_id, description, apt_num) {
+    function Ticket(id, submitted, authorFirstName, authorLastName, description, resolved, resolver_id, notes, apt_num) {
         this.id = id;
         this.submitted = submitted;
         this.authorFirstName = authorFirstName;
         this.authorLastName = authorLastName;
+        this.description = description;
         this.resolved = resolved;
         this.resolver_id = resolver_id;
-        this.description = description;
+        this.notes = notes;
         this.apt_num = apt_num;
     }
     return Ticket;
@@ -360,20 +361,7 @@ var TickethandlerService = /** @class */ (function () {
     //   this.http.post<any>(url,JSON.stringify(ticketId))
     // }
     TickethandlerService.prototype.ticketParse = function (ticket) {
-        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(), ticket[2], ticket[3], new Date(), ticket[5], ticket[6], ticket[7]);
-        var year1 = ticket[1].length[0] + ticket[1].length[1] + ticket[1].length[2] + ticket[1].length[3];
-        var month1 = ticket[1].length[6] + ticket[1].length[7];
-        var date1 = ticket[1].length[9] + ticket[1].length[10];
-        parsedTicket.submitted.setFullYear(parseInt(year1));
-        parsedTicket.submitted.setMonth(parseInt(month1) - 1);
-        parsedTicket.submitted.setDate(parseInt(date1));
-        year1 = ticket[4].length[0] + ticket[4].length[1] + ticket[4].length[2] + ticket[4].length[3];
-        month1 = ticket[4].length[6] + ticket[4].length[7];
-        date1 = ticket[4].length[9] + ticket[4].length[10];
-        parsedTicket.resolved.setFullYear(parseInt(year1));
-        parsedTicket.resolved.setMonth(parseInt(month1) - 1);
-        parsedTicket.resolved.setDate(parseInt(date1));
-        console.log(ticket[1]);
+        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], ticket[1], ticket[2], ticket[3], ticket[4], ticket[5], ticket[6], ticket[7], ticket[8]);
         return parsedTicket;
     };
     TickethandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -413,9 +401,11 @@ var environment = {
     managerGetTickets: "http://localhost:8080/ticket/allTicket",
     managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
     managerGetRent: "http://localhost:8080/payment/allPayments",
+    managerUpdateRent: "TODO",
     managerGetApt: "http://localhost:8080/apt/allApt",
     managerGetApps: "http://localhost:8080/application/viewAll",
     managerGetUsers: "http://localhost:8080/users/findall",
+    managerMakeUser: "http://localhost:8080/users/sign-up",
     //
     residentGetTickets: "http://localhost:8080/ticket/ticketRes",
     //send user ID: author

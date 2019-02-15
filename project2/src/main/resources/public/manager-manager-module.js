@@ -516,7 +516,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rentlist [payments]=\"payments\"></app-rentlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rentlist [payments]=\"payments\" (updatePayment)=\"update($event)\"></app-rentlist>\r\n"
 
 /***/ }),
 
@@ -548,6 +548,10 @@ var RentPageComponent = /** @class */ (function () {
     RentPageComponent.prototype.getRent = function () {
         var _this = this;
         this.renthandler.getRent(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetRent, function (payments) { _this.payments = payments; }, function () { });
+    };
+    RentPageComponent.prototype.update = function (update) {
+        var _this = this;
+        this.renthandler.updateRent(update, src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateRent, function () { _this.getRent(); });
     };
     RentPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -704,6 +708,10 @@ var RentHandlerService = /** @class */ (function () {
         var newRent = new src_app_models_payment__WEBPACK_IMPORTED_MODULE_3__["Payment"](rent[0], rent[1], rent[2], rent[3]);
         return newRent;
     };
+    RentHandlerService.prototype.updateRent = function (rent, url, success) {
+        this.http.post(url, JSON.stringify("rent"), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } }).toPromise().then(success());
+    };
     RentHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -764,6 +772,9 @@ var UserHandlerService = /** @class */ (function () {
         }
         return newUser;
     };
+    UserHandlerService.prototype.createUser = function (url, user, success) {
+        this.http.post(url, user).toPromise().then(success());
+    };
     UserHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -795,7 +806,7 @@ module.exports = ".usebanner{\r\n    text-align: center;\r\n}\r\n.newUser{\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"usebanner\">Add/Manage Users</h1>\r\n<app-navbar></app-navbar>\r\n\r\n<div class=\"newUser\">\r\n  <h5>Add New User</h5>\r\n  <form #submission=\"ngForm\" class=\"newUserform\">\r\n\r\n      First Name:\r\n      <input type=\"text\" size=\"10\">\r\n      Last Name:\r\n      <input type=\"text\" size=\"10\">\r\n      Email:\r\n      <input type=\"text\" size=\"20\">\r\n      Username:\r\n      <input type=\"text\" size=\"10\">\r\n      Password:\r\n      <input type=\"text\" size=\"10\">\r\n      Role:\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"false\" [checked]=\"!resident\">Employee\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"true\" [checked]=\"resident\" >Resident\r\n      <label *ngIf=\"resident\">\r\n        | Apt Number\r\n      <input type=\"text\" size=\"3\"  >\r\n      </label>\r\n  </form>\r\n</div>\r\n<app-userlist [users]=\"users\"></app-userlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"usebanner\">Add/Manage Users</h1>\r\n<app-navbar></app-navbar>\r\n\r\n<div class=\"newUser\">\r\n  <h5>Add New User</h5>\r\n  <form #submission=\"ngForm\" class=\"newUserform\" (ngSubmit)=\"submit()\">\r\n\r\n      First Name:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"first_name\" name=\"firstname\">\r\n      Last Name:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"last_name\" name=\"lastname\">\r\n      Email:\r\n      <input type=\"text\" size=\"20\" #name=\"ngModel\" [(ngModel)]=\"email\" name=\"email\">\r\n      Username:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"username\" name=\"username\">\r\n      Password:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"password\" name=\"password\">\r\n      Role:\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"false\" [checked]=\"!resident\">Employee\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"true\" [checked]=\"resident\" >Resident\r\n      <label *ngIf=\"resident\">\r\n        | Apt Number\r\n      <input type=\"text\" size=\"3\" #name=\"ngModel\" [(ngModel)]=\"apt_num\" name=\"apt_num\" >\r\n      </label>\r\n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!submission.valid\">Submit</button>\r\n  </form>\r\n</div>\r\n<app-userlist [users]=\"users\"></app-userlist>\r\n"
 
 /***/ }),
 
@@ -827,6 +838,19 @@ var UsersPageComponent = /** @class */ (function () {
     UsersPageComponent.prototype.getUsers = function () {
         var _this = this;
         this.userService.getUsers(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetUsers, function (users) { _this.users = users; }, function () { });
+    };
+    UsersPageComponent.prototype.submit = function () {
+        var _this = this;
+        var user;
+        if (this.resident = true) {
+            user = { first_name: this.first_name, last_name: this.last_name,
+                email: this.email, username: this.username, password: this.password, role_id: 1, apt_num: this.apt_num };
+        }
+        else {
+            user = { first_name: this.first_name, last_name: this.last_name,
+                email: this.email, username: this.username, password: this.password, role_id: 2 };
+        }
+        this.userService.createUser(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerMakeUser, user, function () { _this.getUsers(); });
     };
     UsersPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

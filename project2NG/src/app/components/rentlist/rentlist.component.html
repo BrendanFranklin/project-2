@@ -16,8 +16,8 @@
           <td>{{payment.overdue}}</td>
           <td>
               <div class="btn-group btn-group-sm" role="group">
-                  <button type="button" class="btn btn-danger" (click)="update('overdue', payment)">Overdue</button>
-                  <button type="button" class="btn btn-success" (click)="update('payed', payment)">Payed</button>
+                  <button type="button" class="btn btn-danger" (click)="update(1, payment)">Overdue</button>
+                  <button type="button" class="btn btn-success" (click)="update(2, payment)">Paid</button>
               </div>
           </td>
         </tr>

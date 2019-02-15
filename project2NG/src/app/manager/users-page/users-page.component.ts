@@ -11,7 +11,13 @@ import { environment } from 'src/environments/environment';
 })
 export class UsersPageComponent implements OnInit {
 
+  first_name: string
+  last_name: string
+  username: string
+  email: string
+  password: string
   resident: boolean
+  apt_num: number
 
   users: User[]
 
@@ -27,4 +33,15 @@ export class UsersPageComponent implements OnInit {
        ()=>{})
   }
 
+  submit(){
+    let user;
+    if(this.resident = true){
+    user = {first_name: this.first_name, last_name: this.last_name,
+    email: this.email,username:this.username, password: this.password, role_id: 1, apt_num: this.apt_num}
+    }else{
+      user = {first_name: this.first_name, last_name: this.last_name,
+        email: this.email,username:this.username, password: this.password, role_id: 2}
+    }
+    this.userService.createUser(environment.managerMakeUser, user,()=>{this.getUsers()})
+  }
 }

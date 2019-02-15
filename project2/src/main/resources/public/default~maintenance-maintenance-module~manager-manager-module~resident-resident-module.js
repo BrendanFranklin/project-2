@@ -257,7 +257,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Resident ID</th>\r\n        <th scope=\"col\">Payed</th>\r\n        <th scope=\"col\">Overdue</th>\r\n        <th scope=\"col\">Options</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let payment of payments\">\r\n          <td scope=\"row\">{{payment.user_id}}</td>\r\n          <td>{{payment.paid}}</td>\r\n          <td>{{payment.overdue}}</td>\r\n          <td>\r\n              <div class=\"btn-group btn-group-sm\" role=\"group\">\r\n                  <button type=\"button\" class=\"btn btn-danger\" (click)=\"update('overdue', payment)\">Overdue</button>\r\n                  <button type=\"button\" class=\"btn btn-success\" (click)=\"update('payed', payment)\">Payed</button>\r\n              </div>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Resident ID</th>\r\n        <th scope=\"col\">Payed</th>\r\n        <th scope=\"col\">Overdue</th>\r\n        <th scope=\"col\">Options</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let payment of payments\">\r\n          <td scope=\"row\">{{payment.user_id}}</td>\r\n          <td>{{payment.paid}}</td>\r\n          <td>{{payment.overdue}}</td>\r\n          <td>\r\n              <div class=\"btn-group btn-group-sm\" role=\"group\">\r\n                  <button type=\"button\" class=\"btn btn-danger\" (click)=\"update(1, payment)\">Overdue</button>\r\n                  <button type=\"button\" class=\"btn btn-success\" (click)=\"update(2, payment)\">Paid</button>\r\n              </div>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -277,15 +277,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var RentlistComponent = /** @class */ (function () {
     function RentlistComponent() {
+        this.updatePayment = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     RentlistComponent.prototype.ngOnInit = function () {
     };
     RentlistComponent.prototype.update = function (change, payment) {
+        if (change == 1) {
+            payment.overdue = true;
+        }
+        if (change == 2) {
+            payment.paid = true;
+        }
+        this.updatePayment.emit(payment);
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
     ], RentlistComponent.prototype, "payments", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], RentlistComponent.prototype, "updatePayment", void 0);
     RentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-rentlist',
@@ -319,7 +331,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Date Resolved</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>\r\n          <td>{{ticket.submitted.getMonth()+1}}/{{ticket.submitted.getDate()}}/{{ticket.submitted.getFullYear()}}</td>\r\n          <td *ngIf=\"ticket.resolved > ticket.submitted\" >{{ticket.resolved.getMonth()+1}}/{{ticket.resolved.getDate()}}/{{ticket.resolved.getFullYear()}}</td>\r\n          <td *ngIf=\"ticket.resolved < ticket.submitted\">Unresolved</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Date Resolved</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>\r\n          <td>{{ticket.submitted}}</td>\r\n          <td>{{ticket.resolved}}</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
