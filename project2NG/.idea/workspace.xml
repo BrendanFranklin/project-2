@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b2a07af-b55c-4de4-92bd-40869f4e8de9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/apartmentlist/apartmentlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/apartmentlist/apartmentlist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/maintform/maintform.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/maintform/maintform.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/maintform/maintform.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/maintform/maintform.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/manager/users-page/users-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/manager/users-page/users-page.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,55 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/maintform/maintform.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/components/maintform/maintform.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/models/ticket.ts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/home/application/appform/appform.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/home/application/appform/appform.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="61" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -110,7 +60,6 @@
         <option value="$PROJECT_DIR$/src/app/manager/users-page/userlist/userlist.component.ts" />
         <option value="$PROJECT_DIR$/src/app/manager/manager.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/userlist/userlist.component.html" />
-        <option value="$PROJECT_DIR$/src/app/manager/users-page/users-page.component.html" />
         <option value="$PROJECT_DIR$/src/app/resident/apartmentdetailspage/apartmentdetailspage.component.css" />
         <option value="$PROJECT_DIR$/src/app/global/global.module.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
@@ -121,12 +70,13 @@
         <option value="$PROJECT_DIR$/src/app/manager/manmaint/manmaint.component.html" />
         <option value="$PROJECT_DIR$/src/app/manager/rent-page/rent-page.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/apartmentlist/apartmentlist.component.html" />
-        <option value="$PROJECT_DIR$/src/app/components/maintform/maintform.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/maintform/maintform.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/maintform/maintform.component.html" />
+        <option value="$PROJECT_DIR$/src/app/manager/users-page/users-page.component.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="865" />
     <option name="width" value="1015" />
     <option name="height" value="995" />
@@ -155,105 +105,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="maintform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="prospectivepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="prospectivepage" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="maintenance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="resident" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project2NG" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project2NG" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="environments" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550184696016" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550185123444" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -341,7 +204,8 @@
       <workItem from="1550158109678" duration="573000" />
       <workItem from="1550158739012" duration="10642000" />
       <workItem from="1550174942967" duration="1998000" />
-      <workItem from="1550179722684" duration="4473000" />
+      <workItem from="1550179722684" duration="5197000" />
+      <workItem from="1550187371322" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;integrated homepage, set automatic reroute from appcomponent&quot;">
       <created>1549421077964</created>
@@ -361,13 +225,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46140000" />
+    <option name="totallyTimeSpent" value="48432000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3181208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3228188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -652,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/manager/users-page/users-page.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/manager/users-page/users-page.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -764,15 +620,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/home/application/appform/appform.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/models/ticket.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/maintform/maintform.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="73" />
+        <state relative-caret-position="220">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/models/ticket.ts">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/app/components/maintform/maintform.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/home/application/appform/appform.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -784,20 +650,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/maintform/maintform.component.html">
+    <entry file="file://$PROJECT_DIR$/src/app/home/application/appform/appform.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+        <state relative-caret-position="340">
+          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/maintform/maintform.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/manager/users-page/users-page.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="484">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
