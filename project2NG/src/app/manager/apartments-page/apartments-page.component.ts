@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Apartment } from 'src/app/models/apartment';
+import { ApartmentHandlerService } from '../services/apartment-handler.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-apartments-page',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApartmentsPageComponent implements OnInit {
 
-  constructor() { }
+  apts: Apartment[];
+  constructor(private aptHandler: ApartmentHandlerService) { }
 
   ngOnInit() {
+    this.getApts()
   }
 
+  getApts(){
+    this.aptHandler.getApts(environment.managerGetApt,
+      (apts)=>{this.apts = apts},()=>{});
+  }
 }

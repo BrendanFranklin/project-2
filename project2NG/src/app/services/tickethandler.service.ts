@@ -9,7 +9,7 @@ import { Ticket } from '../models/ticket'
 export class TickethandlerService {
 
   detailTicket: Ticket;
-  
+
   constructor(private http: HttpClient) { }
 
   getTickets(url: string, success, fail){
@@ -50,8 +50,8 @@ export class TickethandlerService {
       ticket[6],
       ticket[7]
       );
-      parsedTicket.submitted = ticket[1];
-      parsedTicket.resolved = ticket[4];
+      parsedTicket.submitted.setTime(ticket[1]);
+      parsedTicket.resolved.setTime(ticket[4]);
       console.log(parsedTicket);
       return parsedTicket;
   }

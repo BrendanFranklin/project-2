@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Application } from 'src/app/models/application';
 
 @Component({
   selector: 'app-applicationlist',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationlistComponent implements OnInit {
 
+  @Input() apps: Application[];
   constructor() { }
 
   ngOnInit() {

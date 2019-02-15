@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Apartment} from "../../models/apartment";
+import {Payment} from "../../models/payment";
 
 @Component({
   selector: 'app-apartmentdetailspage',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./apartmentdetailspage.component.css']
 })
 export class ApartmentdetailspageComponent implements OnInit {
+
+  apartment: Apartment;
+  payment: Payment;
 
   constructor() { }
 
