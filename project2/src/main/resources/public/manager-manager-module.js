@@ -84,7 +84,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n<app-applicationlist></app-applicationlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n<app-applicationlist [apps]=\"apps\"></app-applicationlist>\r\n"
 
 /***/ }),
 
@@ -100,12 +100,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationsPageComponent", function() { return ApplicationsPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_application_handler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/application-handler.service */ "./src/app/manager/services/application-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var ApplicationsPageComponent = /** @class */ (function () {
-    function ApplicationsPageComponent() {
+    function ApplicationsPageComponent(appService) {
+        this.appService = appService;
     }
     ApplicationsPageComponent.prototype.ngOnInit = function () {
+        this.getApps();
+    };
+    ApplicationsPageComponent.prototype.getApps = function () {
+        var _this = this;
+        this.appService.getAllApps(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetApps, function (apps) { _this.apps = apps; }, function () { });
     };
     ApplicationsPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -113,7 +123,7 @@ var ApplicationsPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./applications-page.component.html */ "./src/app/manager/applications-page/applications-page.component.html"),
             styles: [__webpack_require__(/*! ./applications-page.component.css */ "./src/app/manager/applications-page/applications-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_application_handler_service__WEBPACK_IMPORTED_MODULE_2__["ApplicationHandlerService"]])
     ], ApplicationsPageComponent);
     return ApplicationsPageComponent;
 }());
@@ -589,6 +599,57 @@ var ApartmentHandlerService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], ApartmentHandlerService);
     return ApartmentHandlerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/services/application-handler.service.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/manager/services/application-handler.service.ts ***!
+  \*****************************************************************/
+/*! exports provided: ApplicationHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationHandlerService", function() { return ApplicationHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_application__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/application */ "./src/app/models/application.ts");
+
+
+
+
+var ApplicationHandlerService = /** @class */ (function () {
+    function ApplicationHandlerService(http) {
+        this.http = http;
+    }
+    ApplicationHandlerService.prototype.getAllApps = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var apps = [];
+            resp.forEach(function (app) {
+                apps.push(_this.parseApp(app));
+            });
+            success(apps);
+        }),
+            fail();
+    };
+    ApplicationHandlerService.prototype.parseApp = function (app) {
+        var newApp = new src_app_models_application__WEBPACK_IMPORTED_MODULE_3__["Application"](app[1], app[2], app[3], app[4]);
+        return newApp;
+    };
+    ApplicationHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ApplicationHandlerService);
+    return ApplicationHandlerService;
 }());
 
 

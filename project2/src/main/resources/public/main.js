@@ -403,6 +403,7 @@ var environment = {
     managerGetTickets: "http://localhost:8080/ticket/allTicket",
     managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
     managerGetApt: "http://localhost:8080/apt/allApt",
+    managerGetApps: "http://localhost:8080/application/viewAll",
     //
     residentGetTickets: "http://localhost:8080/ticket/ticketRes",
     //send user ID: author

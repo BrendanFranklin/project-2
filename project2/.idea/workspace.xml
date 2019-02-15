@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aed0303d-de36-414e-b63b-faafa7aef62a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/common.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/default~maintenance-maintenance-module~manager-manager-module~resident-resident-module.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/home-home-module.js" afterDir="false" />
@@ -11,15 +14,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/main.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/manager-manager-module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/components/apartmentlist/apartmentlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/components/apartmentlist/apartmentlist.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/components/apartmentlist/apartmentlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/components/apartmentlist/apartmentlist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/manager/apartments-page/apartments-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/manager/apartments-page/apartments-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/manager/apartments-page/apartments-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/manager/apartments-page/apartments-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/manager/services/apartment-handler.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/manager/services/apartment-handler.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/models/apartment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/models/apartment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/services/tickethandler.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/services/tickethandler.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/components/applicationlist/applicationlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/components/applicationlist/applicationlist.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/components/applicationlist/applicationlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/components/applicationlist/applicationlist.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/manager/applications-page/applications-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/manager/applications-page/applications-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2NG/src/app/manager/applications-page/applications-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../project2NG/src/app/manager/applications-page/applications-page.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,15 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/pojos/Payment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,6 +109,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepositoryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -141,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/UserRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/PaymentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/project2/controllers/TicketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
       </list>
     </option>
@@ -277,7 +276,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550195076377" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550197607294" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -316,12 +315,12 @@
       <workItem from="1550171629602" duration="2685000" />
       <workItem from="1550174816827" duration="1794000" />
       <workItem from="1550180802855" duration="1510000" />
-      <workItem from="1550185230977" duration="5654000" />
+      <workItem from="1550185230977" duration="6689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19642000" />
+    <option name="totallyTimeSpent" value="20677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -578,6 +577,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -585,10 +591,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/config/WebConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/project2/repository/ApplicationRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
     </entry>
