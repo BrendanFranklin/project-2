@@ -1,7 +1,7 @@
 package org.project2.pojos;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 @Entity
 @Table (name = "tickets", schema = "Pretense")
@@ -13,7 +13,7 @@ public class Ticket {
     private int id;
 
     @Column(name = "submitted")
-    private Timestamp submitted;
+    private Date submitted;
 
     @JoinColumn(name = "author", referencedColumnName = "user_id")
     private int author;
@@ -25,7 +25,7 @@ public class Ticket {
     private boolean resolved;
 
     @Column(name = "updated")
-    private Timestamp updated;
+    private Date updated;
 
     @JoinColumn(name = "resolver", referencedColumnName = "user_id")
     private int resolver;
@@ -47,11 +47,11 @@ public class Ticket {
         this.id = id;
     }
 
-    public Timestamp getSubmitted() {
+    public Date getSubmitted() {
         return submitted;
     }
 
-    public void setSubmitted(Timestamp submitted) {
+    public void setSubmitted(Date submitted) {
         this.submitted = submitted;
     }
 
@@ -71,11 +71,11 @@ public class Ticket {
         this.resolved = resolved;
     }
 
-    public Timestamp getUpdated() {
+    public Date getUpdated() {
         return updated;
     }
 
-    public void setUpdated(Timestamp updated) {
+    public void setUpdated(Date updated) {
         this.updated = updated;
     }
 
