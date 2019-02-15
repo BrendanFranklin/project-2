@@ -67,7 +67,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     @Override
     public int openTicket(int author, String description) {
         Query query = entityManager.createNativeQuery("insert into pretense.tickets " +
-                "(author, description, submitted) values (?,?,now())");
+                "(author, description, submitted) values (?,?,current_date)");
         query.setParameter(1, author);
         query.setParameter(2, description);
 
@@ -79,7 +79,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     public int updateTicket(int ticket_id, int resolver, String notes, boolean resolved) {
 
         Query query = entityManager.createNativeQuery("update pretense.tickets " +
-                "set resolver=?, notes=?, resolved=?, updated = now() where ticket_id = ?");
+                "set resolver=?, notes=?, resolved=?, updated = current_date where ticket_id = ?");
         query.setParameter(4,ticket_id);
         query.setParameter(1, resolver);
         query.setParameter(2, notes);
