@@ -30,10 +30,11 @@ export class TickethandlerService {
       (err)=>fail(err))
   }
 
-  resolveTicket(url: string, ticket:Ticket, success, fail){
-    this.http.post<any>(url, 
-      {headers:{Authorization:localStorage.getItem('userToken')},
-     body:JSON.stringify(ticket)})
+  resolveTicket(url: string, ticket:Ticket){
+    this.http.post<any>(url,
+      JSON.stringify(ticket),
+      {headers:{'Authorization':localStorage.getItem('userToken'),
+      'content-type':'application/json'}})
     .subscribe();
   }
   // getTicketDetail(url: string, ticketId: number, success, fail){
@@ -58,5 +59,16 @@ export class TickethandlerService {
     this.http.post<any>(url,JSON.stringify(newTicket),
     {headers:{'Authorization': localStorage.getItem('userToken'),
   'content-type': 'application/json'}}).toPromise().then(success())
+  }
+
+  getResTickets(url,success,fail){
+    this.http.post<Ticket[]>(url,JSON.stringify({author: parseInt(localStorage.getItem('userId'))})
+     ,{headers:{'Authorization': localStorage.getItem('userToken'),
+      'content-type': 'application/json'}})
+    .toPromise().then((resp)=>{
+      let tickets: Ticket[]=[];
+      resp.forEach(ticket=>tickets.push(this.ticketParse(ticket)));
+      success(tickets)},
+      (err)=>fail(err))
   }
 }

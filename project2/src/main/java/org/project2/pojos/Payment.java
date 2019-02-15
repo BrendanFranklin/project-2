@@ -1,6 +1,7 @@
 package org.project2.pojos;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "payments", schema = "pretense")
@@ -16,6 +17,9 @@ public class Payment {
 
     @Column(name = "overdue")
     private boolean overdue;
+
+    @Column(name = "date_paid")
+    private Date date_paid;
 
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private Integer user_id;

@@ -17,10 +17,11 @@ export class TicketpageComponent implements OnInit {
   constructor( private ticketHandler: TickethandlerService) {}
 
   ngOnInit() {
+    this.getTickets();
   }
 
   getTickets(){
-    this.ticketHandler.getTickets(
+    this.ticketHandler.getResTickets(
       environment.residentGetTickets,
       (tickets: Ticket[])=>{this.tickets = tickets},
       (err)=>console.log(err))

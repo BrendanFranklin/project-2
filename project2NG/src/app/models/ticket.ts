@@ -5,7 +5,7 @@ export class Ticket{
         public authorLastName: string,
         public description: string,
         public resolved: boolean,
-          public resolver_id: number,
+          public resolver: number,
           public notes: string,
           public apt_num: number){}
 }

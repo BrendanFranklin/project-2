@@ -237,7 +237,7 @@ module.exports = ".tickBan{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n\r\n\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1 class=\"tickBan\" >Ticket Details</h1>\r\n\r\n\r\n\r\n<div class=\"card\">\r\n\r\n  <table>\r\n\r\n      <tr>\r\n\r\n          <td>\r\n\r\n          <div>\r\n\r\n              Apartment: {{ticket.apt_num}}\r\n\r\n          </div>\r\n\r\n          <div>\r\n\r\n          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}\r\n\r\n          </div>\r\n\r\n\r\n\r\n      </td>\r\n\r\n      <td>\r\n\r\n          <div>\r\n\r\n          Description: {{ticket.description}}\r\n\r\n          </div>\r\n\r\n          <div>\r\n\r\n              Resolved: {{ticket.resolved}}\r\n\r\n          </div>\r\n\r\n      </td>\r\n\r\n      </tr>\r\n\r\n  </table>\r\n\r\n  <div class=\"buttBox\">\r\n\r\n      <button class = \"btn btn-primary\" >Go Back</button>\r\n\r\n  </div>\r\n\r\n      <div class=\"noteField\">\r\n\r\n          <button class=\"btn btn-primary\" *ngIf=\"manager == true\">Add Notes</button>\r\n\r\n          <input type=\"text\">\r\n\r\n      </div>\r\n\r\n    <div class=\"resolvebutt\" *ngIf=\"ticket.resolved == false\">\r\n\r\n        <button class=\"btn btn-primary\">Resolve</button>\r\n\r\n    </div>\r\n\r\n  </div>"
+module.exports = "<h1 class=\"tickBan\" >Ticket Details</h1>\r\n\r\n\r\n\r\n<div class=\"card\">\r\n\r\n  <table>\r\n\r\n\r\n          <tr>\r\n\r\n          <div>\r\n\r\n              Apartment: {{ticket.apt_num}}\r\n\r\n          </div>\r\n\r\n          <div>\r\n\r\n          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}\r\n\r\n          </div>\r\n\r\n\r\n\r\n      </tr>\r\n\r\n      <tr>\r\n\r\n          <div>\r\n\r\n          Description: {{ticket.description}}\r\n\r\n          </div>\r\n\r\n          <div>\r\n\r\n              Resolved: {{ticket.resolved}}\r\n\r\n          </div>\r\n          <div>\r\n\r\n            Notes: {{ticket.notes}}\r\n\r\n        </div>\r\n\r\n      </tr>\r\n\r\n\r\n  </table>\r\n\r\n<div *ngIf=\"manager\">\r\n        <form class=\"submission\" #submission=\"ngForm\" novalidate (ngSubmit)=\"submit(false)\">\r\n      <div class=\"noteField\" >\r\n\r\n          <button class=\"btn btn-primary\" type=\"submit\">Add Notes</button>\r\n\r\n          <input type=\"text\" ([ngModel])=\"ticket.notes\" name=\"notes\" >\r\n\r\n      </div>\r\n      </form>\r\n    <div class=\"resolvebutt\" *ngIf=\"!ticket.resolved\">\r\n\r\n        <button class=\"btn btn-primary\" (click)=\"submit(true)\">Resolved</button>\r\n\r\n    </div>\r\n</div>\r\n  </div>"
 
 /***/ }),
 
@@ -254,6 +254,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -267,6 +269,16 @@ var TicketDetailsComponent = /** @class */ (function () {
         if (parseInt(localStorage.getItem('userRole')) == 1) {
             this.manager = false;
         }
+    };
+    TicketDetailsComponent.prototype.submit = function (resolved) {
+        if (resolved) {
+            this.ticket.resolved = true;
+            this.ticket.resolver = parseInt(localStorage.getItem('userId'));
+        }
+        if (!this.ticket.resolved) {
+            this.ticket.resolver = 1;
+        }
+        this.ticketService.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateTicket, this.ticket);
     };
     TicketDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -294,14 +306,14 @@ var TicketDetailsComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
 var Ticket = /** @class */ (function () {
-    function Ticket(id, submitted, authorFirstName, authorLastName, description, resolved, resolver_id, notes, apt_num) {
+    function Ticket(id, submitted, authorFirstName, authorLastName, description, resolved, resolver, notes, apt_num) {
         this.id = id;
         this.submitted = submitted;
         this.authorFirstName = authorFirstName;
         this.authorLastName = authorLastName;
         this.description = description;
         this.resolved = resolved;
-        this.resolver_id = resolver_id;
+        this.resolver = resolver;
         this.notes = notes;
         this.apt_num = apt_num;
     }
@@ -336,7 +348,7 @@ var TickethandlerService = /** @class */ (function () {
     }
     TickethandlerService.prototype.getTickets = function (url, success, fail) {
         var _this = this;
-        this.http.get(url, { headers: { Authorization: localStorage.getItem('userToken') } })
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
             .toPromise().then(function (resp) {
             var tickets = [];
             resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
@@ -345,16 +357,16 @@ var TickethandlerService = /** @class */ (function () {
     };
     TickethandlerService.prototype.getResidentTickets = function (url, success, fail) {
         var _this = this;
-        this.http.post(url, localStorage.getItem('userId'), { headers: { Authorization: localStorage.getItem('userToken') } })
+        this.http.post(url, localStorage.getItem('userId'), { headers: { 'Authorization': localStorage.getItem('userToken') } })
             .toPromise().then(function (resp) {
             var tickets = [];
             resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
             success(tickets);
         }, function (err) { return fail(err); });
     };
-    TickethandlerService.prototype.resolveTicket = function (url, ticket, success, fail) {
-        this.http.post(url, { headers: { Authorization: localStorage.getItem('userToken') },
-            body: JSON.stringify(ticket) })
+    TickethandlerService.prototype.resolveTicket = function (url, ticket) {
+        this.http.post(url, JSON.stringify(ticket), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } })
             .subscribe();
     };
     // getTicketDetail(url: string, ticketId: number, success, fail){
@@ -363,6 +375,20 @@ var TickethandlerService = /** @class */ (function () {
     TickethandlerService.prototype.ticketParse = function (ticket) {
         var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], ticket[1], ticket[2], ticket[3], ticket[4], ticket[5], ticket[6], ticket[7], ticket[8]);
         return parsedTicket;
+    };
+    TickethandlerService.prototype.makeTicket = function (url, newTicket, success) {
+        this.http.post(url, JSON.stringify(newTicket), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } }).toPromise().then(success());
+    };
+    TickethandlerService.prototype.getResTickets = function (url, success, fail) {
+        var _this = this;
+        this.http.post(url, JSON.stringify({ author: parseInt(localStorage.getItem('userId')) }), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } })
+            .toPromise().then(function (resp) {
+            var tickets = [];
+            resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
+            success(tickets);
+        }, function (err) { return fail(err); });
     };
     TickethandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -392,6 +418,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
+    everybodyMakeTicket: "http://localhost:8080/ticket/openTicket",
     publicOpenApts: "http://localhost:8080/apt/emptyApt",
     publicSubmitApp: "http://localhost:8080/application/openApp",
     loginGetRoleId: "http://localhost:8080/users/roleid",
@@ -401,15 +428,16 @@ var environment = {
     managerGetTickets: "http://localhost:8080/ticket/allTicket",
     managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
     managerGetRent: "http://localhost:8080/payment/allPayments",
-    managerUpdateRent: "TODO",
+    managerUpdateRent: "http://localhost:8080/payment/makePayment",
     managerGetApt: "http://localhost:8080/apt/allApt",
     managerGetApps: "http://localhost:8080/application/viewAll",
     managerGetUsers: "http://localhost:8080/users/findall",
     managerMakeUser: "http://localhost:8080/users/sign-up",
     //
     residentGetTickets: "http://localhost:8080/ticket/ticketRes",
+    residentGetApt: "http://localhost:8080/apt/aptByUserId",
     //send user ID: author
-    residentGetRentDetails: "http://localhost8080/payment/paymentAuth",
+    residentGetRentDetails: "http://localhost:8080/payment/paymentAuth",
 };
 /*
  * For easier debugging in development mode, you can import the following file

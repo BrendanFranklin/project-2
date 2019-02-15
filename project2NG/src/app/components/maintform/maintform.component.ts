@@ -24,7 +24,7 @@ export class MaintformComponent implements OnInit {
 
   submit(){
     this.ticketService.makeTicket(environment.everybodyMakeTicket, {apt_num: this.apt_num,
-    description: this.description, author: localStorage.getItem('userId')},()=>{this.newTicket.emit()} )
+    description: this.description, author: localStorage.getItem('userId'), resolved: false},()=>{this.newTicket.emit()} )
   }
 
 }

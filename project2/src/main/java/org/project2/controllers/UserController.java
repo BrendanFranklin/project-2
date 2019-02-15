@@ -35,6 +35,7 @@ public class UserController {
 
     @PostMapping(path = "/sign-up", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void signUp(@RequestBody Users user) {
+        System.out.println(user.getUsername());
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         this.userService.addNewUser(user);
         if(user.getApt_num() != null){

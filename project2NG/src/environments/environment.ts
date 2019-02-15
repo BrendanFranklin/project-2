@@ -32,8 +32,9 @@ export const environment = {
 
   //
   residentGetTickets: "http://localhost:8080/ticket/ticketRes",
+  residentGetApt: "http://localhost:8080/apt/aptByUserId",
   //send user ID: author
-  residentGetRentDetails: "http://localhost8080/payment/paymentAuth",
+  residentGetRentDetails: "http://localhost:8080/payment/paymentAuth",
 
 };
 

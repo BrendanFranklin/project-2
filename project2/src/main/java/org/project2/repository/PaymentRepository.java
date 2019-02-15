@@ -9,7 +9,7 @@ public interface PaymentRepository {
 
     List<Payment> findAll();
 
-    List<Payment> findByAuthor(int author);
+    List<Payment> findByAuthor(int user_id);
 
     void makePayment(Payment payment);
 }

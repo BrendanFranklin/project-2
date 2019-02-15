@@ -98,7 +98,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" (resolveTicket)=\"resolve($event)\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 
@@ -129,8 +129,6 @@ var TicketPageComponent = /** @class */ (function () {
         this.getTickets();
     };
     TicketPageComponent.prototype.resolve = function (ticket) {
-        var _this = this;
-        this.ticketHandler.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateTicket, ticket, function () { return _this.getTickets(); }, function (err) { return console.log(err); });
     };
     TicketPageComponent.prototype.getTickets = function () {
         var _this = this;

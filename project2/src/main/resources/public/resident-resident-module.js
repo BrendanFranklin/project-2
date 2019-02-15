@@ -18,7 +18,7 @@ module.exports = ".resBan{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n.mainB
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n\r\n\r\n<div class=\"aptDeets\">\r\n\r\n   <div>Apt Number: {{apartment.apt_num}}</div>\r\n\r\n   <div>Style:{{apartment.apt_style}}</div>\r\n\r\n   <div> Rent: {{apartment.rent}}</div>\r\n\r\n   <div>Rent Status: {{payment.paid}}</div>\r\n\r\n</div>\r\n\r\n\r\n\r\n<div class=\"mainButt\">\r\n\r\n<button [routerLink]=\"'/resident/maintenance'\">Track/Submit Maintenance\r\n\r\n</button>\r\n\r\n</div>"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n\r\n\r\n<div class=\"aptDeets\">\r\n\r\n   <div>Apt Number: {{apartment.apt_num}}</div>\r\n\r\n   <div>Style:{{apartment.apt_style}}</div>\r\n\r\n   <div> Rent: {{apartment.rent}}</div>\r\n\r\n   <div>Rent Status: {{payment.paid}}</div>\r\n\r\n   <div>Overdue: {{payment.overdue}}</div>\r\n\r\n</div>\r\n\r\n\r\n\r\n<div class=\"mainButt\">\r\n\r\n<button [routerLink]=\"'/resident/maintenance'\">Track/Submit Maintenance\r\n\r\n</button>\r\n\r\n</div>"
 
 /***/ }),
 
@@ -34,12 +34,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApartmentdetailspageComponent", function() { return ApartmentdetailspageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_apartment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/apartment */ "./src/app/models/apartment.ts");
+/* harmony import */ var _models_payment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/payment */ "./src/app/models/payment.ts");
+/* harmony import */ var _services_resident_handler_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/resident-handler.service */ "./src/app/resident/services/resident-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
+
+
 
 
 var ApartmentdetailspageComponent = /** @class */ (function () {
-    function ApartmentdetailspageComponent() {
+    function ApartmentdetailspageComponent(residentHandler) {
+        this.residentHandler = residentHandler;
+        this.apartment = new _models_apartment__WEBPACK_IMPORTED_MODULE_2__["Apartment"](0, '', 0, false);
+        this.payment = new _models_payment__WEBPACK_IMPORTED_MODULE_3__["Payment"](0, 0, false, false);
     }
     ApartmentdetailspageComponent.prototype.ngOnInit = function () {
+        this.getApt();
+        this.getPayment();
+    };
+    ApartmentdetailspageComponent.prototype.getApt = function () {
+        var _this = this;
+        this.residentHandler.getApt(src_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].residentGetApt, function (apt) { _this.apartment = apt; });
+    };
+    ApartmentdetailspageComponent.prototype.getPayment = function () {
+        var _this = this;
+        this.residentHandler.getRent(src_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].residentGetRentDetails, function (payment) { _this.payment = payment; });
     };
     ApartmentdetailspageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -47,7 +68,7 @@ var ApartmentdetailspageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./apartmentdetailspage.component.html */ "./src/app/resident/apartmentdetailspage/apartmentdetailspage.component.html"),
             styles: [__webpack_require__(/*! ./apartmentdetailspage.component.css */ "./src/app/resident/apartmentdetailspage/apartmentdetailspage.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_resident_handler_service__WEBPACK_IMPORTED_MODULE_4__["ResidentHandlerService"]])
     ], ApartmentdetailspageComponent);
     return ApartmentdetailspageComponent;
 }());
@@ -149,6 +170,57 @@ var ResidentModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/resident/services/resident-handler.service.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/resident/services/resident-handler.service.ts ***!
+  \***************************************************************/
+/*! exports provided: ResidentHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResidentHandlerService", function() { return ResidentHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/apartment */ "./src/app/models/apartment.ts");
+/* harmony import */ var src_app_models_payment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/models/payment */ "./src/app/models/payment.ts");
+
+
+
+
+
+var ResidentHandlerService = /** @class */ (function () {
+    function ResidentHandlerService(http) {
+        this.http = http;
+    }
+    ResidentHandlerService.prototype.getApt = function (url, success) {
+        this.http.post(url, JSON.stringify({ user_id: parseInt(localStorage.getItem('userId')) }), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } }).toPromise().then(function (resp) {
+            var apt = new src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__["Apartment"](resp[0][0], resp[0][1], resp[0][2], true);
+            success(apt);
+        });
+    };
+    ResidentHandlerService.prototype.getRent = function (url, success) {
+        this.http.post(url, JSON.stringify({ user_id: parseInt(localStorage.getItem('userId')) }), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } }).toPromise().then(function (resp) {
+            var payment = new src_app_models_payment__WEBPACK_IMPORTED_MODULE_4__["Payment"](resp[0][0], resp[0][1], resp[0][2], resp[0][3]);
+            success(payment);
+        });
+    };
+    ResidentHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ResidentHandlerService);
+    return ResidentHandlerService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/resident/ticketpage/ticketpage.component.css":
 /*!**************************************************************!*\
   !*** ./src/app/resident/ticketpage/ticketpage.component.css ***!
@@ -195,10 +267,11 @@ var TicketpageComponent = /** @class */ (function () {
         this.manager = false;
     }
     TicketpageComponent.prototype.ngOnInit = function () {
+        this.getTickets();
     };
     TicketpageComponent.prototype.getTickets = function () {
         var _this = this;
-        this.ticketHandler.getTickets(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].residentGetTickets, function (tickets) { _this.tickets = tickets; }, function (err) { return console.log(err); });
+        this.ticketHandler.getResTickets(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].residentGetTickets, function (tickets) { _this.tickets = tickets; }, function (err) { return console.log(err); });
     };
     TicketpageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

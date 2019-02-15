@@ -4,6 +4,8 @@ import {Apartment} from "../../models/apartment";
 
 import {Payment} from "../../models/payment";
 import { getAppInitializer } from '@angular/router/src/router_module';
+import { ResidentHandlerService } from '../services/resident-handler.service';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -21,13 +23,13 @@ export class ApartmentdetailspageComponent implements OnInit {
 
 
 
-  apartment: Apartment;
+  apartment: Apartment = new Apartment(0,'',0,false);
 
-  payment: Payment;
+  payment: Payment = new Payment(0,0,false,false);
 
 
 
-  constructor() { }
+  constructor(private residentHandler: ResidentHandlerService) { }
 
 
 
@@ -38,8 +40,11 @@ export class ApartmentdetailspageComponent implements OnInit {
 
   }
 
-getApt(){}
+getApt(){
+this.residentHandler.getApt(environment.residentGetApt,(apt: Apartment)=>{this.apartment= apt;})
+}
 
-getPayment(){}
-
+getPayment(){
+this.residentHandler.getRent(environment.residentGetRentDetails,(payment: Payment)=>{this.payment = payment})
+}
 }

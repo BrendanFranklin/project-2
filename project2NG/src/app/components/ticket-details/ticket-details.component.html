@@ -6,9 +6,8 @@
 
   <table>
 
-      <tr>
 
-          <td>
+          <tr>
 
           <div>
 
@@ -24,9 +23,9 @@
 
 
 
-      </td>
+      </tr>
 
-      <td>
+      <tr>
 
           <div>
 
@@ -39,31 +38,31 @@
               Resolved: {{ticket.resolved}}
 
           </div>
+          <div>
 
-      </td>
+            Notes: {{ticket.notes}}
+
+        </div>
 
       </tr>
 
+
   </table>
 
-  <div class="buttBox">
+<div *ngIf="manager">
+        <form class="submission" #submission="ngForm" novalidate (ngSubmit)="submit(false)">
+      <div class="noteField" >
 
-      <button class = "btn btn-primary" >Go Back</button>
+          <button class="btn btn-primary" type="submit">Add Notes</button>
 
-  </div>
-
-      <div class="noteField">
-
-          <button class="btn btn-primary" *ngIf="manager == true">Add Notes</button>
-
-          <input type="text">
+          <input type="text" ([ngModel])="ticket.notes" name="notes" >
 
       </div>
+      </form>
+    <div class="resolvebutt" *ngIf="!ticket.resolved">
 
-    <div class="resolvebutt" *ngIf="ticket.resolved == false">
-
-        <button class="btn btn-primary">Resolve</button>
+        <button class="btn btn-primary" (click)="submit(true)">Resolved</button>
 
     </div>
-
+</div>
   </div>

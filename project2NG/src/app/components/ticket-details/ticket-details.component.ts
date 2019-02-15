@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Ticket } from 'src/app/models/ticket';
 
 import { TickethandlerService } from 'src/app/services/tickethandler.service';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -24,6 +25,8 @@ export class TicketDetailsComponent implements OnInit {
 
   ticket: Ticket;
 
+
+
   constructor(private ticketService: TickethandlerService) { }
 
 
@@ -39,9 +42,17 @@ export class TicketDetailsComponent implements OnInit {
      this.manager = false;
 
    }
-
   }
 
-
+  submit(resolved){
+    if(resolved){
+      this.ticket.resolved = true;
+      this.ticket.resolver = parseInt(localStorage.getItem('userId'));
+    }
+    if(!this.ticket.resolved){
+      this.ticket.resolver = 1
+    }
+    this.ticketService.resolveTicket(environment.managerUpdateTicket,this.ticket)
+  }
 
 }

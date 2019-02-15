@@ -19,11 +19,7 @@ export class TicketPageComponent implements OnInit {
     this.getTickets();
   }
   resolve(ticket: Ticket){
-    this.ticketHandler.resolveTicket(
-      environment.managerUpdateTicket,
-      ticket,
-      ()=>this.getTickets(),
-      (err)=>console.log(err))
+
   }
   getTickets(){
     this.ticketHandler.getTickets(

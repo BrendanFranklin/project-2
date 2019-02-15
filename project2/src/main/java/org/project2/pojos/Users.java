@@ -50,14 +50,16 @@ public class Users {
 
     public Users(){}
 
-    public Users( String username, String password, Collection<Role> roles, Integer apt_num, Integer role_id) {
+    public Users(String username, String password, String first_name, String last_name, String email, Collection<Role> roles, Integer apt_num, Integer role_id) {
         this.username = username;
         this.password = password;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
         this.roles = roles;
         this.apt_num = apt_num;
         this.role_id = role_id;
     }
-
 
     public int getUser_id() {
         return user_id;

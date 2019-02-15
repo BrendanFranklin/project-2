@@ -40,7 +40,7 @@ export class UsersPageComponent implements OnInit {
     email: this.email,username:this.username, password: this.password, role_id: 1, apt_num: this.apt_num}
     }else{
       user = {first_name: this.first_name, last_name: this.last_name,
-        email: this.email,username:this.username, password: this.password, role_id: 2}
+        email: this.email,username: this.username, password: this.password, role_id: 2}
     }
     this.userService.createUser(environment.managerMakeUser, user,()=>{this.getUsers()})
   }

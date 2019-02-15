@@ -46,6 +46,30 @@ var Application = /** @class */ (function () {
 
 
 
+/***/ }),
+
+/***/ "./src/app/models/payment.ts":
+/*!***********************************!*\
+  !*** ./src/app/models/payment.ts ***!
+  \***********************************/
+/*! exports provided: Payment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Payment", function() { return Payment; });
+var Payment = /** @class */ (function () {
+    function Payment(id, user_id, paid, overdue) {
+        this.id = id;
+        this.user_id = user_id;
+        this.paid = paid;
+        this.overdue = overdue;
+    }
+    return Payment;
+}());
+
+
+
 /***/ })
 
 }]);

@@ -445,7 +445,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-maintform></app-maintform>\r\n<app-ticketlist [manager]=\"manager\" (resolveTicket)=\"resolve($event)\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-maintform></app-maintform>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 
@@ -476,8 +476,6 @@ var ManmaintComponent = /** @class */ (function () {
         this.getTickets();
     };
     ManmaintComponent.prototype.resolve = function (ticket) {
-        var _this = this;
-        this.ticketHandler.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateTicket, ticket, function () { return _this.getTickets(); }, function (err) { return console.log(err); });
     };
     ManmaintComponent.prototype.getTickets = function () {
         var _this = this;
@@ -709,7 +707,7 @@ var RentHandlerService = /** @class */ (function () {
         return newRent;
     };
     RentHandlerService.prototype.updateRent = function (rent, url, success) {
-        this.http.post(url, JSON.stringify("rent"), { headers: { 'Authorization': localStorage.getItem('userToken'),
+        this.http.post(url, JSON.stringify(rent), { headers: { 'Authorization': localStorage.getItem('userToken'),
                 'content-type': 'application/json' } }).toPromise().then(success());
     };
     RentHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -861,30 +859,6 @@ var UsersPageComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_handler_service__WEBPACK_IMPORTED_MODULE_2__["UserHandlerService"]])
     ], UsersPageComponent);
     return UsersPageComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/models/payment.ts":
-/*!***********************************!*\
-  !*** ./src/app/models/payment.ts ***!
-  \***********************************/
-/*! exports provided: Payment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Payment", function() { return Payment; });
-var Payment = /** @class */ (function () {
-    function Payment(id, user_id, paid, overdue) {
-        this.id = id;
-        this.user_id = user_id;
-        this.paid = paid;
-        this.overdue = overdue;
-    }
-    return Payment;
 }());
 
 
