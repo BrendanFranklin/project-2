@@ -1,37 +1,69 @@
-
 <h1 class="tickBan" >Ticket Details</h1>
 
+
+
 <div class="card">
+
   <table>
+
       <tr>
+
           <td>
+
           <div>
+
               Apartment: {{ticket.apt_num}}
+
           </div>
+
           <div>
+
           Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}
+
           </div>
 
+
+
       </td>
+
       <td>
+
           <div>
+
           Description: {{ticket.description}}
+
           </div>
+
           <div>
+
               Resolved: {{ticket.resolved}}
+
           </div>
+
       </td>
+
       </tr>
+
   </table>
+
   <div class="buttBox">
+
       <button class = "btn btn-primary" >Go Back</button>
-  </div>
-      <div class="noteField">
-          <button class="btn btn-primary" *ngIf="manager == true">Add Notes</button>
-          <input type="text">
-      </div>
-    <div class="resolvebutt" *ngIf="ticket.resolved == false">
-        <button class="btn btn-primary">Resolve</button>
-    </div>
+
   </div>
 
+      <div class="noteField">
+
+          <button class="btn btn-primary" *ngIf="manager == true">Add Notes</button>
+
+          <input type="text">
+
+      </div>
+
+    <div class="resolvebutt" *ngIf="ticket.resolved == false">
+
+        <button class="btn btn-primary">Resolve</button>
+
+    </div>
+
+  </div>

@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".resBan{\r\n    text-align: center;\r\n}\r\n.mainButt{\r\n text-align: center;\r\n    padding-top: 100px;\r\n}\r\n.aptDeets{\r\n    padding-top: 50px;\r\n    margin-left: 500px;\r\n    display: inline-block;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzaWRlbnQvYXBhcnRtZW50ZGV0YWlsc3BhZ2UvYXBhcnRtZW50ZGV0YWlsc3BhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUNBO0NBQ0Msa0JBQWtCO0lBQ2Ysa0JBQWtCO0FBQ3RCO0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsa0JBQWtCO0lBQ2xCLHFCQUFxQjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL3Jlc2lkZW50L2FwYXJ0bWVudGRldGFpbHNwYWdlL2FwYXJ0bWVudGRldGFpbHNwYWdlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVzQmFue1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbi5tYWluQnV0dHtcclxuIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmctdG9wOiAxMDBweDtcclxufVxyXG5cclxuLmFwdERlZXRze1xyXG4gICAgcGFkZGluZy10b3A6IDUwcHg7XHJcbiAgICBtYXJnaW4tbGVmdDogNTAwcHg7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbn1cclxuIl19 */"
+module.exports = ".resBan{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n.mainButt{\r\n\r\n text-align: center;\r\n\r\n    padding-top: 100px;\r\n\r\n}\r\n\r\n.aptDeets{\r\n\r\n    padding-top: 50px;\r\n\r\n    margin-left: 500px;\r\n\r\n    display: inline-block;\r\n\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzaWRlbnQvYXBhcnRtZW50ZGV0YWlsc3BhZ2UvYXBhcnRtZW50ZGV0YWlsc3BhZ2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxrQkFBa0I7O0FBRXRCOztBQUVBOztDQUVDLGtCQUFrQjs7SUFFZixrQkFBa0I7O0FBRXRCOztBQUlBOztJQUVJLGlCQUFpQjs7SUFFakIsa0JBQWtCOztJQUVsQixxQkFBcUI7O0FBRXpCIiwiZmlsZSI6InNyYy9hcHAvcmVzaWRlbnQvYXBhcnRtZW50ZGV0YWlsc3BhZ2UvYXBhcnRtZW50ZGV0YWlsc3BhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5yZXNCYW57XHJcblxyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG5cclxufVxyXG5cclxuLm1haW5CdXR0e1xyXG5cclxuIHRleHQtYWxpZ246IGNlbnRlcjtcclxuXHJcbiAgICBwYWRkaW5nLXRvcDogMTAwcHg7XHJcblxyXG59XHJcblxyXG5cclxuXHJcbi5hcHREZWV0c3tcclxuXHJcbiAgICBwYWRkaW5nLXRvcDogNTBweDtcclxuXHJcbiAgICBtYXJnaW4tbGVmdDogNTAwcHg7XHJcblxyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG5cclxufSJdfQ== */"
 
 /***/ }),
 
@@ -18,7 +18,7 @@ module.exports = ".resBan{\r\n    text-align: center;\r\n}\r\n.mainButt{\r\n tex
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n<div class=\"aptDeets\">\r\n   <div>Apt Number: {{apartment.apt_num}}</div>\r\n   <div>Style:{{apartment.apt_style}}</div>\r\n   <div> Rent: {{apartment.rent}}</div>\r\n   <div>Rent Status: {{payment.paid}}</div>\r\n</div>\r\n\r\n<div class=\"mainButt\">\r\n<button [routerLink]=\"'/resident/maintenance'\">Track/Submit Maintenance\r\n</button>\r\n</div>\r\n\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n\r\n\r\n<div class=\"aptDeets\">\r\n\r\n   <div>Apt Number: {{apartment.apt_num}}</div>\r\n\r\n   <div>Style:{{apartment.apt_style}}</div>\r\n\r\n   <div> Rent: {{apartment.rent}}</div>\r\n\r\n   <div>Rent Status: {{payment.paid}}</div>\r\n\r\n</div>\r\n\r\n\r\n\r\n<div class=\"mainButt\">\r\n\r\n<button [routerLink]=\"'/resident/maintenance'\">Track/Submit Maintenance\r\n\r\n</button>\r\n\r\n</div>"
 
 /***/ }),
 

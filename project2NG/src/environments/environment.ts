@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
 
+  everybodyMakeTicket: "http://localhost:8080/ticket/openTicket",
+
   publicOpenApts: "http://localhost:8080/apt/emptyApt",
   publicSubmitApp: "http://localhost:8080/application/openApp",
 
@@ -20,7 +22,7 @@ export const environment = {
   managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
 
   managerGetRent: "http://localhost:8080/payment/allPayments",
-  managerUpdateRent: "TODO",
+  managerUpdateRent: "http://localhost:8080/payment/makePayment",
 
   managerGetApt: "http://localhost:8080/apt/allApt",
   managerGetApps: "http://localhost:8080/application/viewAll",

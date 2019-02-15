@@ -13,7 +13,7 @@ export class TickethandlerService {
   constructor(private http: HttpClient) { }
 
   getTickets(url: string, success, fail){
-    this.http.get<Ticket[]>(url, {headers:{Authorization: localStorage.getItem('userToken')}})
+    this.http.get<Ticket[]>(url, {headers:{'Authorization': localStorage.getItem('userToken')}})
     .toPromise().then((resp)=>{
       let tickets: Ticket[]=[];
       resp.forEach(ticket=>tickets.push(this.ticketParse(ticket)));
@@ -22,7 +22,7 @@ export class TickethandlerService {
   }
   getResidentTickets(url: string, success, fail){
     this.http.post<any>(url, localStorage.getItem('userId'),
-    {headers:{Authorization: localStorage.getItem('userToken')}})
+    {headers:{'Authorization': localStorage.getItem('userToken')}})
     .toPromise().then((resp)=>{
       let tickets: Ticket[]=[];
       resp.forEach(ticket=>tickets.push(this.ticketParse(ticket)));
@@ -52,5 +52,11 @@ export class TickethandlerService {
       ticket[8]
       );
       return parsedTicket;
+  }
+
+  makeTicket(url,newTicket,success){
+    this.http.post<any>(url,JSON.stringify(newTicket),
+    {headers:{'Authorization': localStorage.getItem('userToken'),
+  'content-type': 'application/json'}}).toPromise().then(success())
   }
 }
