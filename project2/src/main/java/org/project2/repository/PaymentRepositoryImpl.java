@@ -1,7 +1,6 @@
 package org.project2.repository;
 
 import org.project2.pojos.Payment;
-import org.project2.repository.PaymentRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -19,7 +18,7 @@ public class PaymentRepositoryImpl implements PaymentRepository  {
     @Override
     public List<Payment> findAll() {
 
-        Query query = entityManager.createNativeQuery("SELECT * from pretense.payemt");
+        Query query = entityManager.createNativeQuery("SELECT * from pretense.payment");
 
         if(!query.getResultList().isEmpty()){
             List<Payment> payments = (List<Payment>) query.getResultList();
