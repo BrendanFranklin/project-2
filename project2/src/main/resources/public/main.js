@@ -226,7 +226,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdGlja2V0LWRldGFpbHMvdGlja2V0LWRldGFpbHMuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = ".tickBan{\r\n    text-align: center;\r\n}\r\n\r\n.noteField{\r\n    text-align: center;\r\n}\r\n\r\n.buttBox{\r\n    padding-top: 50px;\r\n}\r\n\r\n.resolvebutt{\r\n    text-align: right;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90aWNrZXQtZGV0YWlscy90aWNrZXQtZGV0YWlscy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCOztBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy90aWNrZXQtZGV0YWlscy90aWNrZXQtZGV0YWlscy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRpY2tCYW57XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5ub3RlRmllbGR7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmJ1dHRCb3h7XHJcbiAgICBwYWRkaW5nLXRvcDogNTBweDtcclxufVxyXG4ucmVzb2x2ZWJ1dHR7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -237,7 +237,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\">\n  <table>\n      <tr>\n          <td>\n          <div>\n          Reimbursement ID: {{reimb.iD}}\n          </div>\n           <div>\n          Author ID: {{reimb.author_id}}\n          </div>\n          <div>\n          Author: {{reimb.firstName}} {{reimb.lastName}}\n          </div>\n          <div>\n          Type: {{reimb.type}}\n          </div>\n          <div>\n           Amount: {{reimb.amount}}\n          </div>\n      </td>\n      <td>\n          <div>\n          Status: {{reimb.status}}\n          </div>\n          <div>\n          Description: {{reimb.description}}\n          </div>\n      </td>\n      </tr>\n  </table>\n  <div>\n      <button class = \"btn btn-primary\" (click)=\"return()\">Go Back</button>\n  </div>\n  <div *ngIf=\"reimb.status == 'Pending'\">\n  <div class=\"manager-only\" *ngIf=\"manager && reimb.status == 'Pending'\" >\n  <button class=\"btn btn-success\"(click)=\"decide(2)\">Approve</button>\n  <button class=\"btn btn-danger\" (click)=\"decide(3)\">Deny</button>\n  </div>\n  </div>\n</div>"
+module.exports = "\r\n<h1 class=\"tickBan\" >Ticket Details</h1>\r\n\r\n<div class=\"card\">\r\n  <table>\r\n      <tr>\r\n          <td>\r\n          <div>\r\n              Apartment: {{ticket.apt_num}}\r\n          </div>\r\n          <div>\r\n          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}\r\n          </div>\r\n\r\n      </td>\r\n      <td>\r\n          <div>\r\n          Description: {{ticket.description}}\r\n          </div>\r\n          <div>\r\n              Resolved: {{ticket.resolved}}\r\n          </div>\r\n      </td>\r\n      </tr>\r\n  </table>\r\n  <div class=\"buttBox\">\r\n      <button class = \"btn btn-primary\" >Go Back</button>\r\n  </div>\r\n      <div class=\"noteField\">\r\n          <button class=\"btn btn-primary\" *ngIf=\"manager == true\">Add Notes</button>\r\n          <input type=\"text\">\r\n      </div>\r\n    <div class=\"resolvebutt\" *ngIf=\"ticket.resolved == false\">\r\n        <button class=\"btn btn-primary\">Resolve</button>\r\n    </div>\r\n  </div>\r\n\r\n"
 
 /***/ }),
 
@@ -360,9 +360,9 @@ var TickethandlerService = /** @class */ (function () {
     //   this.http.post<any>(url,JSON.stringify(ticketId))
     // }
     TickethandlerService.prototype.ticketParse = function (ticket) {
-        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(), ticket[2], ticket[3], new Date(), ticket[5], ticket[6], ticket[7]);
-        parsedTicket.submitted.setTime(ticket[1]);
-        parsedTicket.resolved.setTime(ticket[4]);
+        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(ticket[1]), ticket[2], ticket[3], new Date(ticket[4]), ticket[5], ticket[6], ticket[7]);
+        // parsedTicket.submitted.setTime(ticket[1]);
+        // parsedTicket.resolved.setTime(ticket[4]);
         console.log(parsedTicket);
         return parsedTicket;
     };

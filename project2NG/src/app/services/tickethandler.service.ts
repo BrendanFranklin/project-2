@@ -42,17 +42,17 @@ export class TickethandlerService {
   ticketParse(ticket){
     let parsedTicket = new Ticket(
       ticket[0],
-      new Date(),
+      new Date(ticket[1]),
       ticket[2],
       ticket[3],
-      new Date(),
+      new Date(ticket[4]),
       ticket[5],
       ticket[6],
       ticket[7]
       );
-      parsedTicket.submitted.setTime(ticket[1]);
-      parsedTicket.resolved.setTime(ticket[4]);
-      console.log(parsedTicket);
+      // parsedTicket.submitted.setTime(ticket[1]);
+      // parsedTicket.resolved.setTime(ticket[4]);
+      console.log(ticket[1]);
       return parsedTicket;
   }
 }
