@@ -18,7 +18,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     @Override
     public List<Ticket> findAll() {
         Query query = entityManager.createNativeQuery("Select " +
-                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "ticket_id, submitted, first_name, last_name, description, resolved, resolver, notes, apt_num " +
                 "from pretense.tickets " +
                 "left join pretense.users on author = user_id");
 
@@ -33,7 +33,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     public List<Ticket> findResidentTickets(int user_id) {
 
         Query query = entityManager.createNativeQuery("Select " +
-                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "ticket_id, submitted, first_name, last_name, description, resolved, resolver, notes, apt_num " +
                 "from pretense.tickets " +
                 "left join pretense.users on author = user_id " +
                 "where author = ?");
@@ -50,7 +50,7 @@ public class TicketRepositoryImpl implements TicketRepository{
     public Ticket findTicketById(int ticket_id) {
 
         Query query = entityManager.createNativeQuery("Select " +
-                "ticket_id, submitted, first_name, last_name, resolved, resolver, description, apt_num " +
+                "ticket_id, submitted, first_name, last_name, description resolved, resolver, notes, apt_num " +
                 "from prestense.tickets " +
                 "left join pretense.users on author = user_id " +
                 "where id=?");

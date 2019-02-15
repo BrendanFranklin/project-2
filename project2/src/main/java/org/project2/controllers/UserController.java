@@ -6,6 +6,7 @@ import org.project2.repository.UserRepository;
 import org.project2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -29,12 +30,16 @@ public class UserController {
         this.applicationUserRepository = applicationUserRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.userRepository = userRepository;
+        this.userService = userService;
     }
 
     @PostMapping("/sign-up")
     public void signUp(@RequestBody Users user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         applicationUserRepository.save(user);
+        if(user.getApt_num() != null){
+            this.userService.updateApt(user.getApt_num());
+        }
     }
 
     public Users getCurrentUser(@AuthenticationPrincipal Users users) {
@@ -51,6 +56,7 @@ public class UserController {
         return this.userRepository.viewUserId(user.getUsername());
     }
 
+    @PreAuthorize("hasAuthority('view_users')")
     @GetMapping("/findall")
     public List<Users> findAll(){
         return this.userService.findAll();
