@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping("/sign-up")
     public void signUp(@RequestBody Users user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        applicationUserRepository.save(user);
+        userService.addNewUser(user);
         if(user.getApt_num() != null){
             this.userService.updateApt(user.getApt_num());
         }

@@ -50,5 +50,18 @@ public class UserRepositoryImpl implements UserRepository {
         query.executeUpdate();
     }
 
-
+    @Override
+    public void addNewUser(Users user){
+        Query query = entityManager.createNativeQuery("insert into pretense.users " +
+                "(username, password, first_name, last_name, email, role_id, apt_num) values " +
+                "(?, ?, ?, ?, ?, ?, ?)");
+        query.setParameter(1, user.getUsername());
+        query.setParameter(1, user.getPassword());
+        query.setParameter(1, user.getFirst_name());
+        query.setParameter(1, user.getLast_name());
+        query.setParameter(1, user.getEmail());
+        query.setParameter(1, user.getRole_id());
+        query.setParameter(1, user.getApt_num());
+        query.executeUpdate();
+    }
 }
