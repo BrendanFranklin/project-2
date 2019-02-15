@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { UserHandlerService } from '../services/user-handler.service';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -10,9 +13,18 @@ export class UsersPageComponent implements OnInit {
 
   resident: boolean
 
-  constructor() { }
+  users: User[]
+
+  constructor(private userService: UserHandlerService) { }
 
   ngOnInit() {
+    this.getUsers();
+  }
+
+  getUsers(){
+    this.userService.getUsers(environment.managerGetUsers,
+       (users)=>{this.users = users},
+       ()=>{})
   }
 
 }

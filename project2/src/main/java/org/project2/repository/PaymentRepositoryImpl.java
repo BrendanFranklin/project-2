@@ -19,7 +19,7 @@ public class PaymentRepositoryImpl implements PaymentRepository  {
     @Override
     public List<Payment> findAll() {
 
-        Query query = entityManager.createNativeQuery("SELECT * from pretense.payemt");
+        Query query = entityManager.createNativeQuery("SELECT * from pretense.payments");
 
         if(!query.getResultList().isEmpty()){
             List<Payment> payments = (List<Payment>) query.getResultList();

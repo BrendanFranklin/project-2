@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Payment } from 'src/app/models/payment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class RentHandlerService {
     this.http.get<any>(url, {headers:{'Authorization': localStorage.getItem('userToken')}})
     .toPromise().then(
       (resp)=>{
-        let rents: Rent[] = [];
+        let rents: Payment[] = [];
         resp.forEach(rent=>{
           rents.push(this.parseRent(rent))
         })
@@ -22,6 +23,13 @@ export class RentHandlerService {
   }
 
   parseRent(rent){
+    let newRent = new Payment(
+      rent[0],
+      rent[1],
+      rent[2],
+      rent[3]
+    )
 
+    return newRent;
   }
 }

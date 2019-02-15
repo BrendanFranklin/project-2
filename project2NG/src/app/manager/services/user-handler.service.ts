@@ -23,6 +23,23 @@ export class UserHandlerService {
   }
 
   parseUser(user){
-    
+    let newUser = new User(
+      user[0],
+      user[3],
+      user[4],
+      user[5],
+      "",
+      user[7]
+    )
+    if(user[6]==1){
+      newUser.role = 'Resident';
+    }
+    if(user[6]==2){
+      newUser.role = 'Manager';
+    }
+    if(user[6]==3){
+      newUser.role = 'Maintenance';
+    }
+    return newUser;
   }
 }

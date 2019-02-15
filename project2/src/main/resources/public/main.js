@@ -360,10 +360,20 @@ var TickethandlerService = /** @class */ (function () {
     //   this.http.post<any>(url,JSON.stringify(ticketId))
     // }
     TickethandlerService.prototype.ticketParse = function (ticket) {
-        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(ticket[1]), ticket[2], ticket[3], new Date(ticket[4]), ticket[5], ticket[6], ticket[7]);
-        // parsedTicket.submitted.setTime(ticket[1]);
-        // parsedTicket.resolved.setTime(ticket[4]);
-        console.log(parsedTicket);
+        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(), ticket[2], ticket[3], new Date(), ticket[5], ticket[6], ticket[7]);
+        var year1 = ticket[1].length[0] + ticket[1].length[1] + ticket[1].length[2] + ticket[1].length[3];
+        var month1 = ticket[1].length[6] + ticket[1].length[7];
+        var date1 = ticket[1].length[9] + ticket[1].length[10];
+        parsedTicket.submitted.setFullYear(parseInt(year1));
+        parsedTicket.submitted.setMonth(parseInt(month1) - 1);
+        parsedTicket.submitted.setDate(parseInt(date1));
+        year1 = ticket[4].length[0] + ticket[4].length[1] + ticket[4].length[2] + ticket[4].length[3];
+        month1 = ticket[4].length[6] + ticket[4].length[7];
+        date1 = ticket[4].length[9] + ticket[4].length[10];
+        parsedTicket.resolved.setFullYear(parseInt(year1));
+        parsedTicket.resolved.setMonth(parseInt(month1) - 1);
+        parsedTicket.resolved.setDate(parseInt(date1));
+        console.log(ticket[1]);
         return parsedTicket;
     };
     TickethandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -402,13 +412,14 @@ var environment = {
     employeeAuth: "http://localhost:8080/login",
     managerGetTickets: "http://localhost:8080/ticket/allTicket",
     managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
+    managerGetRent: "http://localhost:8080/payment/allPayments",
     managerGetApt: "http://localhost:8080/apt/allApt",
     managerGetApps: "http://localhost:8080/application/viewAll",
+    managerGetUsers: "http://localhost:8080/users/findall",
     //
     residentGetTickets: "http://localhost:8080/ticket/ticketRes",
     //send user ID: author
     residentGetRentDetails: "http://localhost8080/payment/paymentAuth",
-    residentPayRent: "TODO",
 };
 /*
  * For easier debugging in development mode, you can import the following file

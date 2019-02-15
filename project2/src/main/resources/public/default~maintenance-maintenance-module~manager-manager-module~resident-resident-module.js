@@ -78,7 +78,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">First Name</th>\r\n        <th scope=\"col\">Last Name</th>\r\n        <th scope=\"col\">Email</th>\r\n        <th scope=\"col\">Phone</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let app of apps\">\r\n          <th>{{app.first_name}}</th>\r\n          <th>{{app.last_name}}</th>\r\n          <th>{{app.email}}</th>\r\n          <th>{{app.phone}}</th>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">First Name</th>\r\n        <th scope=\"col\">Last Name</th>\r\n        <th scope=\"col\">Email</th>\r\n        <th scope=\"col\">Phone</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let app of apps\">\r\n          <td>{{app.first_name}}</td>\r\n          <td>{{app.last_name}}</td>\r\n          <td>{{app.email}}</td>\r\n          <td>{{app.phone}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -257,7 +257,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Ticket ID</th>\r\n        <th scope=\"col\">Author</th>\r\n        <th scope=\"col\">Submitted</th>\r\n        <th scope=\"col\">Date Resolved</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Resident ID</th>\r\n        <th scope=\"col\">Payed</th>\r\n        <th scope=\"col\">Overdue</th>\r\n        <th scope=\"col\">Options</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let payment of payments\">\r\n          <td scope=\"row\">{{payment.user_id}}</td>\r\n          <td>{{payment.paid}}</td>\r\n          <td>{{payment.overdue}}</td>\r\n          <td>\r\n              <div class=\"btn-group btn-group-sm\" role=\"group\">\r\n                  <button type=\"button\" class=\"btn btn-danger\" (click)=\"update('overdue', payment)\">Overdue</button>\r\n                  <button type=\"button\" class=\"btn btn-success\" (click)=\"update('payed', payment)\">Payed</button>\r\n              </div>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -280,6 +280,12 @@ var RentlistComponent = /** @class */ (function () {
     }
     RentlistComponent.prototype.ngOnInit = function () {
     };
+    RentlistComponent.prototype.update = function (change, payment) {
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], RentlistComponent.prototype, "payments", void 0);
     RentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-rentlist',
@@ -393,7 +399,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Ticket ID</th>\r\n        <th scope=\"col\">Author</th>\r\n        <th scope=\"col\">Submitted</th>\r\n        <th scope=\"col\">Date Resolved</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">User ID</th>\r\n        <th scope=\"col\">Name</th>\r\n        <th scope=\"col\">email</th>\r\n        <th scope=\"col\">Role</th>\r\n        <th scope=\"col\">Apartment Number</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let user of users\">\r\n          <td scope=\"row\">{{user.id}}</td>\r\n          <td>{{user.first_name}} {{user.last_name}}</td>\r\n          <td>{{user.email}}</td>\r\n          <td>{{user.role}}</td>\r\n          <td>{{user.apt_num}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -416,6 +422,10 @@ var UserlistComponent = /** @class */ (function () {
     }
     UserlistComponent.prototype.ngOnInit = function () {
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], UserlistComponent.prototype, "users", void 0);
     UserlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-userlist',

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Payment } from 'src/app/models/payment';
+import { RentHandlerService } from '../services/rent-handler.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-rent-page',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RentPageComponent implements OnInit {
 
-  constructor() { }
+  payments: Payment[]
+
+  constructor(private renthandler: RentHandlerService) { }
 
   ngOnInit() {
+    this.getRent();
+  }
+
+  getRent(){
+    this.renthandler.getRent(environment.managerGetRent,
+      (payments)=>{this.payments = payments},
+      ()=>{})
   }
 
 }
