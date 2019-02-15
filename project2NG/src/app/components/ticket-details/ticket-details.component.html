@@ -1,0 +1,40 @@
+<div class="card">
+  <table>
+      <tr>
+          <td>
+          <div>
+          Reimbursement ID: {{reimb.iD}}
+          </div>
+           <div>
+          Author ID: {{reimb.author_id}}
+          </div>
+          <div>
+          Author: {{reimb.firstName}} {{reimb.lastName}}
+          </div>
+          <div>
+          Type: {{reimb.type}}
+          </div>
+          <div>
+           Amount: {{reimb.amount}}
+          </div>
+      </td>
+      <td>
+          <div>
+          Status: {{reimb.status}}
+          </div>
+          <div>
+          Description: {{reimb.description}}
+          </div>
+      </td>
+      </tr>
+  </table>
+  <div>
+      <button class = "btn btn-primary" (click)="return()">Go Back</button>
+  </div>
+  <div *ngIf="reimb.status == 'Pending'">
+  <div class="manager-only" *ngIf="manager && reimb.status == 'Pending'" >
+  <button class="btn btn-success"(click)="decide(2)">Approve</button>
+  <button class="btn btn-danger" (click)="decide(3)">Deny</button>
+  </div>
+  </div>
+</div>

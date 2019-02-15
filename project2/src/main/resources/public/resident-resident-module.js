@@ -18,7 +18,7 @@ module.exports = ".resBan{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMapp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n\r\n<button [routerLink]=\"'/maintenance'\">Track/Submit Maintenance\r\n</button>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"resBan\"> Apartment Details </h1>\r\n\r\n<button [routerLink]=\"'/resident/maintenance'\">Track/Submit Maintenance\r\n</button>\r\n"
 
 /***/ }),
 
@@ -167,7 +167,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 style=\"text-align: center\">Resident Maintenance Page</h1>\r\n<app-maintform></app-maintform>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n\r\n"
 
 /***/ }),
 

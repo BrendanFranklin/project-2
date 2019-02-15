@@ -63,6 +63,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_ticket_details_ticket_details_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ticket-details/ticket-details.component */ "./src/app/components/ticket-details/ticket-details.component.ts");
+
 
 
 
@@ -82,6 +84,10 @@ var routes = [
     {
         path: 'manager',
         loadChildren: './manager/manager.module#ManagerModule'
+    },
+    {
+        path: 'ticketdeets',
+        component: _components_ticket_details_ticket_details_component__WEBPACK_IMPORTED_MODULE_3__["TicketDetailsComponent"]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -172,6 +178,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_ticket_details_ticket_details_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/ticket-details/ticket-details.component */ "./src/app/components/ticket-details/ticket-details.component.ts");
+
 
 
 
@@ -187,6 +195,7 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _components_ticket_details_ticket_details_component__WEBPACK_IMPORTED_MODULE_8__["TicketDetailsComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -200,6 +209,166 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/ticket-details/ticket-details.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/components/ticket-details/ticket-details.component.css ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdGlja2V0LWRldGFpbHMvdGlja2V0LWRldGFpbHMuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/components/ticket-details/ticket-details.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/ticket-details/ticket-details.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card\">\n  <table>\n      <tr>\n          <td>\n          <div>\n          Reimbursement ID: {{reimb.iD}}\n          </div>\n           <div>\n          Author ID: {{reimb.author_id}}\n          </div>\n          <div>\n          Author: {{reimb.firstName}} {{reimb.lastName}}\n          </div>\n          <div>\n          Type: {{reimb.type}}\n          </div>\n          <div>\n           Amount: {{reimb.amount}}\n          </div>\n      </td>\n      <td>\n          <div>\n          Status: {{reimb.status}}\n          </div>\n          <div>\n          Description: {{reimb.description}}\n          </div>\n      </td>\n      </tr>\n  </table>\n  <div>\n      <button class = \"btn btn-primary\" (click)=\"return()\">Go Back</button>\n  </div>\n  <div *ngIf=\"reimb.status == 'Pending'\">\n  <div class=\"manager-only\" *ngIf=\"manager && reimb.status == 'Pending'\" >\n  <button class=\"btn btn-success\"(click)=\"decide(2)\">Approve</button>\n  <button class=\"btn btn-danger\" (click)=\"decide(3)\">Deny</button>\n  </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/ticket-details/ticket-details.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/ticket-details/ticket-details.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: TicketDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketDetailsComponent", function() { return TicketDetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+
+
+
+var TicketDetailsComponent = /** @class */ (function () {
+    function TicketDetailsComponent(ticketService) {
+        this.ticketService = ticketService;
+    }
+    TicketDetailsComponent.prototype.ngOnInit = function () {
+        this.ticket = this.ticketService.detailTicket;
+        this.manager = true;
+        if (parseInt(localStorage.getItem('userRole')) == 1) {
+            this.manager = false;
+        }
+    };
+    TicketDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-ticket-details',
+            template: __webpack_require__(/*! ./ticket-details.component.html */ "./src/app/components/ticket-details/ticket-details.component.html"),
+            styles: [__webpack_require__(/*! ./ticket-details.component.css */ "./src/app/components/ticket-details/ticket-details.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__["TickethandlerService"]])
+    ], TicketDetailsComponent);
+    return TicketDetailsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/models/ticket.ts":
+/*!**********************************!*\
+  !*** ./src/app/models/ticket.ts ***!
+  \**********************************/
+/*! exports provided: Ticket */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
+var Ticket = /** @class */ (function () {
+    function Ticket(id, submitted, authorFirstName, authorLastName, resolved, resolver_id, description, apt_num) {
+        this.id = id;
+        this.submitted = submitted;
+        this.authorFirstName = authorFirstName;
+        this.authorLastName = authorLastName;
+        this.resolved = resolved;
+        this.resolver_id = resolver_id;
+        this.description = description;
+        this.apt_num = apt_num;
+    }
+    return Ticket;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/tickethandler.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/services/tickethandler.service.ts ***!
+  \***************************************************/
+/*! exports provided: TickethandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TickethandlerService", function() { return TickethandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _models_ticket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/ticket */ "./src/app/models/ticket.ts");
+
+
+
+
+var TickethandlerService = /** @class */ (function () {
+    function TickethandlerService(http) {
+        this.http = http;
+    }
+    TickethandlerService.prototype.getTickets = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { Authorization: localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var tickets = [];
+            resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
+            success(tickets);
+        }, function (err) { return fail(err); });
+    };
+    TickethandlerService.prototype.getResidentTickets = function (url, success, fail) {
+        var _this = this;
+        this.http.post(url, localStorage.getItem('userId'), { headers: { Authorization: localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var tickets = [];
+            resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
+            success(tickets);
+        }, function (err) { return fail(err); });
+    };
+    TickethandlerService.prototype.resolveTicket = function (url, ticket, success, fail) {
+        this.http.post(url, { headers: { Authorization: localStorage.getItem('userToken') },
+            body: JSON.stringify(ticket) })
+            .subscribe();
+    };
+    // getTicketDetail(url: string, ticketId: number, success, fail){
+    //   this.http.post<any>(url,JSON.stringify(ticketId))
+    // }
+    TickethandlerService.prototype.ticketParse = function (ticket) {
+        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(), ticket[2], ticket[3], new Date(), ticket[5], ticket[6], ticket[7]);
+        parsedTicket.submitted = ticket[1];
+        parsedTicket.resolved = ticket[4];
+        console.log(parsedTicket);
+        return parsedTicket;
+    };
+    TickethandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], TickethandlerService);
+    return TickethandlerService;
 }());
 
 
