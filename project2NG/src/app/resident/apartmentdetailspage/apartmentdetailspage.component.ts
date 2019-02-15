@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {Apartment} from "../../models/apartment";
 
 import {Payment} from "../../models/payment";
+import { getAppInitializer } from '@angular/router/src/router_module';
 
 
 
@@ -30,7 +31,10 @@ export class ApartmentdetailspageComponent implements OnInit {
 
 
 
-  ngOnInit() {
+  ngOnInit(
+  ) {
+    this.getApt();
+    this.getPayment();
 
   }
 
