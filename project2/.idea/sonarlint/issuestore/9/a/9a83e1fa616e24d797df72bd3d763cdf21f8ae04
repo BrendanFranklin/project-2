@@ -1,0 +1,4 @@
+
+Osquid:S1068"3Remove this unused "residentService" private field.(Ô£É¥ÿÿÿÿÿ
+zsquid:S1450"^Remove the "residentService" field and declare it as a local variable in the relevant methods.(Ô£É¥ÿÿÿÿÿ
+—squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ş¬`

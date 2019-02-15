@@ -1,0 +1,8 @@
+
+Isquid:S1168"+Return an empty collection instead of null.(¥¹ï8Û…‚-
+fsquid:S1192"HDefine a constant instead of duplicating this literal "Select " 3 times.(¸®ßÌ8ô§¹ë-
+Isquid:S1168."+Return an empty collection instead of null.(¥¹ï8Û…‚-
+psquid:S001172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆÔïı8Û…‚-
+psquid:S00117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ¥”î8ô§¹ë-
+psquid:S00117O"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢Úß§8ô§¹ë-
+xsquid:UselessImportCheck"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñıÓ“8ô§¹ë-

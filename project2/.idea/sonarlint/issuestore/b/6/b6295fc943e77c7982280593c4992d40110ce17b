@@ -1,0 +1,12 @@
+
+^squid:S46843"@Replace this persistent entity with a simple POJO or DTO object.(ãûˆ8‚¶»ì-
+csquid:S4684D"@Replace this persistent entity with a simple POJO or DTO object.(Ğ”­ùÿÿÿÿ8Š¾Òì-
+}squid:S1450"ZRemove the "userService" field and declare it as a local variable in the relevant methods.(¶òÁÈùÿÿÿÿ8Ù¸ÌÄ-
+^squid:S4684M"@Replace this persistent entity with a simple POJO or DTO object.(œÎØ™8´ÔÚì-
+Rsquid:S1068"/Remove this unused "userService" private field.(¶òÁÈùÿÿÿÿ8Ù¸ÌÄ-
+¤squid:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿œşüÿÿÿÿ8ÃÉ‚-
+‡squid:UselessImportCheck"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8Á¢»Ë-
+^squid:S46849"@Replace this persistent entity with a simple POJO or DTO object.(Ç®¤î8İîÏì-
+asquid:UselessImportCheck"1Remove this unused import 'java.util.Collection'.(¹ÉĞšùÿÿÿÿ8©®¨Ä-
+dsquid:UnusedPrivateMethod"3Remove this unused private "getCurrentUser" method.(—âìëøÿÿÿÿ8©®¨Ä-
+xsquid:UselessImportCheck"MRemove this unused import 'org.springframework.security.core.Authentication'.(ñıÓ“8Á¢»Ë-
