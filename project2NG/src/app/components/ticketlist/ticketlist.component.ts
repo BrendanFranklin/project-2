@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbModal} from '@ng-bootstrap/ng-bootstrap'
-import { DetailsmodalComponent } from '../detailsmodal/detailsmodal.component';
 import { Ticket } from 'src/app/models/ticket';
+import { TickethandlerService } from 'src/app/services/tickethandler.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ticketlist',
@@ -14,17 +15,16 @@ export class TicketlistComponent implements OnInit {
   @Input() manager: boolean;
   @Output() resolveTicket: EventEmitter<Ticket> = new EventEmitter();
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private ticketHandler: TickethandlerService,
+    private router: Router) { }
 
   ngOnInit() {
   }
 
   detailView(ticket: Ticket){
-    const modalRef = this.modalService.open(DetailsmodalComponent)
-    modalRef.componentInstance.ticket = ticket;
-    modalRef.componentInstance.manager = this.manager;
-    modalRef.componentInstance.resolveTicket.subscribe((ticket)=>{
-      this.resolveTicket.emit(ticket);
-    })
+    this.ticketHandler.detailTicket = ticket;
+    this.router.navigate(['/ticketdeets'])
+
+    
   }
 }

@@ -34,15 +34,24 @@ export class LoginComponent implements OnInit {
      })
   }
  
-  reroute(){
-    this.login.checkRole(environment.checkResident,
-      ()=>this.router.navigate(['/resident']),
-    ()=>this.login.checkRole(environment.checkmaintenance,
-      ()=>this.router.navigate(['/maintenance']),
-      ()=>this.login.checkRole(environment.checkManager,
-        ()=>this.router.navigate(['/manager']),
-        ()=>this.shake=true)))
-  }
+   reroute(){
+     //get ID
+    this.login.checkRole(environment.loginGetUserId,this.username,
+      (resp)=>{localStorage.setItem('userId', resp);
+      console.log(localStorage.getItem('userId'))},
+      ()=>{})
+      //getRole
+    this.login.checkRole(environment.loginGetRoleId,this.username,
+      (resp)=>{localStorage.setItem('userRole', resp);
+        if(resp==1){
+          this.router.navigate(['/resident'])
+        }if(resp==2){
+          this.router.navigate(['/manager'])
+        }if(resp==3){
+          this.router.navigate(['/maintenance'])
+        }},
+      ()=>{})
+   }
  
   noShake(){
     this.shake=false;

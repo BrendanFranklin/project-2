@@ -22,7 +22,8 @@ export class AppformComponent implements OnInit {
   }
 
   submit(){
-    this.prospectHandler.submitApplication(environment.publicSubmitApp,this.application);
+    this.prospectHandler.submitApplication(environment.publicSubmitApp,{first_name: this.application.first_name,
+    last_name: this.application.last_name, email: this.application.email, phone: this.application.phone});
     this.router.navigate([''])
   }
 

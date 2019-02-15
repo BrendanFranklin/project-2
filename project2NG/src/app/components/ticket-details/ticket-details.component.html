@@ -1,0 +1,40 @@
+
+<h1 class="tickBan" >Ticket Details</h1>
+
+<div class="card">
+  <table>
+      <tr>
+          <td>
+          <div>
+              Apartment: {{ticket.apt_num}}
+          </div>
+          <div>
+          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}
+          </div>
+
+      </td>
+      <td>
+          <div>
+          Description: {{ticket.description}}
+          </div>
+          <div>
+              Resolved: {{ticket.resolved}}
+          </div>
+      </td>
+      </tr>
+  </table>
+  <div class="buttBox">
+      <button class = "btn btn-primary" (click)="return()">Go Back</button>
+  </div>
+      <div class="noteField">
+          <button class="btn btn-primary">Add Notes</button>
+          <input type="text">
+      </div>
+
+  <div *ngIf="ticket.resolved == false">
+  <div class="manager-only" *ngIf="manager && reimb.status == 'Pending'" >
+  <button class="btn btn-success"(click)="decide(2)">Approve</button>
+  <button class="btn btn-danger" (click)="decide(3)">Deny</button>
+  </div>
+  </div>
+</div>
