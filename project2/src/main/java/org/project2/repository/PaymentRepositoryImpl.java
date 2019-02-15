@@ -1,7 +1,6 @@
 package org.project2.repository;
 
 import org.project2.pojos.Payment;
-import org.project2.repository.PaymentRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -19,7 +18,7 @@ public class PaymentRepositoryImpl implements PaymentRepository  {
     @Override
     public List<Payment> findAll() {
 
-        Query query = entityManager.createNativeQuery("SELECT * from pretense.payments");
+        Query query = entityManager.createNativeQuery("SELECT * from pretense.payment");
 
         if(!query.getResultList().isEmpty()){
             List<Payment> payments = (List<Payment>) query.getResultList();
@@ -42,5 +41,14 @@ public class PaymentRepositoryImpl implements PaymentRepository  {
 
 
         return null;
+    }
+
+    @Override
+    public void makePayment(Payment payment){
+        Query query = entityManager.createNativeQuery("update pretense.payment set " +
+                "paid = ?, overdue = ?, date_paid = current(date)");
+        query.setParameter(1, payment.isPaid());
+        query.setParameter(2, payment.isOverdue());
+        query.executeUpdate();
     }
 }

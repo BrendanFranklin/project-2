@@ -25,4 +25,9 @@ public class UserService {
     public void updateApt(int apt_num){
         this.userRepository.updateApt(apt_num);
     }
+
+    @Transactional
+    public void addNewUser(Users user){
+        this.userRepository.addNewUser(user);
+    }
 }
