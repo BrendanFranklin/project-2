@@ -42,6 +42,7 @@ public class TicketController {
     @GetMapping(path = "/allTicket", produces = MediaType.APPLICATION_JSON_VALUE)
     @PreAuthorize("hasAuthority('view_ticket')")
     public List<Ticket> allTicket(){
+
         return this.ticketService.getAllTicket();
 
     }
