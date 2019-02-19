@@ -16,7 +16,7 @@ public class ApplicationRepositoryImpl implements ApplicationRepository{
 
     @Override
     public List<Application> findAll() {
-        Query query = entityManager.createNativeQuery("SELECT * from prestense.applications");
+        Query query = entityManager.createNativeQuery("SELECT * from pretense.applications");
 
         if(!query.getResultList().isEmpty()){
             List<Application> applications = (List<Application>) query.getResultList();

@@ -20,7 +20,7 @@ public class ApplicationService {
         this.applicationRepository = applicationRepository;
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public List<Application> viewAll(){
         return this.applicationRepository.findAll();
     }

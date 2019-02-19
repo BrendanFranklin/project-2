@@ -14,4 +14,10 @@ public interface UserRepository {
 
     //get user_id
     int viewUserId(String username);
+
+    //assign a user to a new apt
+    void updateApt(int apt_num);
+
+    //add a new user
+    void addNewUser(Users user);
 }

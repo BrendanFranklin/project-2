@@ -48,7 +48,7 @@ public class TicketController {
     }
 
     @PostMapping(path = "/ticketRes", consumes = MediaType.APPLICATION_JSON_VALUE)
-    @PreAuthorize("hasAuthority('open_ticket')")
+    @PreAuthorize("hasAuthority('view_ticket')")
     public List<Ticket> ticketByRes(@RequestBody Ticket ticket){
         return this.ticketService.getTicketByRes(ticket.getAuthor());
     }

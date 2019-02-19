@@ -7,6 +7,7 @@ import {ApartmentlistComponent} from '../components/apartmentlist/apartmentlist.
 import {RentlistComponent} from '../components/rentlist/rentlist.component';
 import {ApplicationlistComponent} from '../components/applicationlist/applicationlist.component';
 import {MaintformComponent} from '../components/maintform/maintform.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MaintformComponent} from '../components/maintform/maintform.component';
       TicketlistComponent,
       LogoutbarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
       MaintformComponent,

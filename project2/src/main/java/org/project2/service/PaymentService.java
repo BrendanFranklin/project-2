@@ -23,7 +23,12 @@ public class PaymentService {
     }
 
     @Transactional(readOnly = true)
-    public List<Payment> findByAuthor(int author){
-        return this.paymentRepository.findByAuthor(author);
+    public List<Payment> findByAuthor(int user_id){
+        return this.paymentRepository.findByAuthor(user_id);
+    }
+
+    @Transactional
+    public void makePayment(Payment payment){
+        this.paymentRepository.makePayment(payment);
     }
 }

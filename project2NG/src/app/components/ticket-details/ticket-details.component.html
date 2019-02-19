@@ -1,40 +1,68 @@
+<h1 class="tickBan" >Ticket Details</h1>
+
+
+
 <div class="card">
+
   <table>
-      <tr>
-          <td>
+
+
+          <tr>
+
           <div>
-          Reimbursement ID: {{reimb.iD}}
+
+              Apartment: {{ticket.apt_num}}
+
           </div>
-           <div>
-          Author ID: {{reimb.author_id}}
-          </div>
+
           <div>
-          Author: {{reimb.firstName}} {{reimb.lastName}}
+
+          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}
+
           </div>
-          <div>
-          Type: {{reimb.type}}
-          </div>
-          <div>
-           Amount: {{reimb.amount}}
-          </div>
-      </td>
-      <td>
-          <div>
-          Status: {{reimb.status}}
-          </div>
-          <div>
-          Description: {{reimb.description}}
-          </div>
-      </td>
+
+
+
       </tr>
+
+      <tr>
+
+          <div>
+
+          Description: {{ticket.description}}
+
+          </div>
+
+          <div>
+
+              Resolved: {{ticket.resolved}}
+
+          </div>
+          <div>
+
+            Notes: {{ticket.notes}}
+
+        </div>
+
+      </tr>
+
+
   </table>
-  <div>
-      <button class = "btn btn-primary" (click)="return()">Go Back</button>
-  </div>
-  <div *ngIf="reimb.status == 'Pending'">
-  <div class="manager-only" *ngIf="manager && reimb.status == 'Pending'" >
-  <button class="btn btn-success"(click)="decide(2)">Approve</button>
-  <button class="btn btn-danger" (click)="decide(3)">Deny</button>
-  </div>
-  </div>
+
+<div *ngIf="manager">
+        <form class="submission" #submission="ngForm" novalidate (ngSubmit)="submit(false)">
+      <div class="noteField" >
+
+          <button class="btn btn-primary" type="submit">Add Notes</button>
+
+          <input type="text" ([ngModel])="ticket.notes" name="notes" >
+
+      </div>
+      </form>
+    <div class="resolvebutt" *ngIf="!ticket.resolved">
+
+        <button class="btn btn-primary" (click)="submit(true)">Resolved</button>
+
+    </div>
 </div>
+  </div>

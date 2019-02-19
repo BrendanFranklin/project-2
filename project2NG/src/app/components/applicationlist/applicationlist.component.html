@@ -10,6 +10,12 @@
       </tr>
       </thead>
       <tbody>
+        <tr *ngFor = "let app of apps">
+          <td>{{app.first_name}}</td>
+          <td>{{app.last_name}}</td>
+          <td>{{app.email}}</td>
+          <td>{{app.phone}}</td>
+        </tr>
       </tbody>
     </table>
   </div>

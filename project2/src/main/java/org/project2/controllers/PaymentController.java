@@ -28,4 +28,10 @@ public class PaymentController {
     public List<Payment> paymentByAuthor(@RequestBody Payment payment) {
         return this.paymentService.findByAuthor(payment.getUser_id());
     }
+
+    @PostMapping(path = "/makePayment",
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void makePayment(@RequestBody Payment payment){
+        this.paymentService.makePayment(payment);
+    }
 }

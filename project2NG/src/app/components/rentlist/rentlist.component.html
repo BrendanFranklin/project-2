@@ -3,13 +3,24 @@
     <table class="table table-hover">
       <thead>
       <tr>
-        <th scope="col">Ticket ID</th>
-        <th scope="col">Author</th>
-        <th scope="col">Submitted</th>
-        <th scope="col">Date Resolved</th>
+        <th scope="col">Resident ID</th>
+        <th scope="col">Payed</th>
+        <th scope="col">Overdue</th>
+        <th scope="col">Options</th>
       </tr>
       </thead>
       <tbody>
+        <tr *ngFor = "let payment of payments">
+          <td scope="row">{{payment.user_id}}</td>
+          <td>{{payment.paid}}</td>
+          <td>{{payment.overdue}}</td>
+          <td>
+              <div class="btn-group btn-group-sm" role="group">
+                  <button type="button" class="btn btn-danger" (click)="update(1, payment)">Overdue</button>
+                  <button type="button" class="btn btn-success" (click)="update(2, payment)">Paid</button>
+              </div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>

@@ -10,21 +10,25 @@
 var map = {
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
+		"common",
 		"home-home-module"
 	],
 	"./maintenance/maintenance.module": [
 		"./src/app/maintenance/maintenance.module.ts",
 		"default~maintenance-maintenance-module~manager-manager-module~resident-resident-module",
+		"common",
 		"maintenance-maintenance-module"
 	],
 	"./manager/manager.module": [
 		"./src/app/manager/manager.module.ts",
 		"default~maintenance-maintenance-module~manager-manager-module~resident-resident-module",
+		"common",
 		"manager-manager-module"
 	],
 	"./resident/resident.module": [
 		"./src/app/resident/resident.module.ts",
 		"default~maintenance-maintenance-module~manager-manager-module~resident-resident-module",
+		"common",
 		"resident-resident-module"
 	]
 };
@@ -222,7 +226,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdGlja2V0LWRldGFpbHMvdGlja2V0LWRldGFpbHMuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = ".tickBan{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n\r\n\r\n.noteField{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n\r\n\r\n.buttBox{\r\n\r\n    padding-top: 50px;\r\n\r\n}\r\n\r\n\r\n\r\n.resolvebutt{\r\n\r\n    text-align: right;\r\n\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy90aWNrZXQtZGV0YWlscy90aWNrZXQtZGV0YWlscy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLGtCQUFrQjs7QUFFdEI7Ozs7QUFJQTs7SUFFSSxrQkFBa0I7O0FBRXRCOzs7O0FBRUE7O0lBRUksaUJBQWlCOztBQUVyQjs7OztBQUVBOztJQUVJLGlCQUFpQjs7QUFFckIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3RpY2tldC1kZXRhaWxzL3RpY2tldC1kZXRhaWxzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGlja0JhbntcclxuXHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcblxyXG59XHJcblxyXG5cclxuXHJcbi5ub3RlRmllbGR7XHJcblxyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG5cclxufVxyXG5cclxuLmJ1dHRCb3h7XHJcblxyXG4gICAgcGFkZGluZy10b3A6IDUwcHg7XHJcblxyXG59XHJcblxyXG4ucmVzb2x2ZWJ1dHR7XHJcblxyXG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcblxyXG59Il19 */"
 
 /***/ }),
 
@@ -233,7 +237,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\">\n  <table>\n      <tr>\n          <td>\n          <div>\n          Reimbursement ID: {{reimb.iD}}\n          </div>\n           <div>\n          Author ID: {{reimb.author_id}}\n          </div>\n          <div>\n          Author: {{reimb.firstName}} {{reimb.lastName}}\n          </div>\n          <div>\n          Type: {{reimb.type}}\n          </div>\n          <div>\n           Amount: {{reimb.amount}}\n          </div>\n      </td>\n      <td>\n          <div>\n          Status: {{reimb.status}}\n          </div>\n          <div>\n          Description: {{reimb.description}}\n          </div>\n      </td>\n      </tr>\n  </table>\n  <div>\n      <button class = \"btn btn-primary\" (click)=\"return()\">Go Back</button>\n  </div>\n  <div *ngIf=\"reimb.status == 'Pending'\">\n  <div class=\"manager-only\" *ngIf=\"manager && reimb.status == 'Pending'\" >\n  <button class=\"btn btn-success\"(click)=\"decide(2)\">Approve</button>\n  <button class=\"btn btn-danger\" (click)=\"decide(3)\">Deny</button>\n  </div>\n  </div>\n</div>"
+module.exports = "<h1 class=\"tickBan\" >Ticket Details</h1>\r\n\r\n\r\n\r\n<div class=\"card\">\r\n\r\n  <table>\r\n\r\n\r\n          <tr>\r\n\r\n          <div>\r\n\r\n              Apartment: {{ticket.apt_num}}\r\n\r\n          </div>\r\n\r\n          <div>\r\n\r\n          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}\r\n\r\n          </div>\r\n\r\n\r\n\r\n      </tr>\r\n\r\n      <tr>\r\n\r\n          <div>\r\n\r\n          Description: {{ticket.description}}\r\n\r\n          </div>\r\n\r\n          <div>\r\n\r\n              Resolved: {{ticket.resolved}}\r\n\r\n          </div>\r\n          <div>\r\n\r\n            Notes: {{ticket.notes}}\r\n\r\n        </div>\r\n\r\n      </tr>\r\n\r\n\r\n  </table>\r\n\r\n<div *ngIf=\"manager\">\r\n        <form class=\"submission\" #submission=\"ngForm\" novalidate (ngSubmit)=\"submit(false)\">\r\n      <div class=\"noteField\" >\r\n\r\n          <button class=\"btn btn-primary\" type=\"submit\">Add Notes</button>\r\n\r\n          <input type=\"text\" ([ngModel])=\"ticket.notes\" name=\"notes\" >\r\n\r\n      </div>\r\n      </form>\r\n    <div class=\"resolvebutt\" *ngIf=\"!ticket.resolved\">\r\n\r\n        <button class=\"btn btn-primary\" (click)=\"submit(true)\">Resolved</button>\r\n\r\n    </div>\r\n</div>\r\n  </div>"
 
 /***/ }),
 
@@ -250,6 +254,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -263,6 +269,16 @@ var TicketDetailsComponent = /** @class */ (function () {
         if (parseInt(localStorage.getItem('userRole')) == 1) {
             this.manager = false;
         }
+    };
+    TicketDetailsComponent.prototype.submit = function (resolved) {
+        if (resolved) {
+            this.ticket.resolved = true;
+            this.ticket.resolver = parseInt(localStorage.getItem('userId'));
+        }
+        if (!this.ticket.resolved) {
+            this.ticket.resolver = 1;
+        }
+        this.ticketService.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateTicket, this.ticket);
     };
     TicketDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -290,14 +306,15 @@ var TicketDetailsComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
 var Ticket = /** @class */ (function () {
-    function Ticket(id, submitted, authorFirstName, authorLastName, resolved, resolver_id, description, apt_num) {
+    function Ticket(id, submitted, authorFirstName, authorLastName, description, resolved, resolver, notes, apt_num) {
         this.id = id;
         this.submitted = submitted;
         this.authorFirstName = authorFirstName;
         this.authorLastName = authorLastName;
-        this.resolved = resolved;
-        this.resolver_id = resolver_id;
         this.description = description;
+        this.resolved = resolved;
+        this.resolver = resolver;
+        this.notes = notes;
         this.apt_num = apt_num;
     }
     return Ticket;
@@ -331,7 +348,7 @@ var TickethandlerService = /** @class */ (function () {
     }
     TickethandlerService.prototype.getTickets = function (url, success, fail) {
         var _this = this;
-        this.http.get(url, { headers: { Authorization: localStorage.getItem('userToken') } })
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
             .toPromise().then(function (resp) {
             var tickets = [];
             resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
@@ -340,27 +357,38 @@ var TickethandlerService = /** @class */ (function () {
     };
     TickethandlerService.prototype.getResidentTickets = function (url, success, fail) {
         var _this = this;
-        this.http.post(url, localStorage.getItem('userId'), { headers: { Authorization: localStorage.getItem('userToken') } })
+        this.http.post(url, localStorage.getItem('userId'), { headers: { 'Authorization': localStorage.getItem('userToken') } })
             .toPromise().then(function (resp) {
             var tickets = [];
             resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
             success(tickets);
         }, function (err) { return fail(err); });
     };
-    TickethandlerService.prototype.resolveTicket = function (url, ticket, success, fail) {
-        this.http.post(url, { headers: { Authorization: localStorage.getItem('userToken') },
-            body: JSON.stringify(ticket) })
+    TickethandlerService.prototype.resolveTicket = function (url, ticket) {
+        this.http.post(url, JSON.stringify(ticket), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } })
             .subscribe();
     };
     // getTicketDetail(url: string, ticketId: number, success, fail){
     //   this.http.post<any>(url,JSON.stringify(ticketId))
     // }
     TickethandlerService.prototype.ticketParse = function (ticket) {
-        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], new Date(), ticket[2], ticket[3], new Date(), ticket[5], ticket[6], ticket[7]);
-        parsedTicket.submitted = ticket[1];
-        parsedTicket.resolved = ticket[4];
-        console.log(parsedTicket);
+        var parsedTicket = new _models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"](ticket[0], ticket[1], ticket[2], ticket[3], ticket[4], ticket[5], ticket[6], ticket[7], ticket[8]);
         return parsedTicket;
+    };
+    TickethandlerService.prototype.makeTicket = function (url, newTicket, success) {
+        this.http.post(url, JSON.stringify(newTicket), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } }).toPromise().then(success());
+    };
+    TickethandlerService.prototype.getResTickets = function (url, success, fail) {
+        var _this = this;
+        this.http.post(url, JSON.stringify({ author: parseInt(localStorage.getItem('userId')) }), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } })
+            .toPromise().then(function (resp) {
+            var tickets = [];
+            resp.forEach(function (ticket) { return tickets.push(_this.ticketParse(ticket)); });
+            success(tickets);
+        }, function (err) { return fail(err); });
     };
     TickethandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -390,6 +418,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
+    everybodyMakeTicket: "http://localhost:8080/ticket/openTicket",
     publicOpenApts: "http://localhost:8080/apt/emptyApt",
     publicSubmitApp: "http://localhost:8080/application/openApp",
     loginGetRoleId: "http://localhost:8080/users/roleid",
@@ -398,12 +427,17 @@ var environment = {
     employeeAuth: "http://localhost:8080/login",
     managerGetTickets: "http://localhost:8080/ticket/allTicket",
     managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
+    managerGetRent: "http://localhost:8080/payment/allPayments",
+    managerUpdateRent: "http://localhost:8080/payment/makePayment",
     managerGetApt: "http://localhost:8080/apt/allApt",
+    managerGetApps: "http://localhost:8080/application/viewAll",
+    managerGetUsers: "http://localhost:8080/users/findall",
+    managerMakeUser: "http://localhost:8080/users/sign-up",
     //
     residentGetTickets: "http://localhost:8080/ticket/ticketRes",
+    residentGetApt: "http://localhost:8080/apt/aptByUserId",
     //send user ID: author
-    residentGetRentDetails: "http://localhost8080/payment/paymentAuth",
-    residentPayRent: "TODO",
+    residentGetRentDetails: "http://localhost:8080/payment/paymentAuth",
 };
 /*
  * For easier debugging in development mode, you can import the following file

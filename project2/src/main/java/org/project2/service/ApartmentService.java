@@ -26,5 +26,8 @@ public class ApartmentService {
         return this.apartmentRepository.findEmpty(occupied);
     }
 
-
+    @Transactional
+    public List<Apartment> getAptByUserId(int user_id){
+        return this.apartmentRepository.getAptByUserId(user_id);
+    }
 }

@@ -18,7 +18,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Apt Num</th>\r\n        <th scope=\"col\">Style</th>\r\n        <th scope=\"col\">Rent</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <th scope=\"row\"></th>\r\n      <td></td>\r\n      <td></td>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Apt Num</th>\r\n        <th scope=\"col\">Style</th>\r\n        <th scope=\"col\">Rent</th>\r\n        <th scope=\"col\">Occupied</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let apt of apts\">\r\n      <th scope=\"row\">{{apt.apt_num}}</th>\r\n      <td>{{apt.apt_style}}</td>\r\n      <td>{{apt.rent}}</td>\r\n      <td>{{apt.occupied}}</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -41,6 +41,10 @@ var ApartmentlistComponent = /** @class */ (function () {
     }
     ApartmentlistComponent.prototype.ngOnInit = function () {
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ApartmentlistComponent.prototype, "apts", void 0);
     ApartmentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-apartmentlist',
@@ -74,7 +78,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">First Name</th>\r\n        <th scope=\"col\">Last Name</th>\r\n        <th scope=\"col\">Email</th>\r\n        <th scope=\"col\">Phone</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">First Name</th>\r\n        <th scope=\"col\">Last Name</th>\r\n        <th scope=\"col\">Email</th>\r\n        <th scope=\"col\">Phone</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let app of apps\">\r\n          <td>{{app.first_name}}</td>\r\n          <td>{{app.last_name}}</td>\r\n          <td>{{app.email}}</td>\r\n          <td>{{app.phone}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -97,6 +101,10 @@ var ApplicationlistComponent = /** @class */ (function () {
     }
     ApplicationlistComponent.prototype.ngOnInit = function () {
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ApplicationlistComponent.prototype, "apps", void 0);
     ApplicationlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-applicationlist',
@@ -193,7 +201,7 @@ module.exports = ".maintsub{\r\n\r\n    text-align: center;\r\n\r\n}\r\n\r\n/*# 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"maintsub\">\r\n  <h5>New Maintenance Request</h5>\r\n  <form class=\"maintform\">\r\n    Apt Num:\r\n    <input  type=\"text\" size=\"3\">\r\n    <br>\r\n    Description:\r\n    <input  type=\"text\" size=\"100\">\r\n    <button>Submit</button>\r\n  </form>\r\n</div>\r\n"
+module.exports = "<div class=\"maintsub\">\r\n  <h5>New Maintenance Request</h5>\r\n  <form class=\"submission\" #submission=\"ngForm\" novalidate (ngSubmit)=\"submit()\">\r\n    Apt Num:\r\n    <input  type=\"text\" size=\"3\" [(ngModel)] = \"apt_num\" name=\"apt_num\" #name=\"ngModel\">\r\n    <br>\r\n    Description:\r\n    <input  type=\"text\" size=\"100\" [(ngModel)] = \"description\" name=\"description\" #name=\"ngModel\">\r\n    <button type=\"submit\" >Submit</button>\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -209,20 +217,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaintformComponent", function() { return MaintformComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/tickethandler.service */ "./src/app/services/tickethandler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var MaintformComponent = /** @class */ (function () {
-    function MaintformComponent() {
+    function MaintformComponent(ticketService) {
+        this.ticketService = ticketService;
+        this.newTicket = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     MaintformComponent.prototype.ngOnInit = function () {
     };
+    MaintformComponent.prototype.submit = function () {
+        var _this = this;
+        this.ticketService.makeTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].everybodyMakeTicket, { apt_num: this.apt_num,
+            description: this.description, author: localStorage.getItem('userId'), resolved: false }, function () { _this.newTicket.emit(); });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], MaintformComponent.prototype, "newTicket", void 0);
     MaintformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-maintform',
             template: __webpack_require__(/*! ./maintform.component.html */ "./src/app/components/maintform/maintform.component.html"),
             styles: [__webpack_require__(/*! ./maintform.component.css */ "./src/app/components/maintform/maintform.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_services_tickethandler_service__WEBPACK_IMPORTED_MODULE_2__["TickethandlerService"]])
     ], MaintformComponent);
     return MaintformComponent;
 }());
@@ -249,7 +272,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Ticket ID</th>\r\n        <th scope=\"col\">Author</th>\r\n        <th scope=\"col\">Submitted</th>\r\n        <th scope=\"col\">Date Resolved</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Resident ID</th>\r\n        <th scope=\"col\">Payed</th>\r\n        <th scope=\"col\">Overdue</th>\r\n        <th scope=\"col\">Options</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let payment of payments\">\r\n          <td scope=\"row\">{{payment.user_id}}</td>\r\n          <td>{{payment.paid}}</td>\r\n          <td>{{payment.overdue}}</td>\r\n          <td>\r\n              <div class=\"btn-group btn-group-sm\" role=\"group\">\r\n                  <button type=\"button\" class=\"btn btn-danger\" (click)=\"update(1, payment)\">Overdue</button>\r\n                  <button type=\"button\" class=\"btn btn-success\" (click)=\"update(2, payment)\">Paid</button>\r\n              </div>\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -269,9 +292,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var RentlistComponent = /** @class */ (function () {
     function RentlistComponent() {
+        this.updatePayment = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
     }
     RentlistComponent.prototype.ngOnInit = function () {
     };
+    RentlistComponent.prototype.update = function (change, payment) {
+        if (change == 1) {
+            payment.overdue = true;
+        }
+        if (change == 2) {
+            payment.paid = true;
+        }
+        this.updatePayment.emit(payment);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], RentlistComponent.prototype, "payments", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], RentlistComponent.prototype, "updatePayment", void 0);
     RentlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-rentlist',
@@ -305,7 +346,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Date Resolved</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>\r\n          <td>{{ticket.submitted.getMonth()+1}}/{{ticket.submitted.getDate()}}/{{ticket.submitted.getFullYear()}}</td>\r\n          <td *ngIf=\"ticket.resolved > ticket.submitted\" >{{ticket.resolved.getMonth()+1}}/{{ticket.resolved.getDate()}}/{{ticket.resolved.getFullYear()}}</td>\r\n          <td *ngIf=\"ticket.resolved < ticket.submitted\">Unresolved</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Ticket ID</th>\r\n          <th scope=\"col\">Author</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Resolved</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{ticket.id}}</th>\r\n          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>\r\n          <td>{{ticket.submitted}}</td>\r\n          <td>{{ticket.resolved}}</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -385,7 +426,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">Ticket ID</th>\r\n        <th scope=\"col\">Author</th>\r\n        <th scope=\"col\">Submitted</th>\r\n        <th scope=\"col\">Date Resolved</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n      <tr>\r\n        <th scope=\"col\">User ID</th>\r\n        <th scope=\"col\">Name</th>\r\n        <th scope=\"col\">email</th>\r\n        <th scope=\"col\">Role</th>\r\n        <th scope=\"col\">Apartment Number</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let user of users\">\r\n          <td scope=\"row\">{{user.id}}</td>\r\n          <td>{{user.first_name}} {{user.last_name}}</td>\r\n          <td>{{user.email}}</td>\r\n          <td>{{user.role}}</td>\r\n          <td>{{user.apt_num}}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -408,6 +449,10 @@ var UserlistComponent = /** @class */ (function () {
     }
     UserlistComponent.prototype.ngOnInit = function () {
     };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], UserlistComponent.prototype, "users", void 0);
     UserlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-userlist',
@@ -443,6 +488,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_rentlist_rentlist_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/rentlist/rentlist.component */ "./src/app/components/rentlist/rentlist.component.ts");
 /* harmony import */ var _components_applicationlist_applicationlist_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/applicationlist/applicationlist.component */ "./src/app/components/applicationlist/applicationlist.component.ts");
 /* harmony import */ var _components_maintform_maintform_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/maintform/maintform.component */ "./src/app/components/maintform/maintform.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
 
 
 
@@ -468,7 +515,8 @@ var GlobalModule = /** @class */ (function () {
                 _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_4__["LogoutbarComponent"]
             ],
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"]
             ],
             exports: [
                 _components_maintform_maintform_component__WEBPACK_IMPORTED_MODULE_9__["MaintformComponent"],

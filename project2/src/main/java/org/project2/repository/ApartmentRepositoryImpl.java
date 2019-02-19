@@ -38,4 +38,18 @@ public class ApartmentRepositoryImpl implements ApartmentRepository{
         }
         return null;
     }
+
+    @Override
+    public List<Apartment> getAptByUserId(int user_id) {
+        Query query = entityManager.createNativeQuery("select apartment.apt_num, apt_style, rent from pretense.apartment " +
+                "left join pretense.users on users.apt_num = apartment.apt_num " +
+                "where user_id = ?");
+        query.setParameter(1, user_id);
+
+        if(!query.getResultList().isEmpty()){
+            List<Apartment> apartments = (List<Apartment>) query.getResultList();
+            return apartments;
+        }
+        return null;
+    }
 }

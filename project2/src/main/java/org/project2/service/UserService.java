@@ -18,6 +18,16 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public List<Users> findAll(){ return this.userRepository.findAll();}
+
+    @Transactional
+    public void updateApt(int apt_num){
+        this.userRepository.updateApt(apt_num);
+    }
+
+    @Transactional
+    public void addNewUser(Users user){
+        this.userRepository.addNewUser(user);
+    }
 }

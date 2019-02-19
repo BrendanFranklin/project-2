@@ -4,25 +4,26 @@
 
 <div class="newUser">
   <h5>Add New User</h5>
-  <form #submission="ngForm" class="newUserform">
+  <form #submission="ngForm" class="newUserform" (ngSubmit)="submit()">
 
       First Name:
-      <input type="text" size="10">
+      <input type="text" size="10" #name="ngModel" [(ngModel)]="first_name" name="firstname">
       Last Name:
-      <input type="text" size="10">
+      <input type="text" size="10" #name="ngModel" [(ngModel)]="last_name" name="lastname">
       Email:
-      <input type="text" size="20">
+      <input type="text" size="20" #name="ngModel" [(ngModel)]="email" name="email">
       Username:
-      <input type="text" size="10">
+      <input type="text" size="10" #name="ngModel" [(ngModel)]="username" name="username">
       Password:
-      <input type="text" size="10">
+      <input type="text" size="10" #name="ngModel" [(ngModel)]="password" name="password">
       Role:
       <input type="radio" name="role"  #name="ngModel" [(ngModel)]="resident" [value]="false" [checked]="!resident">Employee
       <input type="radio" name="role"  #name="ngModel" [(ngModel)]="resident" [value]="true" [checked]="resident" >Resident
       <label *ngIf="resident">
         | Apt Number
-      <input type="text" size="3"  >
+      <input type="text" size="3" #name="ngModel" [(ngModel)]="apt_num" name="apt_num" >
       </label>
+      <button type="submit" class="btn btn-primary" [disabled]="!submission.valid">Submit</button>
   </form>
 </div>
-<app-userlist></app-userlist>
+<app-userlist [users]="users"></app-userlist>

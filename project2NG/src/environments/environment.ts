@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
 
+  everybodyMakeTicket: "http://localhost:8080/ticket/openTicket",
+
   publicOpenApts: "http://localhost:8080/apt/emptyApt",
   publicSubmitApp: "http://localhost:8080/application/openApp",
 
@@ -19,13 +21,20 @@ export const environment = {
   managerGetTickets: "http://localhost:8080/ticket/allTicket",
   managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
 
+  managerGetRent: "http://localhost:8080/payment/allPayments",
+  managerUpdateRent: "http://localhost:8080/payment/makePayment",
+
   managerGetApt: "http://localhost:8080/apt/allApt",
+  managerGetApps: "http://localhost:8080/application/viewAll",
+
+  managerGetUsers: "http://localhost:8080/users/findall",
+  managerMakeUser: "http://localhost:8080/users/sign-up",
 
   //
   residentGetTickets: "http://localhost:8080/ticket/ticketRes",
+  residentGetApt: "http://localhost:8080/apt/aptByUserId",
   //send user ID: author
-  residentGetRentDetails: "http://localhost8080/payment/paymentAuth",
-  residentPayRent: "TODO",
+  residentGetRentDetails: "http://localhost:8080/payment/paymentAuth",
 
 };
 

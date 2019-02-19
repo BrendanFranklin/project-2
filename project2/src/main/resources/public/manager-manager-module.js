@@ -18,7 +18,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n<app-apartmentlist></app-apartmentlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Apartment Management</h1>\r\n<app-navbar></app-navbar>\r\n<app-apartmentlist [apts]=\"apts\"></app-apartmentlist>\r\n"
 
 /***/ }),
 
@@ -34,12 +34,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApartmentsPageComponent", function() { return ApartmentsPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_apartment_handler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/apartment-handler.service */ "./src/app/manager/services/apartment-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var ApartmentsPageComponent = /** @class */ (function () {
-    function ApartmentsPageComponent() {
+    function ApartmentsPageComponent(aptHandler) {
+        this.aptHandler = aptHandler;
     }
     ApartmentsPageComponent.prototype.ngOnInit = function () {
+        this.getApts();
+    };
+    ApartmentsPageComponent.prototype.getApts = function () {
+        var _this = this;
+        this.aptHandler.getApts(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetApt, function (apts) { _this.apts = apts; }, function () { });
     };
     ApartmentsPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -47,7 +57,7 @@ var ApartmentsPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./apartments-page.component.html */ "./src/app/manager/apartments-page/apartments-page.component.html"),
             styles: [__webpack_require__(/*! ./apartments-page.component.css */ "./src/app/manager/apartments-page/apartments-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_apartment_handler_service__WEBPACK_IMPORTED_MODULE_2__["ApartmentHandlerService"]])
     ], ApartmentsPageComponent);
     return ApartmentsPageComponent;
 }());
@@ -74,7 +84,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n<app-applicationlist></app-applicationlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Applications</h1>\r\n<app-navbar></app-navbar>\r\n<app-applicationlist [apps]=\"apps\"></app-applicationlist>\r\n"
 
 /***/ }),
 
@@ -90,12 +100,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationsPageComponent", function() { return ApplicationsPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_application_handler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/application-handler.service */ "./src/app/manager/services/application-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var ApplicationsPageComponent = /** @class */ (function () {
-    function ApplicationsPageComponent() {
+    function ApplicationsPageComponent(appService) {
+        this.appService = appService;
     }
     ApplicationsPageComponent.prototype.ngOnInit = function () {
+        this.getApps();
+    };
+    ApplicationsPageComponent.prototype.getApps = function () {
+        var _this = this;
+        this.appService.getAllApps(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetApps, function (apps) { _this.apps = apps; }, function () { });
     };
     ApplicationsPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -103,7 +123,7 @@ var ApplicationsPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./applications-page.component.html */ "./src/app/manager/applications-page/applications-page.component.html"),
             styles: [__webpack_require__(/*! ./applications-page.component.css */ "./src/app/manager/applications-page/applications-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_application_handler_service__WEBPACK_IMPORTED_MODULE_2__["ApplicationHandlerService"]])
     ], ApplicationsPageComponent);
     return ApplicationsPageComponent;
 }());
@@ -425,7 +445,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-maintform></app-maintform>\r\n<app-ticketlist [manager]=\"manager\" (resolveTicket)=\"resolve($event)\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">Manager Maintenance Access</h1>\r\n<app-navbar></app-navbar>\r\n<app-maintform></app-maintform>\r\n<app-ticketlist [manager]=\"manager\" [tickets]=\"tickets\"></app-ticketlist>\r\n"
 
 /***/ }),
 
@@ -456,8 +476,6 @@ var ManmaintComponent = /** @class */ (function () {
         this.getTickets();
     };
     ManmaintComponent.prototype.resolve = function (ticket) {
-        var _this = this;
-        this.ticketHandler.resolveTicket(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateTicket, ticket, function () { return _this.getTickets(); }, function (err) { return console.log(err); });
     };
     ManmaintComponent.prototype.getTickets = function () {
         var _this = this;
@@ -496,7 +514,7 @@ module.exports = ".manmanban{\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rentlist></app-rentlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"manmanban\">View/Manage Rent</h1>\r\n<app-navbar></app-navbar>\r\n<app-rentlist [payments]=\"payments\" (updatePayment)=\"update($event)\"></app-rentlist>\r\n"
 
 /***/ }),
 
@@ -512,12 +530,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RentPageComponent", function() { return RentPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_rent_handler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/rent-handler.service */ "./src/app/manager/services/rent-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var RentPageComponent = /** @class */ (function () {
-    function RentPageComponent() {
+    function RentPageComponent(renthandler) {
+        this.renthandler = renthandler;
     }
     RentPageComponent.prototype.ngOnInit = function () {
+        this.getRent();
+    };
+    RentPageComponent.prototype.getRent = function () {
+        var _this = this;
+        this.renthandler.getRent(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetRent, function (payments) { _this.payments = payments; }, function () { });
+    };
+    RentPageComponent.prototype.update = function (update) {
+        var _this = this;
+        this.renthandler.updateRent(update, src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerUpdateRent, function () { _this.getRent(); });
     };
     RentPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -525,9 +557,229 @@ var RentPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./rent-page.component.html */ "./src/app/manager/rent-page/rent-page.component.html"),
             styles: [__webpack_require__(/*! ./rent-page.component.css */ "./src/app/manager/rent-page/rent-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_rent_handler_service__WEBPACK_IMPORTED_MODULE_2__["RentHandlerService"]])
     ], RentPageComponent);
     return RentPageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/services/apartment-handler.service.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/manager/services/apartment-handler.service.ts ***!
+  \***************************************************************/
+/*! exports provided: ApartmentHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApartmentHandlerService", function() { return ApartmentHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/apartment */ "./src/app/models/apartment.ts");
+
+
+
+
+var ApartmentHandlerService = /** @class */ (function () {
+    function ApartmentHandlerService(http) {
+        this.http = http;
+    }
+    ApartmentHandlerService.prototype.getApts = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var apts = [];
+            resp.forEach(function (apt) {
+                apts.push(_this.parseApt(apt));
+            });
+            success(apts);
+        }),
+            fail();
+    };
+    ApartmentHandlerService.prototype.parseApt = function (apt) {
+        var newAp = new src_app_models_apartment__WEBPACK_IMPORTED_MODULE_3__["Apartment"](apt[0], apt[1], apt[2], apt[3]);
+        return newAp;
+    };
+    ApartmentHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ApartmentHandlerService);
+    return ApartmentHandlerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/services/application-handler.service.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/manager/services/application-handler.service.ts ***!
+  \*****************************************************************/
+/*! exports provided: ApplicationHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApplicationHandlerService", function() { return ApplicationHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_application__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/application */ "./src/app/models/application.ts");
+
+
+
+
+var ApplicationHandlerService = /** @class */ (function () {
+    function ApplicationHandlerService(http) {
+        this.http = http;
+    }
+    ApplicationHandlerService.prototype.getAllApps = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var apps = [];
+            resp.forEach(function (app) {
+                apps.push(_this.parseApp(app));
+            });
+            success(apps);
+        }),
+            fail();
+    };
+    ApplicationHandlerService.prototype.parseApp = function (app) {
+        var newApp = new src_app_models_application__WEBPACK_IMPORTED_MODULE_3__["Application"](app[1], app[2], app[3], app[4]);
+        return newApp;
+    };
+    ApplicationHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], ApplicationHandlerService);
+    return ApplicationHandlerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/services/rent-handler.service.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/manager/services/rent-handler.service.ts ***!
+  \**********************************************************/
+/*! exports provided: RentHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RentHandlerService", function() { return RentHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_payment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/payment */ "./src/app/models/payment.ts");
+
+
+
+
+var RentHandlerService = /** @class */ (function () {
+    function RentHandlerService(http) {
+        this.http = http;
+    }
+    RentHandlerService.prototype.getRent = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var rents = [];
+            resp.forEach(function (rent) {
+                rents.push(_this.parseRent(rent));
+            });
+            success(rents);
+        }),
+            fail();
+    };
+    RentHandlerService.prototype.parseRent = function (rent) {
+        var newRent = new src_app_models_payment__WEBPACK_IMPORTED_MODULE_3__["Payment"](rent[0], rent[1], rent[2], rent[3]);
+        return newRent;
+    };
+    RentHandlerService.prototype.updateRent = function (rent, url, success) {
+        this.http.post(url, JSON.stringify(rent), { headers: { 'Authorization': localStorage.getItem('userToken'),
+                'content-type': 'application/json' } }).toPromise().then(success());
+    };
+    RentHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], RentHandlerService);
+    return RentHandlerService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/manager/services/user-handler.service.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/manager/services/user-handler.service.ts ***!
+  \**********************************************************/
+/*! exports provided: UserHandlerService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserHandlerService", function() { return UserHandlerService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_models_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/user */ "./src/app/models/user.ts");
+
+
+
+
+var UserHandlerService = /** @class */ (function () {
+    function UserHandlerService(http) {
+        this.http = http;
+    }
+    UserHandlerService.prototype.getUsers = function (url, success, fail) {
+        var _this = this;
+        this.http.get(url, { headers: { 'Authorization': localStorage.getItem('userToken') } })
+            .toPromise().then(function (resp) {
+            var users = [];
+            resp.forEach(function (user) {
+                users.push(_this.parseUser(user));
+            });
+            success(users);
+        }),
+            fail();
+    };
+    UserHandlerService.prototype.parseUser = function (user) {
+        var newUser = new src_app_models_user__WEBPACK_IMPORTED_MODULE_3__["User"](user[0], user[3], user[4], user[5], "", user[7]);
+        if (user[6] == 1) {
+            newUser.role = 'Resident';
+        }
+        if (user[6] == 2) {
+            newUser.role = 'Manager';
+        }
+        if (user[6] == 3) {
+            newUser.role = 'Maintenance';
+        }
+        return newUser;
+    };
+    UserHandlerService.prototype.createUser = function (url, user, success) {
+        this.http.post(url, user).toPromise().then(success());
+    };
+    UserHandlerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], UserHandlerService);
+    return UserHandlerService;
 }());
 
 
@@ -552,7 +804,7 @@ module.exports = ".usebanner{\r\n    text-align: center;\r\n}\r\n.newUser{\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"usebanner\">Add/Manage Users</h1>\r\n<app-navbar></app-navbar>\r\n\r\n<div class=\"newUser\">\r\n  <h5>Add New User</h5>\r\n  <form #submission=\"ngForm\" class=\"newUserform\">\r\n\r\n      First Name:\r\n      <input type=\"text\" size=\"10\">\r\n      Last Name:\r\n      <input type=\"text\" size=\"10\">\r\n      Email:\r\n      <input type=\"text\" size=\"20\">\r\n      Username:\r\n      <input type=\"text\" size=\"10\">\r\n      Password:\r\n      <input type=\"text\" size=\"10\">\r\n      Role:\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"false\" [checked]=\"!resident\">Employee\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"true\" [checked]=\"resident\" >Resident\r\n      <label *ngIf=\"resident\">\r\n        | Apt Number\r\n      <input type=\"text\" size=\"3\"  >\r\n      </label>\r\n  </form>\r\n</div>\r\n<app-userlist></app-userlist>\r\n"
+module.exports = "<app-logoutbar></app-logoutbar>\r\n<h1 class=\"usebanner\">Add/Manage Users</h1>\r\n<app-navbar></app-navbar>\r\n\r\n<div class=\"newUser\">\r\n  <h5>Add New User</h5>\r\n  <form #submission=\"ngForm\" class=\"newUserform\" (ngSubmit)=\"submit()\">\r\n\r\n      First Name:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"first_name\" name=\"firstname\">\r\n      Last Name:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"last_name\" name=\"lastname\">\r\n      Email:\r\n      <input type=\"text\" size=\"20\" #name=\"ngModel\" [(ngModel)]=\"email\" name=\"email\">\r\n      Username:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"username\" name=\"username\">\r\n      Password:\r\n      <input type=\"text\" size=\"10\" #name=\"ngModel\" [(ngModel)]=\"password\" name=\"password\">\r\n      Role:\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"false\" [checked]=\"!resident\">Employee\r\n      <input type=\"radio\" name=\"role\"  #name=\"ngModel\" [(ngModel)]=\"resident\" [value]=\"true\" [checked]=\"resident\" >Resident\r\n      <label *ngIf=\"resident\">\r\n        | Apt Number\r\n      <input type=\"text\" size=\"3\" #name=\"ngModel\" [(ngModel)]=\"apt_num\" name=\"apt_num\" >\r\n      </label>\r\n      <button type=\"submit\" class=\"btn btn-primary\" [disabled]=\"!submission.valid\">Submit</button>\r\n  </form>\r\n</div>\r\n<app-userlist [users]=\"users\"></app-userlist>\r\n"
 
 /***/ }),
 
@@ -568,12 +820,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersPageComponent", function() { return UsersPageComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_user_handler_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/user-handler.service */ "./src/app/manager/services/user-handler.service.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var UsersPageComponent = /** @class */ (function () {
-    function UsersPageComponent() {
+    function UsersPageComponent(userService) {
+        this.userService = userService;
     }
     UsersPageComponent.prototype.ngOnInit = function () {
+        this.getUsers();
+    };
+    UsersPageComponent.prototype.getUsers = function () {
+        var _this = this;
+        this.userService.getUsers(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerGetUsers, function (users) { _this.users = users; }, function () { });
+    };
+    UsersPageComponent.prototype.submit = function () {
+        var _this = this;
+        var user;
+        if (this.resident = true) {
+            user = { first_name: this.first_name, last_name: this.last_name,
+                email: this.email, username: this.username, password: this.password, role_id: 1, apt_num: this.apt_num };
+        }
+        else {
+            user = { first_name: this.first_name, last_name: this.last_name,
+                email: this.email, username: this.username, password: this.password, role_id: 2 };
+        }
+        this.userService.createUser(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].managerMakeUser, user, function () { _this.getUsers(); });
     };
     UsersPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -581,9 +856,35 @@ var UsersPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./users-page.component.html */ "./src/app/manager/users-page/users-page.component.html"),
             styles: [__webpack_require__(/*! ./users-page.component.css */ "./src/app/manager/users-page/users-page.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_user_handler_service__WEBPACK_IMPORTED_MODULE_2__["UserHandlerService"]])
     ], UsersPageComponent);
     return UsersPageComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/models/user.ts":
+/*!********************************!*\
+  !*** ./src/app/models/user.ts ***!
+  \********************************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+var User = /** @class */ (function () {
+    function User(id, first_name, last_name, email, role, apt_num) {
+        this.id = id;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.role = role;
+        this.apt_num = apt_num;
+    }
+    return User;
 }());
 
 
