@@ -1,0 +1,31 @@
+.aptList{
+    color: gold;
+    background-color: black;
+}
+
+.aptTable{
+    font-size: 15pt;
+    border-spacing: 20px;
+    border-collapse: separate;
+    width: 100%;
+}
+
+.tabHead{
+    text-align: left;
+}
+
+.zoom:hover {
+    transform: scale(3.0);
+}
+
+.listButt{
+    cursor: pointer;
+    border-color: gold;
+    color: gold;
+    background-color: black;
+}
+
+.listButt:hover{
+    color: black;
+    background-color: gold;
+}

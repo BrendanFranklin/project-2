@@ -1,0 +1,29 @@
+<app-logoutbar></app-logoutbar>
+
+<h1 class="resBan"> Apartment Details </h1>
+
+
+
+<div class="aptDeets">
+
+   <div>Apt Number: {{apartment.apt_num}}</div>
+
+   <div>Style:{{apartment.apt_style}}</div>
+
+   <div> Rent: {{apartment.rent}}</div>
+
+   <div>Rent Status: {{payment.paid}}</div>
+
+   <div>Overdue: {{payment.overdue}}</div>
+
+</div>
+
+
+
+<div class="mainButt">
+
+<button [routerLink]="'/resident/maintenance'">Track/Submit Maintenance
+
+</button>
+
+</div>

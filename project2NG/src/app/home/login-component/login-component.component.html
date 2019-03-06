@@ -1,0 +1,29 @@
+<div class="card"  id = {{shake}} >
+  <div class="login-form">
+  <div class="main-div">
+      <div class="panel">
+     <h2>{{title}}</h2>
+     <p>Please enter your username and password</p>
+     </div>
+      <form id="Login"#login="ngForm" novalidate (ngSubmit)="submit()" (click)="noShake()">
+  
+          <div class="form-group">
+  
+  
+              <input type="text" class="form-control" #name="ngModel" name="username" [(ngModel)]=username required placeholder="Username">
+  
+          </div>
+  
+          <div class="form-group">
+  
+              <input type="password" class="form-control" #name="ngModel" name ="password" [(ngModel)]=password required placeholder="Password">
+  
+          </div>
+  
+          <button type="Submit" class="btn btn-primary">Login</button>
+  
+      </form>
+      <p class="error" *ngIf="shake">Username or Password invalid, try again.</p>
+      </div>
+  </div>
+  </div>

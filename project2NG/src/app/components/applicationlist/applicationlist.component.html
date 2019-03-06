@@ -1,0 +1,22 @@
+<div class = "container">
+  <div class = "list-container">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let app of apps">
+          <td>{{app.first_name}}</td>
+          <td>{{app.last_name}}</td>
+          <td>{{app.email}}</td>
+          <td>{{app.phone}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

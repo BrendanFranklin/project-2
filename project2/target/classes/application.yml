@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: validate
+      temp:
+        user_jdbc_metadata_defaults: false
+      jdbc:
+        lob:
+          non_contextual_creation: false
+  datasource:
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://sparknov27.cufykwrwwlpz.us-east-2.rds.amazonaws.com:5432/inclass
+    username: michael_perez
+    password: Chaidez19*

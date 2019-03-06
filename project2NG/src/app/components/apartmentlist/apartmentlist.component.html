@@ -1,0 +1,22 @@
+<div class = "container">
+  <div class = "list-container">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Apt Num</th>
+        <th scope="col">Style</th>
+        <th scope="col">Rent</th>
+        <th scope="col">Occupied</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let apt of apts">
+      <th scope="row">{{apt.apt_num}}</th>
+      <td>{{apt.apt_style}}</td>
+      <td>{{apt.rent}}</td>
+      <td>{{apt.occupied}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
