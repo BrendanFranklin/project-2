@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomepageComponent} from './home/homepage/homepage.component';
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
+
 
 const routes: Routes = [
   {
@@ -8,7 +9,7 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
   },
   {
-    path:'maintenance',
+    path: 'maintenance',
     loadChildren: './maintenance/maintenance.module#MaintenanceModule'
   },
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'manager',
     loadChildren: './manager/manager.module#ManagerModule'
+  },
+  {
+    path: 'ticketdeets',
+    component: TicketDetailsComponent
   }
 ];
 

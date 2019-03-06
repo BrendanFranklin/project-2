@@ -13,16 +13,16 @@ public class Application {
     private String first_name;
     private String last_name;
     private String email;
-    private String phonenumber;
+    private String phone;
 
     public Application() {
     }
 
-    public Application(String first_name, String last_name, String email, String phonenumber) {
+    public Application(String first_name, String last_name, String email, String phone) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
-        this.phonenumber = phonenumber;
+        this.phone = phone;
     }
 
     public Integer getId() {
@@ -57,11 +57,11 @@ public class Application {
         this.email = email;
     }
 
-    public String getPhonenumber() {
-        return phonenumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhone(String phonenumber) {
+        this.phone = phone;
     }
 }

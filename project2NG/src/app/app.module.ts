@@ -1,20 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{ FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {HomepageComponent} from './home/homepage/homepage.component';
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    TicketDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

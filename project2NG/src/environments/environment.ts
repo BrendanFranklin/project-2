@@ -4,7 +4,38 @@
 
 export const environment = {
   production: false,
-  authUrl: "url eventually"
+
+  everybodyMakeTicket: "http://localhost:8080/ticket/openTicket",
+
+  publicOpenApts: "http://localhost:8080/apt/emptyApt",
+  publicSubmitApp: "http://localhost:8080/application/openApp",
+
+  
+  loginGetRoleId: "http://localhost:8080/users/roleid",
+  loginGetUserId: "http://localhost:8080/users/userid",
+
+
+  residentAuth: "http://localhost:8080/login",
+  employeeAuth: "http://localhost:8080/login",
+ 
+  managerGetTickets: "http://localhost:8080/ticket/allTicket",
+  managerUpdateTicket: "http://localhost:8080/ticket/updateTicket",
+
+  managerGetRent: "http://localhost:8080/payment/allPayments",
+  managerUpdateRent: "http://localhost:8080/payment/makePayment",
+
+  managerGetApt: "http://localhost:8080/apt/allApt",
+  managerGetApps: "http://localhost:8080/application/viewAll",
+
+  managerGetUsers: "http://localhost:8080/users/findall",
+  managerMakeUser: "http://localhost:8080/users/sign-up",
+
+  //
+  residentGetTickets: "http://localhost:8080/ticket/ticketRes",
+  residentGetApt: "http://localhost:8080/apt/aptByUserId",
+  //send user ID: author
+  residentGetRentDetails: "http://localhost:8080/payment/paymentAuth",
+
 };
 
 /*

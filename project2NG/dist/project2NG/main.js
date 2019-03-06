@@ -5,21 +5,45 @@
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
   \**********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncaught exception popping up in devtools
-	return Promise.resolve().then(function() {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
+var map = {
+	"./home/home.module": [
+		"./src/app/home/home.module.ts",
+		"home-home-module"
+	],
+	"./maintenance/maintenance.module": [
+		"./src/app/maintenance/maintenance.module.ts",
+		"maintenance-maintenance-module"
+	],
+	"./manager/manager.module": [
+		"./src/app/manager/manager.module.ts",
+		"manager-manager-module"
+	],
+	"./resident/resident.module": [
+		"./src/app/resident/resident.module.ts",
+		"resident-resident-module"
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids) {
+		return Promise.resolve().then(function() {
+			var e = new Error("Cannot find module '" + req + "'");
+			e.code = 'MODULE_NOT_FOUND';
+			throw e;
+		});
+	}
+	return __webpack_require__.e(ids[1]).then(function() {
+		var id = ids[0];
+		return __webpack_require__(id);
 	});
 }
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
@@ -36,14 +60,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _home_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/homepage/homepage.component */ "./src/app/home/homepage/homepage.component.ts");
-
 
 
 
 var routes = [
-    { path: 'home', component: _home_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_3__["HomepageComponent"] },
-    { path: '', redirectTo: '/home', pathMatch: 'full' }
+    {
+        path: '',
+        loadChildren: './home/home.module#HomeModule'
+    },
+    {
+        path: 'maintenance',
+        loadChildren: './maintenance/maintenance.module#MaintenanceModule'
+    },
+    {
+        path: 'resident',
+        loadChildren: './resident/resident.module#ResidentModule'
+    },
+    {
+        path: 'manager',
+        loadChildren: './manager/manager.module#ManagerModule'
+    }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -128,9 +164,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _home_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./home/homepage/homepage.component */ "./src/app/home/homepage/homepage.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/logoutbar/logoutbar.component */ "./src/app/components/logoutbar/logoutbar.component.ts");
+/* harmony import */ var _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/ticketlist/ticketlist.component */ "./src/app/components/ticketlist/ticketlist.component.ts");
+/* harmony import */ var _components_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/detailsmodal/detailsmodal.component */ "./src/app/components/detailsmodal/detailsmodal.component.ts");
+
+
+
+
+
 
 
 
@@ -143,15 +189,20 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _home_homepage_homepage_component__WEBPACK_IMPORTED_MODULE_5__["HomepageComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _components_logoutbar_logoutbar_component__WEBPACK_IMPORTED_MODULE_8__["LogoutbarComponent"],
+                _components_ticketlist_ticketlist_component__WEBPACK_IMPORTED_MODULE_9__["TicketlistComponent"],
+                _components_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_10__["DetailsmodalComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_5__["NgbModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -161,56 +212,236 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/home/homepage/homepage.component.css":
-/*!******************************************************!*\
-  !*** ./src/app/home/homepage/homepage.component.css ***!
-  \******************************************************/
+/***/ "./src/app/components/detailsmodal/detailsmodal.component.css":
+/*!********************************************************************!*\
+  !*** ./src/app/components/detailsmodal/detailsmodal.component.css ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@font-face{\r\n  font-family: 'Scriptina';\r\n  src: url('SCRIPTIN.ttf') format('truetype');\r\n}\r\n\r\n.banner{\r\n  background-color: black;\r\n  height: 200px;\r\n\r\n}\r\n\r\n.banner-text{\r\n\r\n  text-align: center;\r\n  color: gold;\r\n  font-family: 'Scriptina';\r\n  font-size: 80pt;\r\n\r\n}\r\n\r\n.building{\r\n  background-image: url('aptimg.jpg');\r\n  background-repeat: no-repeat;\r\n  height: 700px;\r\n  width: 100%;\r\n  background-size: 100% 100%;\r\n  padding: 115px;\r\n}\r\n\r\n.footer{\r\n  background-color: black;\r\n  height: 150px;\r\n  text-align: left;\r\n  color: gold;\r\n\r\n}\r\n\r\n.navButtons{\r\n  text-align: center;\r\n\r\n}\r\n\r\n.button1{\r\n  background-color: black;\r\n  color: gold;\r\n  border: none;\r\n  margin: 5px;\r\n  border-radius: 12px;\r\n  height: 30px;\r\n  font-family: 'Times New Roman', Times, serif;\r\n  font-size: 13pt;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lcGFnZS9ob21lcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXdCO0VBQ3hCLDJDQUF5RTtBQUMzRTs7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixhQUFhOztBQUVmOztBQUNBOztFQUVFLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsd0JBQXdCO0VBQ3hCLGVBQWU7O0FBRWpCOztBQUNBO0VBQ0UsbUNBQTBEO0VBQzFELDRCQUE0QjtFQUM1QixhQUFhO0VBQ2IsV0FBVztFQUNYLDBCQUEwQjtFQUMxQixjQUFjO0FBQ2hCOztBQUNBO0VBQ0UsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEIsV0FBVzs7QUFFYjs7QUFFQTtFQUNFLGtCQUFrQjs7QUFFcEI7O0FBRUE7RUFDRSx1QkFBdUI7RUFDdkIsV0FBVztFQUNYLFlBQVk7RUFDWixXQUFXO0VBQ1gsbUJBQW1CO0VBQ25CLFlBQVk7RUFDWiw0Q0FBNEM7RUFDNUMsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZXBhZ2UvaG9tZXBhZ2UuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2V7XHJcbiAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gIHNyYzogdXJsKC4uLy4uLy4uL2Fzc2V0cy9mb250cy9zY3JpcHRpbmEvU0NSSVBUSU4udHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbn1cclxuXHJcbi5iYW5uZXJ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgaGVpZ2h0OiAyMDBweDtcclxuXHJcbn1cclxuLmJhbm5lci10ZXh0e1xyXG5cclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgY29sb3I6IGdvbGQ7XHJcbiAgZm9udC1mYW1pbHk6ICdTY3JpcHRpbmEnO1xyXG4gIGZvbnQtc2l6ZTogODBwdDtcclxuXHJcbn1cclxuLmJ1aWxkaW5ne1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCgnLi4vLi4vLi4vYXNzZXRzL2ltYWdlcy9hcHRpbWcuanBnJyk7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBoZWlnaHQ6IDcwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG4gIHBhZGRpbmc6IDExNXB4O1xyXG59XHJcbi5mb290ZXJ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgaGVpZ2h0OiAxNTBweDtcclxuICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gIGNvbG9yOiBnb2xkO1xyXG5cclxufVxyXG5cclxuLm5hdkJ1dHRvbnN7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG5cclxufVxyXG5cclxuLmJ1dHRvbjF7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbiAgY29sb3I6IGdvbGQ7XHJcbiAgYm9yZGVyOiBub25lO1xyXG4gIG1hcmdpbjogNXB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDEycHg7XHJcbiAgaGVpZ2h0OiAzMHB4O1xyXG4gIGZvbnQtZmFtaWx5OiAnVGltZXMgTmV3IFJvbWFuJywgVGltZXMsIHNlcmlmO1xyXG4gIGZvbnQtc2l6ZTogMTNwdDtcclxufVxyXG4iXX0= */"
+module.exports = ".navButtons{\r\n    text-align: center;\r\n}\r\n.button1{\r\n    background-color: black;\r\n    color: gold;\r\n    border: none;\r\n    margin: 5px;\r\n    border-radius: 12px;\r\n    height: 30px;\r\n    font-family: 'Times New Roman', Times, serif;\r\n    font-size: 13pt;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9kZXRhaWxzbW9kYWwvZGV0YWlsc21vZGFsLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLHVCQUF1QjtJQUN2QixXQUFXO0lBQ1gsWUFBWTtJQUNaLFdBQVc7SUFDWCxtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLDRDQUE0QztJQUM1QyxlQUFlO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9kZXRhaWxzbW9kYWwvZGV0YWlsc21vZGFsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2QnV0dG9uc3tcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG4uYnV0dG9uMXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgY29sb3I6IGdvbGQ7XHJcbiAgICBib3JkZXI6IG5vbmU7XHJcbiAgICBtYXJnaW46IDVweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEycHg7XHJcbiAgICBoZWlnaHQ6IDMwcHg7XHJcbiAgICBmb250LWZhbWlseTogJ1RpbWVzIE5ldyBSb21hbicsIFRpbWVzLCBzZXJpZjtcclxuICAgIGZvbnQtc2l6ZTogMTNwdDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
-/***/ "./src/app/home/homepage/homepage.component.html":
-/*!*******************************************************!*\
-  !*** ./src/app/home/homepage/homepage.component.html ***!
-  \*******************************************************/
+/***/ "./src/app/components/detailsmodal/detailsmodal.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/detailsmodal/detailsmodal.component.html ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class = \"banner\">\r\n  <div class = \"banner-text\">\r\n    the pretense\r\n  </div>\r\n</div>\r\n<div class = \"building\">\r\n  <div class=\"navButtons\">\r\n    <button class=\"button1\">Available Apartments</button>\r\n    <button class=\"button1\">Resident Portal</button>\r\n    <button class=\"button1\">Employee Portal</button>\r\n  </div>\r\n</div>\r\n<div class = \"footer\" >\r\n  <div class = \"address\">\r\n    123 Fake St\r\n    <br>\r\n    Anytown, USA 45678\r\n  </div>\r\n</div>\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<div class=\"modal-header\">\r\n  <h4 class=\"modal-title\">Hi there!</h4>\r\n  <button type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"activeModal.dismiss('Cross click')\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>\r\n<div class=\"modal-body\">\r\n</div>\r\n<div class=\"modal-footer\">\r\n  <button type=\"button\" class=\"resolve\" (click)=\"resolve()\" *ngIf=\"employee\"></button>\r\n</div>"
 
 /***/ }),
 
-/***/ "./src/app/home/homepage/homepage.component.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/home/homepage/homepage.component.ts ***!
-  \*****************************************************/
-/*! exports provided: HomepageComponent */
+/***/ "./src/app/components/detailsmodal/detailsmodal.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/components/detailsmodal/detailsmodal.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: DetailsmodalComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomepageComponent", function() { return HomepageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsmodalComponent", function() { return DetailsmodalComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var src_app_models_ticket__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/models/ticket */ "./src/app/models/ticket.ts");
+
+
+
+
+var DetailsmodalComponent = /** @class */ (function () {
+    function DetailsmodalComponent(activeModal) {
+        this.activeModal = activeModal;
+        this.resolveTicket = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    DetailsmodalComponent.prototype.ngOnInit = function () {
+    };
+    DetailsmodalComponent.prototype.resolve = function () {
+        this.resolveTicket.emit(this.ticket);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", src_app_models_ticket__WEBPACK_IMPORTED_MODULE_3__["Ticket"])
+    ], DetailsmodalComponent.prototype, "ticket", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+    ], DetailsmodalComponent.prototype, "employee", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], DetailsmodalComponent.prototype, "resolveTicket", void 0);
+    DetailsmodalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-detailsmodal',
+            template: __webpack_require__(/*! ./detailsmodal.component.html */ "./src/app/components/detailsmodal/detailsmodal.component.html"),
+            styles: [__webpack_require__(/*! ./detailsmodal.component.css */ "./src/app/components/detailsmodal/detailsmodal.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbActiveModal"]])
+    ], DetailsmodalComponent);
+    return DetailsmodalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/logoutbar/logoutbar.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/logoutbar/logoutbar.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbG9nb3V0YmFyL2xvZ291dGJhci5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/logoutbar/logoutbar.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/logoutbar/logoutbar.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  logoutbar works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/logoutbar/logoutbar.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/logoutbar/logoutbar.component.ts ***!
+  \*************************************************************/
+/*! exports provided: LogoutbarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LogoutbarComponent", function() { return LogoutbarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-var HomepageComponent = /** @class */ (function () {
-    function HomepageComponent() {
+var LogoutbarComponent = /** @class */ (function () {
+    function LogoutbarComponent() {
     }
-    HomepageComponent.prototype.ngOnInit = function () {
+    LogoutbarComponent.prototype.ngOnInit = function () {
     };
-    HomepageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    LogoutbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-homepage',
-            template: __webpack_require__(/*! ./homepage.component.html */ "./src/app/home/homepage/homepage.component.html"),
-            styles: [__webpack_require__(/*! ./homepage.component.css */ "./src/app/home/homepage/homepage.component.css")]
+            selector: 'app-logoutbar',
+            template: __webpack_require__(/*! ./logoutbar.component.html */ "./src/app/components/logoutbar/logoutbar.component.html"),
+            styles: [__webpack_require__(/*! ./logoutbar.component.css */ "./src/app/components/logoutbar/logoutbar.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], HomepageComponent);
-    return HomepageComponent;
+    ], LogoutbarComponent);
+    return LogoutbarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/ticketlist/ticketlist.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/ticketlist/ticketlist.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvdGlja2V0bGlzdC90aWNrZXRsaXN0LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/ticketlist/ticketlist.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/ticketlist/ticketlist.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class = \"container\">\r\n  <div class = \"list-container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th scope=\"col\">Request ID</th>\r\n          <th scope=\"col\">Name</th>\r\n          <th scope=\"col\">Amount</th>\r\n          <th scope=\"col\">Type</th>\r\n          <th scope=\"col\">Submitted</th>\r\n          <th scope=\"col\">Resolved</th>\r\n          <th scope=\"col\">Status</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor = \"let ticket of tickets\"\r\n        (click) = \"detailView(ticket)\">\r\n          <th scope=\"row\">{{reimb.iD}}</th>\r\n          <td>{{reimb.firstName}} {{reimb.lastName}}</td>\r\n          <td>{{reimb.amount}}</td>\r\n          <td>{{reimb.type}}</td>\r\n          <td>{{reimb.submitted.getMonth()+1}}/{{reimb.submitted.getDate()}}/{{reimb.submitted.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved > reimb.submitted\" >{{reimb.resolved.getMonth()+1}}/{{reimb.resolved.getDate()}}/{{reimb.resolved.getFullYear()}}</td>\r\n          <td *ngIf=\"reimb.resolved < reimb.submitted\">Unresolved</td>\r\n          <td>{{reimb.status}}</td>\r\n        </tr>\r\n    </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/ticketlist/ticketlist.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/ticketlist/ticketlist.component.ts ***!
+  \***************************************************************/
+/*! exports provided: TicketlistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TicketlistComponent", function() { return TicketlistComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../detailsmodal/detailsmodal.component */ "./src/app/components/detailsmodal/detailsmodal.component.ts");
+
+
+
+
+var TicketlistComponent = /** @class */ (function () {
+    function TicketlistComponent(modalService) {
+        this.modalService = modalService;
+        this.resolveTicket = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+    }
+    TicketlistComponent.prototype.ngOnInit = function () {
+    };
+    TicketlistComponent.prototype.detailView = function (ticket) {
+        var _this = this;
+        var modalRef = this.modalService.open(_detailsmodal_detailsmodal_component__WEBPACK_IMPORTED_MODULE_3__["DetailsmodalComponent"]);
+        modalRef.componentInstance.ticket = ticket;
+        modalRef.componentInstance.employee = this.employee;
+        modalRef.componentInstance.resolveTicket.subscribe(function (ticket) {
+            _this.resolveTicket.emit(ticket);
+        });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], TicketlistComponent.prototype, "tickets", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+    ], TicketlistComponent.prototype, "employee", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
+    ], TicketlistComponent.prototype, "resolveTicket", void 0);
+    TicketlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-ticketlist',
+            template: __webpack_require__(/*! ./ticketlist.component.html */ "./src/app/components/ticketlist/ticketlist.component.html"),
+            styles: [__webpack_require__(/*! ./ticketlist.component.css */ "./src/app/components/ticketlist/ticketlist.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModal"]])
+    ], TicketlistComponent);
+    return TicketlistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/models/ticket.ts":
+/*!**********************************!*\
+  !*** ./src/app/models/ticket.ts ***!
+  \**********************************/
+/*! exports provided: Ticket */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Ticket", function() { return Ticket; });
+var Ticket = /** @class */ (function () {
+    function Ticket() {
+    }
+    return Ticket;
 }());
 
 
@@ -232,7 +463,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    authUrl: "url eventually"
+    residentAuth: "http://localhost:8080/login_resident",
+    employeeAuth: "http://localhost:8080/login_mgmt"
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -279,7 +511,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\quite\OneDrive\Desktop\THE GITS\Project 2\project-2\project2NG\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Matthew\Desktop\Project_2\project-2\project2NG\src\main.ts */"./src/main.ts");
 
 
 /***/ })

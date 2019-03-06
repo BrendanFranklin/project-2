@@ -1,6 +1,7 @@
 package org.project2.pojos;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table (name = "tickets", schema = "Pretense")
@@ -11,14 +12,30 @@ public class Ticket {
     @Column(name = "ticket_id")
     private int id;
 
-    @JoinColumn(name = "author", referencedColumnName = "res_id")
-    private String author;
+    @Column(name = "submitted")
+    private Date submitted;
 
-    @JoinColumn(name = "resolver", referencedColumnName = "mgmt_id")
-    private String resolver;
+    @JoinColumn(name = "author", referencedColumnName = "user_id")
+    private int author;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "resolved")
+    private boolean resolved;
+
+    @Column(name = "updated")
+    private Date updated;
+
+    @JoinColumn(name = "resolver", referencedColumnName = "user_id")
+    private int resolver;
 
     @Column(name = "notes")
     private String notes;
+
+    @Transient
+    @ManyToOne(targetEntity = Users.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Users userTickets;
 
     public Ticket() { }
 
@@ -30,19 +47,43 @@ public class Ticket {
         this.id = id;
     }
 
-    public String getAuthor() {
+    public Date getSubmitted() {
+        return submitted;
+    }
+
+    public void setSubmitted(Date submitted) {
+        this.submitted = submitted;
+    }
+
+    public int getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(int author) {
         this.author = author;
     }
 
-    public String getResolver() {
+    public boolean isResolved() {
+        return resolved;
+    }
+
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
+    }
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
+
+    public int getResolver() {
         return resolver;
     }
 
-    public void setResolver(String resolver) {
+    public void setResolver(int resolver) {
         this.resolver = resolver;
     }
 
@@ -52,5 +93,21 @@ public class Ticket {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Users getUserTickets() {
+        return userTickets;
+    }
+
+    public void setUserTickets(Users userTickets) {
+        this.userTickets = userTickets;
     }
 }

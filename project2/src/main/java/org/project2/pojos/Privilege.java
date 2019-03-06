@@ -8,9 +8,9 @@ import java.util.Collection;
 public class Privilege {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int priv_id;
 
-    private String name;
+    private String priv_name;
 
     @ManyToMany(mappedBy = "privileges")
     private Collection<Role> roles;
@@ -18,24 +18,24 @@ public class Privilege {
     public Privilege() {
     }
 
-    public Privilege(String name) {
-        this.name = name;
+    public Privilege(String priv_name) {
+        this.priv_name = priv_name;
     }
 
-    public Integer getId() {
-        return id;
+    public int getId() {
+        return priv_id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(int id) {
+        this.priv_id = priv_id;
     }
 
     public String getName() {
-        return name;
+        return priv_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String priv_name) {
+        this.priv_name = priv_name;
     }
 
     public Collection<Role> getRoles() {

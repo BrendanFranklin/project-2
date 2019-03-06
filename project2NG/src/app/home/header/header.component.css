@@ -1,0 +1,18 @@
+@font-face{
+    font-family: 'Scriptina';
+    src: url(../../../assets/fonts/scriptina/SCRIPTIN.ttf) format('truetype');
+}
+
+.banner{
+    background-color: black;
+    height: auto;
+
+}
+.banner-text{
+    cursor: pointer;
+    text-align: center;
+    color: gold;
+    font-family: 'Scriptina';
+    font-size: 80pt;
+
+}

@@ -1,0 +1,68 @@
+<h1 class="tickBan" >Ticket Details</h1>
+
+
+
+<div class="card">
+
+  <table>
+
+
+          <tr>
+
+          <div>
+
+              Apartment: {{ticket.apt_num}}
+
+          </div>
+
+          <div>
+
+          Author: {{ticket.authorFirstName}} {{ticket.authorLastName}}
+
+          </div>
+
+
+
+      </tr>
+
+      <tr>
+
+          <div>
+
+          Description: {{ticket.description}}
+
+          </div>
+
+          <div>
+
+              Resolved: {{ticket.resolved}}
+
+          </div>
+          <div>
+
+            Notes: {{ticket.notes}}
+
+        </div>
+
+      </tr>
+
+
+  </table>
+
+<div *ngIf="manager">
+        <form class="submission" #submission="ngForm" novalidate (ngSubmit)="submit(false)">
+      <div class="noteField" >
+
+          <button class="btn btn-primary" type="submit">Add Notes</button>
+
+          <input type="text" ([ngModel])="ticket.notes" name="notes" >
+
+      </div>
+      </form>
+    <div class="resolvebutt" *ngIf="!ticket.resolved">
+
+        <button class="btn btn-primary" (click)="submit(true)">Resolved</button>
+
+    </div>
+</div>
+  </div>

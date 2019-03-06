@@ -9,14 +9,14 @@ public interface TicketRepository {
     List<Ticket> findAll();
 
     // returns the tickets of a specific resident
-    List<Ticket> findResidentTickets(int res_id);
+    List<Ticket> findResidentTickets(int user_id);
 
     // returns a ticket based on a searched ID
     Ticket findTicketById(int ticket_id);
 
     // open/create a new ticket
-    int openTicket();
+    int openTicket(int author, String description);
 
     // update/close an existing ticket
-    void updateTicket(int ticket_id);
+    int updateTicket(int ticket_id, int resolver, String notes, boolean resolved);
 }

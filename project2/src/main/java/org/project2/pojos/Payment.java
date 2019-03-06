@@ -1,6 +1,7 @@
 package org.project2.pojos;
 
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "payments", schema = "pretense")
@@ -10,19 +11,26 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "payment_id")
     private Integer id;
+
+    @Column(name = "paid")
     private boolean paid;
+
+    @Column(name = "overdue")
     private boolean overdue;
 
-    @JoinColumn(name = "res_id", referencedColumnName = "res_id")
-    private Integer resident_id;
+    @Column(name = "date_paid")
+    private Date date_paid;
+
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    private Integer user_id;
 
     public Payment() {
     }
 
-    public Payment(boolean paid, boolean overdue, Integer resident_id) {
+    public Payment(boolean paid, boolean overdue, Integer user_id) {
         this.paid = paid;
         this.overdue = overdue;
-        this.resident_id = resident_id;
+        this.user_id = user_id;
     }
 
     public Integer getId() {
@@ -49,11 +57,11 @@ public class Payment {
         this.overdue = overdue;
     }
 
-    public Integer getResident_id() {
-        return resident_id;
+    public Integer getUser_id() {
+        return user_id;
     }
 
-    public void setResident_id(Integer resident_id) {
-        this.resident_id = resident_id;
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
     }
 }

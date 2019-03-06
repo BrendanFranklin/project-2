@@ -19,7 +19,7 @@ import java.util.*;
 
 import static org.project2.security.SecurityConstants.*;
 
-public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
+public class JWTAuthorizationFilter extends BasicAuthenticationFilter{
 
     public JWTAuthorizationFilter(AuthenticationManager authenticationManager) {
         super(authenticationManager);
@@ -48,8 +48,6 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
                     .parseClaimsJws(token.replace(PREFIX, ""));
             String user = claims.getBody().getSubject();
             ArrayList<String> scopes = (ArrayList<String>)claims.getBody().get("scope");
-
-            System.out.println(scopes);
 
             if(user != null) {
                 return new UsernamePasswordAuthenticationToken(user, null, getAuthorities(scopes));

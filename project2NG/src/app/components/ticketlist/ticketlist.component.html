@@ -1,0 +1,23 @@
+<div class = "container">
+  <div class = "list-container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Ticket ID</th>
+          <th scope="col">Author</th>
+          <th scope="col">Submitted</th>
+          <th scope="col">Resolved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let ticket of tickets"
+        (click) = "detailView(ticket)">
+          <th scope="row">{{ticket.id}}</th>
+          <td>{{ticket.authorFirstName}} {{ticket.authorLastName}}</td>
+          <td>{{ticket.submitted}}</td>
+          <td>{{ticket.resolved}}</td>
+        </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
